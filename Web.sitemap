@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/index.aspx" title="首页"  description="请点击此处进入首页">
+      <siteMapNode url="~/login.aspx" title="用户登录"  description="登录页面" />
+      <siteMapNode url="~/bookDetail.aspx" title="书籍详情"  description="书籍详情" />
+    </siteMapNode>
+</siteMap>

@@ -1,0 +1,130 @@
+.detailContainer{
+    width: 1200px;
+    margin: 0 auto;
+    .breadcrumbs{
+        font-size: 16px;
+        .typelabel{
+            color: orange;
+        }
+    }
+    .mainContain{
+        .topContent{
+            height: 600px;
+            clear: both;
+            margin-top: 10px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            padding: 30px;
+            .imgbox{
+                float: left;
+                padding: 0 100px;
+                height: 394px;
+                overflow: hidden;
+                img{
+                    height: 300px;
+                    width: auto;
+                }
+            }
+            .bookinfo{
+                overflow: hidden;
+                padding: 30px;
+                float: left;
+                width: 500px;
+                background-color: #eee;
+                .price{
+                    line-height: 24px;  
+                    .qianggou{                  
+                        background: url(../images/price_bg.png) left top no-repeat;
+                        padding: 3px 10px;
+                        line-height: 22px;
+                        position: relative;
+                        span{
+                            color: #fff;
+                            overflow: hidden;
+                            width: 50px;
+                            font-size: 22px;
+                            font-weight: 700;
+                            vertical-align: middle;
+                            line-height: 22px;
+                        }
+                    }
+                    .yuanjia{
+                        background-color: #ccc;
+                        text-decoration: line-through;
+                    }
+                }
+                .attribute{
+                    margin-bottom: 15px;
+                    margin-top: 50px;
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid #d9d9d9;
+                    dl{
+                        font-size: 12px;
+                        margin: 12px 0;
+                        dt{
+                            display: inline-block;
+                            width: 60px;
+                        }
+                        dd{
+                            display: inline;
+                            margin-left: 70px;
+                        }
+                    }
+                }   
+                .buydiv{
+                    margin-left: 100px;
+                    overflow: hidden;
+                    div{
+                        float: left;
+                        a{
+                            display: block;
+                            padding: 0 15px;
+                            background-color: aquamarine;
+                            margin-right: 10px;
+                            height: 40px;
+                            line-height: 40px;
+                        }
+                        a:hover{
+                            background-color: orange;
+                            color: aquamarine;
+                        }
+                    }
+                }           
+            }        
+        }
+        .tabbox{
+            border: 1px solid #ccc;
+            margin-top: 50px;
+            height: 400px;
+            ul{
+                width: 100%;
+                background-color: #eee;
+                overflow: hidden;
+                li{
+                    text-align: center;
+                    float: left;
+                    width: 100px;
+                    height: 40px;
+                    line-height: 40px;  
+                }
+                .clickli{
+                    background-color: #fff;
+                    color: orange;
+                }
+            }
+            .description{
+                div{
+                    width: 500px;
+                    padding: 30px;
+                }
+                .normal{
+                    display: none;
+                    
+                }
+                .current{
+                    display:block;
+                }
+            }
+        }
+    }
+}

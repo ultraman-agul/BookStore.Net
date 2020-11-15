@@ -1,0 +1,125 @@
+.detailContainer {
+  width: 1200px;
+  margin: 0 auto;
+}
+.detailContainer .breadcrumbs {
+  font-size: 16px;
+}
+.detailContainer .breadcrumbs .typelabel {
+  color: orange;
+}
+.detailContainer .mainContain .topContent {
+  height: 600px;
+  clear: both;
+  margin-top: 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  padding: 30px;
+}
+.detailContainer .mainContain .topContent .imgbox {
+  float: left;
+  padding: 0 100px;
+  height: 394px;
+  overflow: hidden;
+}
+.detailContainer .mainContain .topContent .imgbox img {
+  height: 300px;
+  width: auto;
+}
+.detailContainer .mainContain .topContent .bookinfo {
+  overflow: hidden;
+  padding: 30px;
+  float: left;
+  width: 500px;
+  background-color: #eee;
+}
+.detailContainer .mainContain .topContent .bookinfo .price {
+  line-height: 24px;
+}
+.detailContainer .mainContain .topContent .bookinfo .price .qianggou {
+  background: url(../images/price_bg.png) left top no-repeat;
+  padding: 3px 10px;
+  line-height: 22px;
+  position: relative;
+}
+.detailContainer .mainContain .topContent .bookinfo .price .qianggou span {
+  color: #fff;
+  overflow: hidden;
+  width: 50px;
+  font-size: 22px;
+  font-weight: 700;
+  vertical-align: middle;
+  line-height: 22px;
+}
+.detailContainer .mainContain .topContent .bookinfo .price .yuanjia {
+  background-color: #ccc;
+  text-decoration: line-through;
+}
+.detailContainer .mainContain .topContent .bookinfo .attribute {
+  margin-bottom: 15px;
+  margin-top: 50px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.detailContainer .mainContain .topContent .bookinfo .attribute dl {
+  font-size: 12px;
+  margin: 12px 0;
+}
+.detailContainer .mainContain .topContent .bookinfo .attribute dl dt {
+  display: inline-block;
+  width: 60px;
+}
+.detailContainer .mainContain .topContent .bookinfo .attribute dl dd {
+  display: inline;
+  margin-left: 70px;
+}
+.detailContainer .mainContain .topContent .bookinfo .buydiv {
+  margin-left: 100px;
+  overflow: hidden;
+}
+.detailContainer .mainContain .topContent .bookinfo .buydiv div {
+  float: left;
+}
+.detailContainer .mainContain .topContent .bookinfo .buydiv div a {
+  display: block;
+  padding: 0 15px;
+  background-color: aquamarine;
+  margin-right: 10px;
+  height: 40px;
+  line-height: 40px;
+}
+.detailContainer .mainContain .topContent .bookinfo .buydiv div a:hover {
+  background-color: orange;
+  color: aquamarine;
+}
+.detailContainer .mainContain .tabbox {
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  height: 400px;
+}
+.detailContainer .mainContain .tabbox ul {
+  width: 100%;
+  background-color: #eee;
+  overflow: hidden;
+}
+.detailContainer .mainContain .tabbox ul li {
+  text-align: center;
+  float: left;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+}
+.detailContainer .mainContain .tabbox ul .clickli {
+  background-color: #fff;
+  color: orange;
+}
+.detailContainer .mainContain .tabbox .description div {
+  width: 500px;
+  padding: 30px;
+}
+.detailContainer .mainContain .tabbox .description .normal {
+  display: none;
+}
+.detailContainer .mainContain .tabbox .description .current {
+  display: block;
+}

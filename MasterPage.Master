@@ -1,0 +1,172 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="DDbook.MasterPage" %>
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <head runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+        <link rel="stylesheet" href="css/iconfont.css">
+        <link rel="stylesheet" href="css/masterpage.css">
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+
+    <body>
+        <form id="form1" runat="server">
+            <div>
+                <!-- 顶部导航栏搜索框开始 -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <header>
+                        <div class="container">
+                            <span>你好，欢迎光临 <asp:HyperLink ID="HyperLink100" runat="server" NavigateUrl="~/index.aspx">叮当书店</asp:HyperLink></span>
+                            <div class="menu">
+                                <ul>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink5" NavigateUrl="~/index.aspx" runat="server">叮当首页</asp:HyperLink><span>|</span></li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink7" NavigateUrl="~/shoppingCart.aspx" runat="server">购物车</asp:HyperLink><span>|</span></li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink8" NavigateUrl="~/myOrders.aspx" runat="server">订单查询</asp:HyperLink><span>|</span></li>
+                                    <li> <asp:HyperLink ID="HyperLink1" runat="server" CssClass="login" NavigateUrl="~/login.aspx">你好，请登录</asp:HyperLink>&nbsp;<span>|</span></li>
+                                    <li><asp:HyperLink ID="HyperLink2" runat="server" CssClass="login" NavigateUrl="~/register.aspx">注册</asp:HyperLink></li>
+                                    <li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </header>
+                    <div class="search_container">
+                        <!-- 左边logo -->
+                        <a href="index.aspx">
+                        <div class="logo">
+                            <div class="imgdv">
+                                <img src="./images/logo.png" alt="">
+                            </div>
+                            <div class="ddread">
+                                <asp:HyperLink ID="HyperLink3" NavigateUrl="~/index.aspx" runat="server">叮当Read</asp:HyperLink>
+                                </div>
+                        </div>
+                        </a>
+                        <!-- 中间搜索框部分 -->
+                        <div class="search_input">
+                            <input type="text" placeholder="请输入商品信息">
+                            <button class="searchbtn">
+                                搜索
+                            </button>
+                        </div>
+                        <!-- 购物车部分 -->
+                        <div class="shoppcart">
+                            <asp:HyperLink ID="shoppingcart" runat="server">
+                                <span class="iconfont icon-gouwuchekong"></span><span>
+                                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/shoppingCart.aspx">购物车</asp:HyperLink>
+                                </span>&nbsp;
+                                <asp:Label ID="CartLabel1" runat="server" Text="0"></asp:Label>
+                            </asp:HyperLink>
+                        </div>
+                        <!-- 搜索框下面搜索热词 -->
+                        <div class="hotsearch">
+                            <ul>
+                                <li>搜索热词：</li>
+                                <li>奇迹公式</li>
+                                <li>阿尔茨海默症</li>
+                                <li>认知真相</li>
+                                <li>克莱的桥</li>
+                                <li>高效工作</li>
+                            </ul>
+                        </div>
+                    </div>
+                </asp:ContentPlaceHolder>
+                <!-- 顶部导航栏搜索框结束 -->
+                <!-- 分类开始 -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    <!-- 分类导航 -->
+                    <nav>
+                        <a href="#">图书分类</a>
+                        <div>
+                            <ul>
+                                <li><a href="#">电子书</a></li>
+                                <li><a href="#">网络文学</a></li>
+                                <li><a href="#">租阅</a></li>
+                                <li><a href="#">叮当阅读器</a></li>
+                                <li><a href="#">阅读器客户端</a></li>
+                                <li><a href="#">我要写书</a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="lasta"><i class="iconfont icon-geren"></i>个人中心 </a>
+                    </nav>
+                    <div class="hr">
+                    </div>
+                </asp:ContentPlaceHolder>
+                <!-- 分类结束 -->
+                <!-- 主题内容区域开始 -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+
+
+                </asp:ContentPlaceHolder>
+                <!-- 主题内容区域结束 -->
+                <!-- 关于我们开始 -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                    <div class="aboutme1">
+                        <ul>
+                            <li>
+                                <div class="left">
+                                    <i class="iconfont icon-aixin1"></i>
+                                </div>
+                                <div class="right">
+                                    <ul>
+                                        <li>关注我们</li>
+                                        <li>最受欢迎的阅读产品</li>
+                                        <li>关注我们：</li>
+                                        <li><a href="#"><i class="iconfont icon-weibo"></i>新浪微博 </a></li>
+                                        <li><a href="#"><i class="iconfont icon-gongzhonghao"></i>官方微信 </a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <i class="iconfont icon-renshu"></i>
+                                </div>
+                                <div class="right">
+                                    <ul>
+                                        <li>作者后台</li>
+                                        <li>加入叮当原创网，尊享作者 </li>
+                                        <li>福利，成就网文大神</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <i class="iconfont icon-taiyang-copy"></i>
+                                </div>
+                                <div class="right">
+                                    <ul>
+                                        <li>关于我们 </li>
+                                        <li>欢迎反馈宝贵意见给我们</li>
+                                        <li>客服书吧：当当云阅读问答</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </asp:ContentPlaceHolder>
+                <!-- 关于我们结束 -->
+                <!-- 底部开始 -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+                    <footer>
+                        <div>Copyright (C) 叮当网 2004-2014, All Rights Reserved
+                        </div>
+                        <div>
+                            京ICP证041189号|出版物经营许可证 新出发京批字第直0673号
+                        </div>
+                        <div>叮当网收录的免费小说作品、频道内容、书友评论、用户上传文字、图片等其他一切内容及在当当网所做之广告均属用户个人行为，与叮当网无关。
+                        </div>
+                    </footer>
+                </asp:ContentPlaceHolder>
+                <!-- 底部结束 -->
+            </div>
+        </form>
+    </body>
+
+    </html>>

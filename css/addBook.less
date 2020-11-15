@@ -1,0 +1,95 @@
+
+.mainContainer{
+    width: 1200px;
+    margin: 0 auto;
+    nav{
+        height: 80px;
+        background-color: pink;
+        border-bottom: 3px solid orange;
+        ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            li{
+                text-align: center;
+                width: 100px;
+                height: 80px;
+                line-height: 80px;
+                cursor: pointer;
+                a{
+                    display: block;
+                    width: 100px;
+                    height: 100%;
+                }
+            }
+            li:hover{
+                background-color: skyblue;
+            }
+        }
+    }
+    .content{
+        overflow: hidden;
+        padding: 20px;
+        background-color: skyblue;
+         .leftcontent{
+            float: left;
+            margin-left: 100px;         
+            p{
+                cursor: pointer;
+                display: block;
+                width: 100px;
+                text-align: center;
+                margin: 10px;
+                a{
+                    width: 100%;
+                    font-size: 22px;
+                }
+            }
+            p:hover{
+                background-color: pink;
+            } 
+         }
+         .rightcontent{
+            float: left;
+            border-left: 2px solid orange;
+            padding: 50px;
+            .showResult{
+                position: absolute;
+                font-size: 24px;
+                color: red;
+                left: 700px;
+
+            }
+            .items{
+                height: 50px;
+            }
+            .publishdate{
+                margin-top: 40px;
+            }
+            .zishu{
+                margin-top: 100px;
+            }
+            .btn{
+                
+                height: 160px;
+                .btnok{
+                    color: green;
+                    background-color: #ccc;
+                    font-size: 20px;  
+                    height: 40px;
+                    width: 70px;
+                    // text-align: center;
+                    // vertical-align: middle;
+                    line-height: 30px; 
+                }
+                .btnok:hover{
+                    background-color: orange;
+                    color: rgb(163, 248, 163);
+                }
+            }
+            // .date{
+            //     padding-left: 50px;
+            // }
+         }
+    }
+}

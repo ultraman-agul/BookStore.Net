@@ -1,0 +1,94 @@
+.SCartcontainer {
+  width: 1200px;
+  background-color: #ccc;
+  margin: 0 auto;
+  padding-bottom: 153px;
+}
+.SCartcontainer .head {
+  box-sizing: border-box;
+  padding: 15px;
+  height: 100px;
+  border-bottom: 4px solid #ff6666;
+}
+.SCartcontainer .head .logo {
+  float: left;
+}
+.SCartcontainer .head .logo img {
+  float: left;
+  width: 200px;
+  border-radius: 3px;
+}
+.SCartcontainer .head .logo span {
+  height: 70px;
+  font-size: 28px;
+  line-height: 70px;
+  width: 100px;
+}
+.SCartcontainer .head .jindu {
+  margin-left: 50px;
+  float: left;
+}
+.SCartcontainer .head .jindu span {
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  margin: 15px 10px;
+  line-height: 40px;
+  background-color: #f6f6f6;
+  font-size: 14px;
+  font-weight: 700;
+}
+.SCartcontainer .head .jindu .current {
+  color: #fff;
+  background-color: #ff6666;
+}
+.SCartcontainer .listBody .biaoti {
+  height: 50px;
+  margin-top: 20px;
+  background-color: pink;
+  border: 1px solid #ccc;
+}
+.SCartcontainer .listBody .biaoti ul {
+  overflow: hidden;
+  padding-left: 250px;
+}
+.SCartcontainer .listBody .biaoti ul li {
+  line-height: 50px;
+  float: left;
+  margin-right: 150px;
+}
+.SCartcontainer .CartBottom {
+  width: 100%;
+  height: 100px;
+  background-color: green;
+}
+.SCartcontainer .CartBottom div {
+  margin: 0 auto;
+  width: 100%;
+  line-height: 100px;
+}
+.SCartcontainer .CartBottom div .pick {
+  width: 100px;
+  float: left;
+}
+.SCartcontainer .CartBottom div .price {
+  width: 200px;
+  float: right;
+}
+.SCartcontainer .CartBottom div .price .realprice {
+  font-size: 20px;
+  color: #ff6666;
+}
+.SCartcontainer .CartBottom div .go {
+  width: 100px;
+  float: right;
+}
+.SCartcontainer .CartBottom div a {
+  width: 100px;
+  padding: 10px;
+  background-color: orange;
+}
+.SCartcontainer .CartBottom div a:hover {
+  color: #fff;
+}

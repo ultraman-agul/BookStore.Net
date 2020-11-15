@@ -1,0 +1,54 @@
+.mainContainer {
+  width: 1200px;
+  height: 800px;
+  margin: 0 auto;
+}
+.mainContainer nav {
+  height: 80px;
+  background-color: pink;
+  border-bottom: 3px solid orange;
+}
+.mainContainer nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.mainContainer nav ul li {
+  text-align: center;
+  width: 100px;
+  height: 80px;
+  line-height: 80px;
+  cursor: pointer;
+}
+.mainContainer nav ul li a {
+  display: block;
+  width: 100px;
+  height: 100%;
+}
+.mainContainer nav ul li:hover {
+  background-color: skyblue;
+}
+.mainContainer .content {
+  padding: 20px;
+  background-color: skyblue;
+}
+.mainContainer .content .leftcontent {
+  float: left;
+  margin-left: 100px;
+  border-right: 2px solid orange;
+  height: 800px;
+}
+.mainContainer .content .leftcontent p {
+  cursor: pointer;
+  display: block;
+  width: 100px;
+  text-align: center;
+  margin: 10px;
+}
+.mainContainer .content .leftcontent p a {
+  width: 100%;
+  font-size: 22px;
+}
+.mainContainer .content .leftcontent p:hover {
+  background-color: pink;
+}
