@@ -12,9 +12,9 @@ namespace DDbook
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (this.TextBox1.Text == "")
+            if (TextBox1.Text == "")
             {
-                this.TextBox1.Focus();
+                TextBox1.Focus();
             }
         }
 
@@ -30,8 +30,8 @@ namespace DDbook
                     dr.BeginEdit();//开始编辑行
                     dr["LoginName"] = TextBox1.Text.Trim();
                     dr["Realname"] = TextBox2.Text.Trim();
-                    dr["LinkTel"] = TextBox3.Text.Trim();
-                    dr["Password"] = TextBox5.Text.Trim();
+                    dr["LinkTel"] = TextBox3.Text.Trim();                    
+                    dr["Password"] = db.MD5Hash(TextBox5.Text.Trim());
                     dr["Address"] = TextBox6.Text.Trim();
                     dr["PostCode"] = TextBox7.Text.Trim();
                     db.MyDataSet.Tables[0].Rows.Add(dr); //将编辑的行添加到本地数据库中

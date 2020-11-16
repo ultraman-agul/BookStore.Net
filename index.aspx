@@ -13,8 +13,9 @@
 </asp:Content> --%>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-<div class="mainContainer">
-    <!-- 分类栏 -->
+    <div class="mainContainer">
+    <div class="topdv">
+        <!-- 分类栏 -->
     <div class="column1">
         <ul>
             <li>
@@ -167,6 +168,53 @@
         </div>
         
     </div>
+    </div>
+    <div class="commend">
+        
+        <div class="leftContent">
+            <div class="biaoti1">
+                <asp:LinkButton ID="LinkButton4" CssClass="active" runat="server" OnClick="LinkButton4_Click">主编推荐</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">小说</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton6" runat="server">文学传记</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton7_Click">历史哲学</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton8_Click">经济管理</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton9_Click">成功励志</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton10" runat="server" OnClick="LinkButton10_Click">科技教育</asp:LinkButton>
+            </div>
+            <asp:DataList ID="CommendDataList" OnItemCommand="commendDLCommand" runat="server" CssClass="commenddl" RepeatColumns="5">
+                <ItemTemplate>
+                    <asp:LinkButton ID="LinkButton11" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="describe">
+                        <span class="img-box">
+                        <img src="./images/img/<%# Eval("Pic") %>"/>
+                    </span> 
+                    <div class="info">
+                        <asp:Label ID="Label1" CssClass="bookname" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
+                    <p>
+                        <asp:Label ID="Label4" CssClass="author" runat="server" Text='<%# Eval("Author") %>'></asp:Label>
+                    </p>
+                    <p>
+                        <span class="specialPrice">
+                            ￥
+                        <asp:Label ID="Label2" runat="server" Text='<%# Eval("SpecialPrice") %>'></asp:Label>
+                        </span>
+                        <span class="originPrice">
+                            ￥
+                            <asp:Label ID="Label3" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
+                        </span>
+                    </p>
+                    </div>
+                    </asp:LinkButton>
+                </ItemTemplate>
+            </asp:DataList>
+        </div>
+        <div class="rightContent">
+            <div><img src="" alt=""></div>
+            <div><img src="" alt=""></div>
+            <div><img src="" alt=""></div>
+            <div><img src="" alt=""></div>
+        </div>
+    </div>
+    
 </div>
 <script>
     var imgs = ['./images/img1.jpg', './images/img2.jpg', './images/img3.jpg', './images/img4.jpg', './images/img5.jpg'];

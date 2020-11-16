@@ -11,7 +11,7 @@ namespace DDbook
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            FillData1();
+            FillData1();//秒杀
             //分类开始
             FillXiaoShuoData();
             FillWenYiData();
@@ -23,8 +23,9 @@ namespace DDbook
             FillKeJiData();
             FillYuanBanData();
             //分类结束
-            //销售榜
-            SalesData();
+           
+            SalesData(); //销售榜
+            CommendData(0);//推荐分类
         }
         // 特价
         protected void FillData1()
@@ -165,6 +166,63 @@ namespace DDbook
                 string id = e.CommandArgument.ToString();
                 Response.Redirect("./bookDetail.aspx?Id=" + id);
             }
+        }
+
+        protected void CommendData(int typeId)
+        {
+            DB db = new DB();
+            string sql = "";
+            if(typeId == 0)
+            {
+                sql = "select top 10 * from Book where IsCommend = 1 order by PublishDate desc";
+            }
+            else
+            {
+                sql = "select top 10 * from Book where BookTypeID in (select Id from BookType where ParentID ="+typeId+")";
+            }
+            db.LoadExecuteData(sql);
+            CommendDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
+            CommendDataList.DataKeyField = "Id";
+            CommendDataList.DataBind();
+            db.OffData();
+        }
+        protected void commendDLCommand(object source, DataListCommandEventArgs e)
+        {
+            if(e.CommandName == "describe")
+            {
+                string id = e.CommandArgument.ToString();
+                Response.Redirect("~bookDetail.aspx?Id=" + id);
+            }
+        }
+
+        protected void LinkButton4_Click(object sender, EventArgs e)
+        {
+            CommendData(0);
+        }
+
+        protected void LinkButton5_Click(object sender, EventArgs e)
+        {
+            CommendData(2);
+        }
+
+        protected void LinkButton7_Click(object sender, EventArgs e)
+        {
+            CommendData(3);
+        }
+
+        protected void LinkButton8_Click(object sender, EventArgs e)
+        {
+            CommendData(4);
+        }
+
+        protected void LinkButton9_Click(object sender, EventArgs e)
+        {
+            CommendData(5);
+        }
+
+        protected void LinkButton10_Click(object sender, EventArgs e)
+        {
+            CommendData(8);
         }
     }
 }

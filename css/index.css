@@ -3,7 +3,10 @@
   width: 1200px;
   margin: 0 auto;
 }
-.mainContainer .column1 {
+.mainContainer .topdv {
+  overflow: hidden;
+}
+.mainContainer .topdv .column1 {
   float: left;
   padding-right: 15px;
   width: 250px;
@@ -11,36 +14,36 @@
             // padding: 20px;
         }*/
 }
-.mainContainer .column1 ul li {
+.mainContainer .topdv .column1 ul li {
   background-color: #f6f6f6;
-  padding: 20px;
+  padding: 18px;
 }
-.mainContainer .column1 ul li span a {
+.mainContainer .topdv .column1 ul li span a {
   font-size: 14px;
   font-weight: 700;
 }
-.mainContainer .column1 ul li .adv .booktypeTb td {
+.mainContainer .topdv .column1 ul li .adv .booktypeTb td {
   word-wrap: break-word;
   word-break: break-all;
 }
-.mainContainer .column1 ul li .adv .booktypeTb td .sas {
+.mainContainer .topdv .column1 ul li .adv .booktypeTb td .sas {
   display: inline-block;
   margin-right: 15px !important;
 }
-.mainContainer .column1 ul li:nth-child(2n) {
+.mainContainer .topdv .column1 ul li:nth-child(2n) {
   background-color: #e9e7e6;
 }
-.mainContainer .column2 {
+.mainContainer .topdv .column2 {
   padding-top: 10px;
   float: left;
   overflow: hidden;
 }
-.mainContainer .column2 .xianshi {
+.mainContainer .topdv .column2 .xianshi {
   margin-top: 20px;
   overflow: hidden;
   border-bottom: 2px solid #ee554a;
 }
-.mainContainer .column2 .xianshi p {
+.mainContainer .topdv .column2 .xianshi p {
   float: left;
   background: #ee554a;
   color: #fff;
@@ -50,12 +53,12 @@
   line-height: 34px;
   font-size: 18px;
 }
-.mainContainer .column2 .specialList {
+.mainContainer .topdv .column2 .specialList {
   width: 675px;
   display: flex;
   justify-content: center;
 }
-.mainContainer .column2 .specialList td {
+.mainContainer .topdv .column2 .specialList td {
   z-index: 9;
   float: left;
   overflow: hidden;
@@ -63,15 +66,15 @@
   height: 232px;
   border: 1px solid #e5e5e5;
   background-color: #fff;
-  margin: 8px;
+  margin: 12px 8px;
 }
-.mainContainer .column2 .specialList td a {
+.mainContainer .topdv .column2 .specialList td a {
   height: 100%;
   display: block;
   color: #737373;
   background-color: transparent;
 }
-.mainContainer .column2 .specialList td a .img-box {
+.mainContainer .topdv .column2 .specialList td a .img-box {
   text-align: center;
   padding-top: 10px;
   display: block;
@@ -80,64 +83,64 @@
   margin: 0 auto;
   background-color: #fff;
 }
-.mainContainer .column2 .specialList td a .img-box img {
+.mainContainer .topdv .column2 .specialList td a .img-box img {
   height: 140px;
   width: 100px;
   transition: all 0.5s ease-in-out;
 }
-.mainContainer .column2 .specialList td a .img-box img:hover {
+.mainContainer .topdv .column2 .specialList td a .img-box img:hover {
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
   transform: translate3d(0, -2px, 0);
 }
-.mainContainer .column2 .specialList td a .info {
+.mainContainer .topdv .column2 .specialList td a .info {
   padding: 0 10px;
 }
-.mainContainer .column2 .specialList td a .info .bookname {
+.mainContainer .topdv .column2 .specialList td a .info .bookname {
   height: 36px;
   display: inline-block;
 }
-.mainContainer .column2 .specialList td a .info p {
+.mainContainer .topdv .column2 .specialList td a .info p {
   display: block;
 }
-.mainContainer .column2 .specialList td a .info p .author {
+.mainContainer .topdv .column2 .specialList td a .info p .author {
   font-size: 12px;
   color: #888888;
 }
-.mainContainer .column2 .specialList td a .info p .specialPrice {
+.mainContainer .topdv .column2 .specialList td a .info p .specialPrice {
   font-size: 16px;
   font-weight: 700;
   color: red;
 }
-.mainContainer .column2 .specialList td a .info p .specialPrice span {
+.mainContainer .topdv .column2 .specialList td a .info p .specialPrice span {
   color: red;
 }
-.mainContainer .column2 .specialList td a .info p .originPrice {
+.mainContainer .topdv .column2 .specialList td a .info p .originPrice {
   font-size: 10px;
   text-decoration: line-through;
   color: #888888 8;
   text-align: right;
 }
-.mainContainer .column2 .specialList td a .info p .originPrice span {
+.mainContainer .topdv .column2 .specialList td a .info p .originPrice span {
   text-decoration: line-through;
 }
-.mainContainer .column3 {
+.mainContainer .topdv .column3 {
   width: 255px;
   float: left;
 }
-.mainContainer .column3 .imgdv {
+.mainContainer .topdv .column3 .imgdv {
   padding: 10px 0 0 15px;
 }
-.mainContainer .column3 .imgdv a img {
+.mainContainer .topdv .column3 .imgdv a img {
   width: 245px;
   height: 113px;
   margin-bottom: 10px;
 }
-.mainContainer .column3 .biaoti {
+.mainContainer .topdv .column3 .biaoti {
   margin: 8px 0 0 15px;
   overflow: hidden;
   border-bottom: 2px solid #ee554a;
 }
-.mainContainer .column3 .biaoti p {
+.mainContainer .topdv .column3 .biaoti p {
   float: left;
   background: #ee554a;
   color: #fff;
@@ -147,27 +150,138 @@
   line-height: 34px;
   font-size: 18px;
 }
-.mainContainer .column3 .saleBox {
+.mainContainer .topdv .column3 .saleBox {
   padding: 15px;
   border: 1px solid #dddad8;
 }
-.mainContainer .column3 .saleBox .sales td a {
+.mainContainer .topdv .column3 .saleBox .sales td a {
   overflow: hidden;
   border-top: 1px solid #dddad8;
   display: block;
   height: 100%;
 }
-.mainContainer .column3 .saleBox .sales td a span {
+.mainContainer .topdv .column3 .saleBox .sales td a span {
   height: 40px;
   line-height: 40px;
   float: left;
 }
-.mainContainer .column3 .saleBox .sales td a .nam {
+.mainContainer .topdv .column3 .saleBox .sales td a .nam {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 150px;
 }
-.mainContainer .column3 .saleBox .sales td a .pric {
+.mainContainer .topdv .column3 .saleBox .sales td a .pric {
   float: right;
+}
+.mainContainer .commend {
+  overflow: hidden;
+  margin-top: 40px;
+}
+.mainContainer .commend .leftContent {
+  float: left;
+  width: 940px;
+  overflow: hidden;
+  background-color: pink;
+}
+.mainContainer .commend .leftContent .biaoti1 {
+  border-bottom: 2px solid orange;
+  height: 34px;
+  line-height: 34px;
+}
+.mainContainer .commend .leftContent .biaoti1 a {
+  display: block;
+  float: left;
+  width: 110px;
+  text-align: center;
+  font-size: 14px;
+}
+.mainContainer .commend .leftContent .biaoti1 .active {
+  font-size: 18px;
+  background-color: orange;
+  color: #fff;
+}
+.mainContainer .commend .leftContent .commenddl {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mainContainer .commend .leftContent .commenddl td {
+  z-index: 9;
+  float: left;
+  overflow: hidden;
+  width: 150px;
+  height: 232px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  margin: 12px 8px;
+}
+.mainContainer .commend .leftContent .commenddl td a {
+  height: 100%;
+  display: block;
+  color: #737373;
+  background-color: transparent;
+}
+.mainContainer .commend .leftContent .commenddl td a .img-box {
+  text-align: center;
+  padding-top: 10px;
+  display: block;
+  overflow: hidden;
+  height: 150px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.mainContainer .commend .leftContent .commenddl td a .img-box img {
+  height: 140px;
+  width: 100px;
+  transition: all 0.5s ease-in-out;
+}
+.mainContainer .commend .leftContent .commenddl td a .img-box img:hover {
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  transform: translate3d(0, -2px, 0);
+}
+.mainContainer .commend .leftContent .commenddl td a .info {
+  padding: 0 10px;
+}
+.mainContainer .commend .leftContent .commenddl td a .info .bookname {
+  height: 36px;
+  display: inline-block;
+}
+.mainContainer .commend .leftContent .commenddl td a .info p {
+  display: block;
+}
+.mainContainer .commend .leftContent .commenddl td a .info p .author {
+  font-size: 12px;
+  color: #888888;
+}
+.mainContainer .commend .leftContent .commenddl td a .info p .specialPrice {
+  font-size: 16px;
+  font-weight: 700;
+  color: red;
+}
+.mainContainer .commend .leftContent .commenddl td a .info p .specialPrice span {
+  color: red;
+}
+.mainContainer .commend .leftContent .commenddl td a .info p .originPrice {
+  font-size: 10px;
+  text-decoration: line-through;
+  color: #888888 8;
+  text-align: right;
+}
+.mainContainer .commend .leftContent .commenddl td a .info p .originPrice span {
+  text-decoration: line-through;
+}
+.mainContainer .commend .rightContent {
+  float: right;
+  width: 245px;
+  height: 585px;
+  background-color: blue;
+}
+.mainContainer .commend .rightContent div {
+  margin-top: 17px;
+}
+.mainContainer .commend .rightContent div img {
+  width: 245px;
+  height: 125px;
+  background-color: green;
 }

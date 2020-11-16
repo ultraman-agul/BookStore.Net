@@ -5,6 +5,7 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 using System.Collections;
+using System.Security.Cryptography;
 
 namespace DDbook
 {
@@ -314,7 +315,6 @@ namespace DDbook
             string str = Convert.ToString(comm.ExecuteScalar());
             if (str != "")
             {
-                //MessageBox.Show(str,"有值");
                 return true;
             }
             else
@@ -405,5 +405,20 @@ namespace DDbook
                 conn.Dispose();//释放资源
             }
         }
+
+
+        // MD5数据加密
+        public string MD5Hash(string str)
+        {
+            string pwd = "";
+            MD5 md5 = MD5.Create();
+            byte[] s = md5.ComputeHash(System.Text.Encoding.UTF8.GetBytes(str));
+            for (var i = 0; i < s.Length; i++)
+            {
+                pwd += s[i].ToString("X");
+            }
+            return pwd;
+        }
+
     }
 }

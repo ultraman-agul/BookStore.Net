@@ -46,14 +46,15 @@
                             <tr>
                                 <td class="left">密码</td>
                                 <td>
-                                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="TextBox4" runat="server" ControlToCompare="TextBox4" TextMode="Password"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="left">确认密码</td>
                                 <td>
-                                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-                                </td>
+                                    <asp:TextBox ID="TextBox5" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="密码不一致" ControlToValidate="TextBox5" ControlToCompare="TextBox4"></asp:CompareValidator>
+                                </td>       
                             </tr>
                         </tbody>
                     </table>

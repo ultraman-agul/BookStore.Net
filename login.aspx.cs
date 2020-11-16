@@ -43,14 +43,15 @@ namespace DDbook
                     {
                         ArrayList arr = db.DataReader("SELECT * FROM Customer WHERE LoginName='" + TextBox1.Text.Trim() + "'", "Password");
                         //对比密码是否正确  如果没错将文本信息赋值将SESSION里面
-                        if (arr[0].ToString() == TextBox2.Text.Trim())
+                        string pwd = db.MD5Hash(TextBox2.Text.Trim());
+                        if (arr[0].ToString() == pwd)
                         {
                             string sqlID = "SELECT Id FROM Customer WHERE LoginName='" + TextBox1.Text.Trim() + "'";
                             ArrayList arr1 = db.DataReader(sqlID, "Id");
                             //Session存储信息
                             Session["USERID"] = Convert.ToInt32(arr1[0]);
                             Session["USERName"] = TextBox1.Text.Trim();
-                            Session["USERPWD"] = TextBox2.Text.Trim();
+                            Session["USERPWD"] = pwd;
                             // 执行完 关闭连接和 释放资源
                             db.OffData();
                             //跳转到主页
@@ -73,6 +74,7 @@ namespace DDbook
                     if (db.Query("SELECT * FROM  SysUser  WHERE LoginName='" + TextBox1.Text.Trim() + "'"))
                     {
                         ArrayList arr = db.DataReader("SELECT * FROM SysUser WHERE LoginName='" + TextBox1.Text.Trim() + "'", "Password");
+
                         if (arr[0].ToString() == TextBox2.Text)
                         //对比密码是否正确  如果没错将文本信息赋值将Session里面
                         {

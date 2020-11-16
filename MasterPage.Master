@@ -144,7 +144,7 @@
                                     <ul>
                                         <li>关于我们 </li>
                                         <li>欢迎反馈宝贵意见给我们</li>
-                                        <li>客服书吧：当当云阅读问答</li>
+                                        <li>客服书吧：叮当云阅读问答</li>
                                     </ul>
                                 </div>
                             </li>
@@ -155,12 +155,12 @@
                 <!-- 底部开始 -->
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
                     <footer>
-                        <div>Copyright (C) 叮当网 2004-2014, All Rights Reserved
+                        <div>Copyright (C) 叮当网 2020-2100, All Rights Reserved
                         </div>
                         <div>
-                            京ICP证041189号|出版物经营许可证 新出发京批字第直0673号
+                            弘ICP证123124号|出版物经营许可证 岭南师范学院弘志苑412栋708号
                         </div>
-                        <div>叮当网收录的免费小说作品、频道内容、书友评论、用户上传文字、图片等其他一切内容及在当当网所做之广告均属用户个人行为，与叮当网无关。
+                        <div>叮当网收录的免费小说作品、频道内容、书友评论、用户上传文字、图片等其他一切内容及在叮当网所做之广告均属用户个人行为，与叮当网无关。
                         </div>
                     </footer>
                 </asp:ContentPlaceHolder>
