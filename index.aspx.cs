@@ -26,6 +26,10 @@ namespace DDbook
            
             SalesData(); //销售榜
             CommendData(0);//推荐分类
+            forClass(LinkButton4);
+            rightCommendData();// 右侧推荐
+            newBookData();//新书推荐
+            newBookRankData();//新书排行榜
         }
         // 特价
         protected void FillData1()
@@ -195,34 +199,115 @@ namespace DDbook
             }
         }
 
+        protected void forClass(LinkButton lkbt)
+        {
+            LinkButton4.Attributes.Remove("class");
+            LinkButton5.Attributes.Remove("class");
+            LinkButton6.Attributes.Remove("class");
+            LinkButton7.Attributes.Remove("class");
+            LinkButton8.Attributes.Remove("class");
+            LinkButton9.Attributes.Remove("class");
+            LinkButton10.Attributes.Remove("class");
+            lkbt.Attributes.Add("class", "active");
+
+        }
+
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
             CommendData(0);
+            forClass(LinkButton4);
         }
 
         protected void LinkButton5_Click(object sender, EventArgs e)
         {
-            CommendData(2);
+            CommendData(1);
+            forClass(LinkButton5);
         }
 
         protected void LinkButton7_Click(object sender, EventArgs e)
         {
             CommendData(3);
+            forClass(LinkButton7);
         }
 
         protected void LinkButton8_Click(object sender, EventArgs e)
         {
             CommendData(4);
+            forClass(LinkButton8);
         }
 
         protected void LinkButton9_Click(object sender, EventArgs e)
         {
             CommendData(5);
+            forClass(LinkButton9);
         }
 
         protected void LinkButton10_Click(object sender, EventArgs e)
         {
             CommendData(8);
+            forClass(LinkButton10);
+        }
+
+        protected void LinkButton6_Click(object sender, EventArgs e)
+        {
+            CommendData(2);
+            forClass(LinkButton6);
+        }
+
+        //右侧推荐
+        protected void rightCommendData()
+        {
+            DB db = new DB();
+            string sql = "select top 3 * from Book where IsCommend = 1";
+            db.LoadExecuteData(sql);
+            rightCommendDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
+            rightCommendDataList.DataKeyField = "Id";
+            rightCommendDataList.DataBind();
+            db.OffData();
+        }
+
+        protected void rightCommendCommand(object source, DataListCommandEventArgs e)
+        {
+            if(e.CommandName == "describe" )
+            {
+                Response.Redirect("./bookDetail.aspx?Id=" + e.CommandArgument.ToString());
+            }
+        }
+
+        protected void newBookData()
+        {
+            DB db = new DB();
+            string sql = "select top 10 * from Book order by PublishDate desc";
+            db.LoadExecuteData(sql);
+            newBookDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
+            newBookDataList.DataKeyField = "Id";
+            newBookDataList.DataBind();
+            db.OffData();
+        }
+        protected void newBookCommand(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "describe")
+            {
+                Response.Redirect("./bookDetail.aspx?Id=" + e.CommandArgument.ToString());
+            }
+        }
+
+        protected void newBookRankData()
+        {
+            DB db = new DB();
+            string sql = "select top 10 序号 = row_number() over(order by PublishDate desc), Id, Name, Price from Book";
+            db.LoadExecuteData(sql);
+            newBookRankDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
+            newBookRankDataList.DataKeyField = "Id";
+            newBookRankDataList.DataBind();
+            db.OffData();
+        }
+        protected void newBookRankCommand(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "describe")
+            {
+                Response.Redirect("./bookDetail.aspx?Id=" + e.CommandArgument.ToString());
+            }
         }
     }
 }

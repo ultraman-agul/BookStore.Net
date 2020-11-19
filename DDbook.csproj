@@ -69,8 +69,10 @@
   <ItemGroup>
     <Content Include="addBook.aspx" />
     <Content Include="bookDetail.aspx" />
+    <Content Include="bookPackage.aspx" />
     <Content Include="css\addBook.css" />
     <Content Include="css\bookDetail.css" />
+    <Content Include="css\bookPackage.css" />
     <Content Include="css\editOrder.css" />
     <Content Include="css\iconfont.css" />
     <Content Include="css\index.css" />
@@ -128,6 +130,13 @@
     </Compile>
     <Compile Include="bookDetail.aspx.designer.cs">
       <DependentUpon>bookDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bookPackage.aspx.cs">
+      <DependentUpon>bookPackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bookPackage.aspx.designer.cs">
+      <DependentUpon>bookPackage.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -199,6 +208,7 @@
     <Content Include="css\register.less" />
     <Content Include="css\shoppingCart.less" />
     <Content Include="css\userInfo.less" />
+    <Content Include="css\bookPackage.less" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

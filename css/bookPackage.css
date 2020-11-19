@@ -1,0 +1,122 @@
+.showDataList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.showDataList td {
+  z-index: 9;
+  float: left;
+  overflow: hidden;
+  width: 150px;
+  height: 232px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  margin: 12px 8px;
+}
+.showDataList td a {
+  height: 100%;
+  display: block;
+  color: #737373;
+  background-color: transparent;
+}
+.showDataList td a .img-box {
+  text-align: center;
+  padding-top: 10px;
+  display: block;
+  overflow: hidden;
+  height: 150px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.showDataList td a .img-box img {
+  height: 140px;
+  width: 100px;
+  transition: all 0.5s ease-in-out;
+}
+.showDataList td a .img-box img:hover {
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  transform: translate3d(0, -2px, 0);
+}
+.showDataList td a .info {
+  padding: 0 10px;
+}
+.showDataList td a .info .bookname {
+  height: 36px;
+  display: inline-block;
+}
+.showDataList td a .info p {
+  display: block;
+}
+.showDataList td a .info p .author {
+  font-size: 12px;
+  color: #888888;
+}
+.showDataList td a .info p .specialPrice {
+  font-size: 16px;
+  font-weight: 700;
+  color: red;
+}
+.showDataList td a .info p .specialPrice span {
+  color: red;
+}
+.showDataList td a .info p .originPrice {
+  font-size: 10px;
+  text-decoration: line-through;
+  color: #888888 8;
+  text-align: right;
+}
+.showDataList td a .info p .originPrice span {
+  text-decoration: line-through;
+}
+.PContainer {
+  width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 154px;
+  overflow: hidden;
+}
+.PContainer .column1 {
+  float: left;
+  width: 250px;
+}
+.PContainer .column1 ul li {
+  background-color: #f6f6f6;
+  padding: 18px;
+}
+.PContainer .column1 ul li span a {
+  font-size: 14px;
+  font-weight: 700;
+}
+.PContainer .column1 ul li .adv .booktypeTb td {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.PContainer .column1 ul li .adv .booktypeTb td .sas {
+  display: inline-block;
+  margin-right: 15px !important;
+}
+.PContainer .column1 ul li:nth-child(2n) {
+  background-color: #e9e7e6;
+}
+.PContainer .Pmain {
+  float: right;
+  width: 940px;
+  background-color: pink;
+}
+.PContainer .Pmain nav {
+  border-bottom: 2px solid #f6f6f6;
+  height: 36px;
+  line-height: 36px;
+}
+.PContainer .Pmain nav a {
+  display: block;
+  width: 80px;
+  text-align: center;
+  float: left;
+  margin-right: 20px;
+}
+.PContainer .Pmain nav .active {
+  border-bottom: 2px solid orange;
+}

@@ -140,4 +140,14 @@
 
 })(jQuery);
 
-
+function activeClass(){
+    var aObj = document.getElementById("biaoti1").getElementsByTagName("li");
+    for(let i = 0; i < aObj.length; i++)
+        aObj[i].onclick = function(){
+            for(let j = 0; j < aObj.length;j++)
+            {
+                aObj[j].className="";
+            }
+            aObj[i].className="active";
+    }
+}

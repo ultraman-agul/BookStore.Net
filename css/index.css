@@ -1,3 +1,76 @@
+.showDataList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.showDataList td {
+  z-index: 9;
+  float: left;
+  overflow: hidden;
+  width: 150px;
+  height: 232px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  margin: 12px 8px;
+}
+.showDataList td a {
+  height: 100%;
+  display: block;
+  color: #737373;
+  background-color: transparent;
+}
+.showDataList td a .img-box {
+  text-align: center;
+  padding-top: 10px;
+  display: block;
+  overflow: hidden;
+  height: 150px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.showDataList td a .img-box img {
+  height: 140px;
+  width: 100px;
+  transition: all 0.5s ease-in-out;
+}
+.showDataList td a .img-box img:hover {
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  transform: translate3d(0, -2px, 0);
+}
+.showDataList td a .info {
+  padding: 0 10px;
+}
+.showDataList td a .info .bookname {
+  height: 36px;
+  display: inline-block;
+}
+.showDataList td a .info p {
+  display: block;
+}
+.showDataList td a .info p .author {
+  font-size: 12px;
+  color: #888888;
+}
+.showDataList td a .info p .specialPrice {
+  font-size: 16px;
+  font-weight: 700;
+  color: red;
+}
+.showDataList td a .info p .specialPrice span {
+  color: red;
+}
+.showDataList td a .info p .originPrice {
+  font-size: 10px;
+  text-decoration: line-through;
+  color: #888888 8;
+  text-align: right;
+}
+.showDataList td a .info p .originPrice span {
+  text-decoration: line-through;
+}
 .mainContainer {
   overflow: hidden;
   width: 1200px;
@@ -53,76 +126,6 @@
   line-height: 34px;
   font-size: 18px;
 }
-.mainContainer .topdv .column2 .specialList {
-  width: 675px;
-  display: flex;
-  justify-content: center;
-}
-.mainContainer .topdv .column2 .specialList td {
-  z-index: 9;
-  float: left;
-  overflow: hidden;
-  width: 150px;
-  height: 232px;
-  border: 1px solid #e5e5e5;
-  background-color: #fff;
-  margin: 12px 8px;
-}
-.mainContainer .topdv .column2 .specialList td a {
-  height: 100%;
-  display: block;
-  color: #737373;
-  background-color: transparent;
-}
-.mainContainer .topdv .column2 .specialList td a .img-box {
-  text-align: center;
-  padding-top: 10px;
-  display: block;
-  overflow: hidden;
-  height: 150px;
-  margin: 0 auto;
-  background-color: #fff;
-}
-.mainContainer .topdv .column2 .specialList td a .img-box img {
-  height: 140px;
-  width: 100px;
-  transition: all 0.5s ease-in-out;
-}
-.mainContainer .topdv .column2 .specialList td a .img-box img:hover {
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
-  transform: translate3d(0, -2px, 0);
-}
-.mainContainer .topdv .column2 .specialList td a .info {
-  padding: 0 10px;
-}
-.mainContainer .topdv .column2 .specialList td a .info .bookname {
-  height: 36px;
-  display: inline-block;
-}
-.mainContainer .topdv .column2 .specialList td a .info p {
-  display: block;
-}
-.mainContainer .topdv .column2 .specialList td a .info p .author {
-  font-size: 12px;
-  color: #888888;
-}
-.mainContainer .topdv .column2 .specialList td a .info p .specialPrice {
-  font-size: 16px;
-  font-weight: 700;
-  color: red;
-}
-.mainContainer .topdv .column2 .specialList td a .info p .specialPrice span {
-  color: red;
-}
-.mainContainer .topdv .column2 .specialList td a .info p .originPrice {
-  font-size: 10px;
-  text-decoration: line-through;
-  color: #888888 8;
-  text-align: right;
-}
-.mainContainer .topdv .column2 .specialList td a .info p .originPrice span {
-  text-decoration: line-through;
-}
 .mainContainer .topdv .column3 {
   width: 255px;
   float: left;
@@ -151,8 +154,11 @@
   font-size: 18px;
 }
 .mainContainer .topdv .column3 .saleBox {
-  padding: 15px;
+  margin-left: 15px;
   border: 1px solid #dddad8;
+}
+.mainContainer .topdv .column3 .saleBox .sales {
+  margin: 0 auto;
 }
 .mainContainer .topdv .column3 .saleBox .sales td a {
   overflow: hidden;
@@ -169,7 +175,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 150px;
+  width: 145px;
 }
 .mainContainer .topdv .column3 .saleBox .sales td a .pric {
   float: right;
@@ -182,106 +188,133 @@
   float: left;
   width: 940px;
   overflow: hidden;
-  background-color: pink;
 }
-.mainContainer .commend .leftContent .biaoti1 {
+.mainContainer .commend .leftContent #biaoti1 {
   border-bottom: 2px solid orange;
   height: 34px;
   line-height: 34px;
 }
-.mainContainer .commend .leftContent .biaoti1 a {
-  display: block;
+.mainContainer .commend .leftContent #biaoti1 a {
   float: left;
   width: 110px;
   text-align: center;
   font-size: 14px;
 }
-.mainContainer .commend .leftContent .biaoti1 .active {
+.mainContainer .commend .leftContent #biaoti1 .active {
   font-size: 18px;
   background-color: orange;
   color: #fff;
 }
-.mainContainer .commend .leftContent .commenddl {
-  width: 100%;
+.mainContainer .commend .rightContent {
+  float: right;
+  width: 245px;
+  height: 585px;
+  margin-left: 15px;
+}
+.mainContainer .commend .rightContent .rightdl {
+  width: 245px;
   display: flex;
   justify-content: center;
+  border-right: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 }
-.mainContainer .commend .leftContent .commenddl td {
+.mainContainer .commend .rightContent .rightdl td {
   z-index: 9;
   float: left;
   overflow: hidden;
   width: 150px;
-  height: 232px;
+  height: 170px;
   border: 1px solid #e5e5e5;
   background-color: #fff;
-  margin: 12px 8px;
+  margin: 8px 8px;
 }
-.mainContainer .commend .leftContent .commenddl td a {
+.mainContainer .commend .rightContent .rightdl td a {
   height: 100%;
   display: block;
   color: #737373;
   background-color: transparent;
 }
-.mainContainer .commend .leftContent .commenddl td a .img-box {
+.mainContainer .commend .rightContent .rightdl td a .img-box {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 15px;
   display: block;
   overflow: hidden;
   height: 150px;
   margin: 0 auto;
   background-color: #fff;
 }
-.mainContainer .commend .leftContent .commenddl td a .img-box img {
+.mainContainer .commend .rightContent .rightdl td a .img-box img {
   height: 140px;
   width: 100px;
   transition: all 0.5s ease-in-out;
 }
-.mainContainer .commend .leftContent .commenddl td a .img-box img:hover {
+.mainContainer .commend .rightContent .rightdl td a .img-box img:hover {
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
   transform: translate3d(0, -2px, 0);
 }
-.mainContainer .commend .leftContent .commenddl td a .info {
-  padding: 0 10px;
+.mainContainer .newBook {
+  overflow: hidden;
+  margin-top: 40px;
 }
-.mainContainer .commend .leftContent .commenddl td a .info .bookname {
-  height: 36px;
-  display: inline-block;
+.mainContainer .newBook .leftContent {
+  float: left;
+  width: 940px;
+  overflow: hidden;
 }
-.mainContainer .commend .leftContent .commenddl td a .info p {
+.mainContainer .newBook .leftContent #biaoti1 {
+  border-bottom: 2px solid orange;
+  height: 34px;
+  line-height: 34px;
+}
+.mainContainer .newBook .leftContent #biaoti1 span {
   display: block;
+  width: 110px;
+  text-align: center;
+  font-size: 18px;
+  background-color: orange;
+  color: #fff;
 }
-.mainContainer .commend .leftContent .commenddl td a .info p .author {
-  font-size: 12px;
-  color: #888888;
-}
-.mainContainer .commend .leftContent .commenddl td a .info p .specialPrice {
-  font-size: 16px;
-  font-weight: 700;
-  color: red;
-}
-.mainContainer .commend .leftContent .commenddl td a .info p .specialPrice span {
-  color: red;
-}
-.mainContainer .commend .leftContent .commenddl td a .info p .originPrice {
-  font-size: 10px;
-  text-decoration: line-through;
-  color: #888888 8;
-  text-align: right;
-}
-.mainContainer .commend .leftContent .commenddl td a .info p .originPrice span {
-  text-decoration: line-through;
-}
-.mainContainer .commend .rightContent {
+.mainContainer .newBook .rightContent {
   float: right;
   width: 245px;
   height: 585px;
-  background-color: blue;
+  margin-left: 15px;
 }
-.mainContainer .commend .rightContent div {
-  margin-top: 17px;
+.mainContainer .newBook .rightContent .biaoti {
+  border-bottom: 2px solid orange;
+  height: 34px;
+  line-height: 34px;
 }
-.mainContainer .commend .rightContent div img {
-  width: 245px;
-  height: 125px;
-  background-color: green;
+.mainContainer .newBook .rightContent .biaoti p {
+  display: block;
+  width: 110px;
+  text-align: center;
+  font-size: 18px;
+  background-color: orange;
+  color: #fff;
+}
+.mainContainer .newBook .rightContent .new-box {
+  padding: 15px;
+  border: 1px solid #dddad8;
+}
+.mainContainer .newBook .rightContent .new-box .newb td a {
+  overflow: hidden;
+  border-top: 1px solid #dddad8;
+  display: block;
+  height: 100%;
+}
+.mainContainer .newBook .rightContent .new-box .newb td a span {
+  height: 40px;
+  line-height: 40px;
+  float: left;
+}
+.mainContainer .newBook .rightContent .new-box .newb td a .nam {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 145px;
+}
+.mainContainer .newBook .rightContent .new-box .newb td a .pric {
+  float: right;
 }

@@ -83,7 +83,7 @@
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
                     <!-- 分类导航 -->
                     <nav>
-                        <a href="#">图书分类</a>
+                        <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/bookPackage.aspx?Id=0">图书分类</asp:LinkButton>
                         <div>
                             <ul>
                                 <li><a href="#">电子书</a></li>

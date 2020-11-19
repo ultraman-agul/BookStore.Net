@@ -1,3 +1,80 @@
+.showDataList{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    td{
+        z-index: 9;
+        float: left;    
+        overflow: hidden;
+        width: 150px;
+        height: 232px;
+        border: 1px solid #e5e5e5;
+        background-color: #fff;
+        margin: 12px 8px;
+        a{
+            height: 100%;
+            // width: 100%;
+            display: block;
+            color: #737373;
+            background-color: transparent;
+            .img-box{
+                text-align: center;
+                padding-top: 10px;
+                display: block;
+                overflow: hidden;
+                // width: 100%;
+                height: 150px;
+                margin: 0 auto;
+                background-color: #fff;
+                img{
+                    height: 140px;
+                    width: 100px;  
+                    transition: all 0.5s ease-in-out;
+                }
+                img:hover{
+                    // transform: scale(1.15,1.15);
+                    box-shadow: 0 5px 30px rgba(0,0,0,.2);
+                    transform: translate3d(0,-2px,0);
+                }
+            }
+            .info{
+                padding:0 10px; 
+                .bookname{
+                    height: 36px;
+                    display: inline-block;
+                }
+                p{
+                    display: block;
+                    .author{
+                    font-size: 12px;
+                    color: #888888;
+                    }
+                    .specialPrice{
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: red;
+                        span{
+                            color: red;
+                        }
+                    }
+                    .originPrice{
+                        font-size: 10px;
+                        text-decoration: line-through;
+                        color: #8888888;
+                        text-align: right;  
+                        span{
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }   
+        }
+    }  
+}
+
 .mainContainer{
     overflow: hidden;
     width: 1200px;
@@ -61,81 +138,7 @@
         }
         padding-top: 10px;
         float: left;
-        overflow: hidden;
-        
-        .specialList{
-            width: 675px;
-            display: flex;
-            justify-content: center;
-            td{
-                z-index: 9;
-                float: left;    
-                overflow: hidden;
-                width: 150px;
-                height: 232px;
-                border: 1px solid #e5e5e5;
-                background-color: #fff;
-                margin: 12px 8px;
-                a{
-                    height: 100%;
-                    // width: 100%;
-                    display: block;
-                    color: #737373;
-                    background-color: transparent;
-                    .img-box{
-                        text-align: center;
-                        padding-top: 10px;
-                        display: block;
-                        overflow: hidden;
-                        // width: 100%;
-                        height: 150px;
-                        margin: 0 auto;
-                        background-color: #fff;
-                        img{
-                            height: 140px;
-                            width: 100px;  
-                            transition: all 0.5s ease-in-out;
-                        }
-                        img:hover{
-                            // transform: scale(1.15,1.15);
-                            box-shadow: 0 5px 30px rgba(0,0,0,.2);
-                            transform: translate3d(0,-2px,0);
-                        }
-                    }
-                    .info{
-                        padding:0 10px; 
-                        .bookname{
-                            height: 36px;
-                            display: inline-block;
-                        }
-                        p{
-                            display: block;
-                            .author{
-                            font-size: 12px;
-                            color: #888888;
-                            }
-                            .specialPrice{
-                                font-size: 16px;
-                                font-weight: 700;
-                                color: red;
-                                span{
-                                    color: red;
-                                }
-                            }
-                            .originPrice{
-                                font-size: 10px;
-                                text-decoration: line-through;
-                                color: #8888888;
-                                text-align: right;  
-                                span{
-                                    text-decoration: line-through;
-                                }
-                            }
-                        }
-                    }   
-                }
-            }    
-            }           
+        overflow: hidden;       
         }
         
     // 右边栏
@@ -168,9 +171,10 @@
             }
         }
         .saleBox{
-            padding: 15px;
+            margin-left: 15px;
             border: 1px solid #dddad8;
             .sales{
+                margin: 0 auto;
                 td{
                     a{
                         overflow: hidden;
@@ -186,7 +190,7 @@
                             overflow: hidden;
                             white-space: nowrap;
                             text-overflow: ellipsis;
-                            width: 150px;
+                            width: 145px;
                         }
                         .pric{
                             float: right;
@@ -207,37 +211,47 @@
             float: left;    
             width: 940px;
             overflow: hidden;
-            background-color: pink;
-            .biaoti1{
+            // background-color: pink;
+            
+            #biaoti1{
                 border-bottom: 2px solid orange;
                 height: 34px;
                 line-height: 34px;
                 a{
-                    display: block;
                     float:left;
                     width: 110px;
                     text-align: center;
                     font-size: 14px;
                 }
                 .active{
-                    font-size: 18px;
-                    background-color: orange;
-                    color:#fff;
-                }
+                font-size: 18px;
+                background-color: orange;
+                color:#fff;
+                }  
             }
-            .commenddl{
-                width: 100%;
+        }
+        .rightContent{  
+            float: right;
+            width: 245px;
+            height: 585px;
+            margin-left: 15px;
+            // background-color:blue;
+            .rightdl{
+                width: 245px;
                 display: flex;
                 justify-content: center;
+                border-right: 1px solid #e5e5e5;
+                border-left: 1px solid #e5e5e5;
+                border-bottom: 1px solid #e5e5e5;
                 td{
                     z-index: 9;
                     float: left;    
                     overflow: hidden;
                     width: 150px;
-                    height: 232px;
+                    height: 170px;
                     border: 1px solid #e5e5e5;
                     background-color: #fff;
-                    margin: 12px 8px;
+                    margin: 8px 8px;
                     a{
                         height: 100%;
                         // width: 100%;
@@ -246,7 +260,7 @@
                         background-color: transparent;
                         .img-box{
                             text-align: center;
-                            padding-top: 10px;
+                            padding-top: 15px;
                             display: block;
                             overflow: hidden;
                             // width: 100%;
@@ -263,56 +277,85 @@
                                 box-shadow: 0 5px 30px rgba(0,0,0,.2);
                                 transform: translate3d(0,-2px,0);
                             }
-                        }
-                        .info{
-                            padding:0 10px; 
-                            .bookname{
-                                height: 36px;
-                                display: inline-block;
-                            }
-                            p{
-                                display: block;
-                                .author{
-                                font-size: 12px;
-                                color: #888888;
-                                }
-                                .specialPrice{
-                                    font-size: 16px;
-                                    font-weight: 700;
-                                    color: red;
-                                    span{
-                                        color: red;
-                                    }
-                                }
-                                .originPrice{
-                                    font-size: 10px;
-                                    text-decoration: line-through;
-                                    color: #8888888;
-                                    text-align: right;  
-                                    span{
-                                        text-decoration: line-through;
-                                    }
-                                }
-                            }
-                        }   
                     }
-                }  
+                }
             }
         }
-        .rightContent{
+        }
+    }
+
+    .newBook{
+        overflow: hidden;
+        margin-top:40px;
+        .leftContent{
+            float: left;    
+            width: 940px;
+            overflow: hidden;
+            // background-color: pink;
+            #biaoti1{
+                border-bottom: 2px solid orange;
+                height: 34px;
+                line-height: 34px;
+                span{
+                    display: block;
+                    width: 110px;
+                    text-align: center;
+                    font-size: 18px; 
+                    background-color: orange;
+                    color:#fff;
+                }
+            }
+
+        }
+        .rightContent{  
             float: right;
             width: 245px;
             height: 585px;
-            background-color:blue;
-            div{
-                margin-top: 17px;
-                img{
-                    width: 245px;
-                    height: 125px;
-                    background-color: green;
+            margin-left: 15px;
+
+            // background-color:blue;
+            .biaoti{
+                border-bottom: 2px solid orange;
+                height: 34px;
+                line-height: 34px;
+                p{
+                    display: block;
+                    width: 110px;
+                    text-align: center;
+                    font-size: 18px; 
+                    background-color: orange;
+                    color:#fff;
+                }
+            }
+            .new-box{
+                padding: 15px;
+                border: 1px solid #dddad8;
+                .newb{
+                    td{
+                        a{
+                            overflow: hidden;
+                            border-top: 1px solid #dddad8;
+                            display: block;
+                            height: 100%;
+                            span{
+                                height: 40px;
+                                line-height: 40px;
+                                float: left;
+                            }
+                            .nam{
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                width: 145px;
+                            }
+                            .pric{
+                                float: right;
+                            }
+                        }
+                        
+                    }
                 }
             }
         }
     }
-
 }
