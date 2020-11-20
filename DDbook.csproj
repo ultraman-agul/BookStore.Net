@@ -79,6 +79,7 @@
     <Content Include="css\login.css" />
     <Content Include="css\masterpage.css" />
     <Content Include="css\register.css" />
+    <Content Include="css\reply.css" />
     <Content Include="css\shoppingCart.css" />
     <Content Include="css\slider.css" />
     <Content Include="css\userInfo.css" />
@@ -112,9 +113,11 @@
     <Content Include="myOrders.aspx" />
     <Content Include="Orders.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="reply.aspx" />
     <Content Include="shoppingCart.aspx" />
     <Content Include="userInfo.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="addBook.aspx.cs">
@@ -181,6 +184,13 @@
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="reply.aspx.cs">
+      <DependentUpon>reply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reply.aspx.designer.cs">
+      <DependentUpon>reply.aspx</DependentUpon>
+    </Compile>
     <Compile Include="shoppingCart.aspx.cs">
       <DependentUpon>shoppingCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -196,6 +206,13 @@
     <Compile Include="userInfo.aspx.designer.cs">
       <DependentUpon>userInfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage.Master" />
@@ -209,6 +226,7 @@
     <Content Include="css\shoppingCart.less" />
     <Content Include="css\userInfo.less" />
     <Content Include="css\bookPackage.less" />
+    <Content Include="css\reply.less" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

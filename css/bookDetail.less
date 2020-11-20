@@ -1,6 +1,7 @@
 .detailContainer{
     width: 1200px;
     margin: 0 auto;
+    padding-bottom: 154px;
     .breadcrumbs{
         font-size: 16px;
         .typelabel{
@@ -93,9 +94,9 @@
             }        
         }
         .tabbox{
+            width: 935px;
+            margin: 50px auto 0;
             border: 1px solid #ccc;
-            margin-top: 50px;
-            height: 400px;
             ul{
                 width: 100%;
                 background-color: #eee;
@@ -113,16 +114,52 @@
                 }
             }
             .description{
-                div{
-                    width: 500px;
-                    padding: 30px;
-                }
                 .normal{
                     display: none;
                     
                 }
                 .current{
                     display:block;
+                }
+                #dv1{
+                    padding: 30px;
+                    width: 95%;
+                }
+                #dv2{
+                    // height: 500px;
+                    overflow: hidden;
+                    .CommentNum{
+                        padding: 0;
+                        span{
+                            display: block;
+                            width: 120px;
+                            text-align: center;
+                            background-color: orange;
+                            color: #fff;
+                            font-size: 18px;
+                            height: 36px;
+                            line-height: 36px;
+                        }
+                        border-bottom: 2px solid orange;
+                    }
+                    .commentdl{
+                        td{
+                            width: 900px;
+                            padding: 20px;
+                            overflow: hidden;
+                            .left{
+                                float: left;
+                            }
+                            .Lcontent{
+                                float: left;
+                                padding-left: 50px;
+                            }
+                            .right{
+                                float: right;
+                            }
+                           
+                        }
+                    }
                 }
             }
         }

@@ -1,6 +1,7 @@
 .detailContainer {
   width: 1200px;
   margin: 0 auto;
+  padding-bottom: 154px;
 }
 .detailContainer .breadcrumbs {
   font-size: 16px;
@@ -93,9 +94,9 @@
   color: aquamarine;
 }
 .detailContainer .mainContain .tabbox {
+  width: 935px;
+  margin: 50px auto 0;
   border: 1px solid #ccc;
-  margin-top: 50px;
-  height: 400px;
 }
 .detailContainer .mainContain .tabbox ul {
   width: 100%;
@@ -113,13 +114,45 @@
   background-color: #fff;
   color: orange;
 }
-.detailContainer .mainContain .tabbox .description div {
-  width: 500px;
-  padding: 30px;
-}
 .detailContainer .mainContain .tabbox .description .normal {
   display: none;
 }
 .detailContainer .mainContain .tabbox .description .current {
   display: block;
+}
+.detailContainer .mainContain .tabbox .description #dv1 {
+  padding: 30px;
+  width: 95%;
+}
+.detailContainer .mainContain .tabbox .description #dv2 {
+  overflow: hidden;
+}
+.detailContainer .mainContain .tabbox .description #dv2 .CommentNum {
+  padding: 0;
+  border-bottom: 2px solid orange;
+}
+.detailContainer .mainContain .tabbox .description #dv2 .CommentNum span {
+  display: block;
+  width: 120px;
+  text-align: center;
+  background-color: orange;
+  color: #fff;
+  font-size: 18px;
+  height: 36px;
+  line-height: 36px;
+}
+.detailContainer .mainContain .tabbox .description #dv2 .commentdl td {
+  width: 900px;
+  padding: 20px;
+  overflow: hidden;
+}
+.detailContainer .mainContain .tabbox .description #dv2 .commentdl td .left {
+  float: left;
+}
+.detailContainer .mainContain .tabbox .description #dv2 .commentdl td .Lcontent {
+  float: left;
+  padding-left: 50px;
+}
+.detailContainer .mainContain .tabbox .description #dv2 .commentdl td .right {
+  float: right;
 }

@@ -89,7 +89,32 @@
                 <div class="description">
                     <div id="dv1" class="current">
                         <asp:Label ID="Label11" runat="server" Text="Label"></asp:Label></div>
-                    <div id="dv2" class="normal">2fsafasdsa</div>
+                    <div id="dv2" class="normal">
+                        <div class="CommentNum">
+                            <span>累计评论(<asp:HyperLink ID="HyperLink2" runat="server" Text="0"></asp:HyperLink>)条</span>
+                        </div>
+                        <asp:DataList ID="CommentDataList" runat="server" CssClass="commentdl" OnItemCommand="CommentCommand" >
+                            <ItemTemplate>
+                                <div class="left">
+                                    <p>
+                                        <asp:Label ID="Label12" runat="server" Text='<%# Eval("LoginName") %>'></asp:Label></p>
+                                    <p>
+                                        <asp:Label ID="Label13" runat="server" Text='<%# Eval("LeaveDate") %>'></asp:Label></p>
+                                </div>
+                                <div class="Lcontent">
+                                    <asp:Label ID="Label14" runat="server" Text='<%# Eval("LeaveContent") %>'></asp:Label>
+                                </div>
+                                <div class="right">
+                                    <asp:LinkButton ID="LinkButton7" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="describe">回复</asp:LinkButton>
+                                </div>                        
+                            </ItemTemplate>
+                        </asp:DataList>
+                        <div class="inputword">
+                            <div class="top"></div>
+                            <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Height="200" MaxLength="500" Width="900"></asp:TextBox>
+                            <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">发表</asp:LinkButton>
+                        </div> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,8 +122,8 @@
     <script src="js/bookDetail.js"></script>
 
 </asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
-</asp:Content>
+<%-- <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
+</asp:Content>--%>
 <%--<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder5" runat="server">
 </asp:Content>--%>
 

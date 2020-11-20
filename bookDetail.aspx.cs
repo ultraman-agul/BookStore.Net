@@ -41,6 +41,7 @@ namespace DDbook
                     db.OffData();
                     Response.Write("<script>alter('连接数据库失败')</script>");
                 }
+                commentData(); // 评论
             }
         }
 
@@ -136,6 +137,40 @@ namespace DDbook
                 db.ExecuteNonQuery("insert into ShoppingCart values(" + Session["USERID"] + "," + id + ",'" + name + "'," + price + ",'" + pic + "',1,1)");
             }
             db.OffData();
+        }
+
+        protected void LinkButton6_Click(object sender, EventArgs e)
+        {
+            if(Session["USERID"] == null)
+            {
+                Response.Write("<script>alert('您尚未登录，请登录');window.location='./login.aspx'</script>");
+            }
+            else
+            {
+                DB db = new DB();
+                string bid = Request.QueryString["Id"].ToString().Trim();
+                string commentlevel = "";
+                string date = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("hh:mm:ss");
+                string sql = "insert into LeaveWord values('"+ bid +"','"+Session["USERID"]+"','"+commentlevel+"','"+TextBox1.Text.Trim()+"','"+date+"')";
+                db.ExecuteNonQuery(sql);
+            }
+        }
+        
+        protected void commentData()
+        {
+            DB db = new DB();
+            string bid = Request.QueryString["Id"].ToString().Trim();
+            string sql = "select LoginName, lw.* from Customer as ct,LeaveWord as lw where ct.Id in (select CustomerID from LeaveWord where BookID = "+bid+ ") and lw.BookID = " +bid;
+            db.LoadExecuteData(sql);
+            CommentDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
+            CommentDataList.DataKeyField = "Id";
+            CommentDataList.DataBind();
+            db.OffData();
+        }
+
+        protected void CommentCommand(object source, DataListCommandEventArgs e)
+        {
+            Response.Redirect("./reply.aspx?Id=" + Request.QueryString["Id"].ToString().Trim() + "&&Lid=" + e.CommandArgument.ToString());
         }
     }
 }

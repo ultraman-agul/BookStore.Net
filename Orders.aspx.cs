@@ -106,7 +106,8 @@ namespace DDbook
             int id1 = rd.Next(1000, 9999);
             string id = DateTime.Now.ToString("yyyyMMddHHffss") + Convert.ToString(id1);
             // 下单时间
-            string date = DateTime.Now.ToString("yyyy-MM-dd");
+            //string date = DateTime.Now.ToString("yyyy-MM-dd");
+            string date = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("hh:mm:ss");
 
             ArrayList BookID = new ArrayList();
             string sql = "select BookID,BookNum from ShoppingCart where CustomerID=" + Session["USERID"] + " and State=1 order by  BookID";

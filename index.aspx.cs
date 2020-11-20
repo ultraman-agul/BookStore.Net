@@ -195,7 +195,7 @@ namespace DDbook
             if(e.CommandName == "describe")
             {
                 string id = e.CommandArgument.ToString();
-                Response.Redirect("~bookDetail.aspx?Id=" + id);
+                Response.Redirect("./bookDetail.aspx?Id=" + id);
             }
         }
 
