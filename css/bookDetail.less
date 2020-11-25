@@ -1,4 +1,5 @@
 .detailContainer{
+    background: url(../images/cool-background\ \(2\).png);
     width: 1200px;
     margin: 0 auto;
     padding-bottom: 154px;
@@ -8,6 +9,7 @@
             color: orange;
         }
     }
+    
     .mainContain{
         .topContent{
             height: 600px;
@@ -97,11 +99,12 @@
             width: 935px;
             margin: 50px auto 0;
             border: 1px solid #ccc;
-            ul{
+            div{
                 width: 100%;
                 background-color: #eee;
                 overflow: hidden;
-                li{
+                a{
+                    display: block;
                     text-align: center;
                     float: left;
                     width: 100px;
@@ -114,20 +117,14 @@
                 }
             }
             .description{
-                .normal{
-                    display: none;
-                    
-                }
-                .current{
-                    display:block;
-                }
+                
                 #dv1{
                     padding: 30px;
                     width: 95%;
                 }
                 #dv2{
                     // height: 500px;
-                    overflow: hidden;
+                    // overflow: hidden;
                     .CommentNum{
                         padding: 0;
                         span{
@@ -148,17 +145,48 @@
                             padding: 20px;
                             overflow: hidden;
                             .left{
+                                width: 300px;
                                 float: left;
+                                height: 50px;
                             }
                             .Lcontent{
+                                width: 300px;
                                 float: left;
-                                padding-left: 50px;
+                                // padding-left: 50px;
+                                font-size: 14px;
+                                height: 50px;
+
                             }
                             .right{
+                                width: 200px;
                                 float: right;
+                                height: 50px;
+
                             }
                            
                         }
+                    }
+                    .inputword{
+                        .top{
+                            padding-left: 100px;
+                            a{
+                                display: inline !important;
+                                width: 20px;
+                            }
+                            i{
+                                color: #aaa !important;
+                            }
+                            .active{
+                                color: orange !important;
+                            }
+                        }
+                       .txtbox{
+                           margin-left: 100px;
+                       }
+                       .gobtn{
+                           margin-left: 400px;
+                           background-color: rgb(138, 223, 126);
+                       }
                     }
                 }
             }

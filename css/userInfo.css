@@ -1,32 +1,32 @@
-.mainContainer {
-  width: 1200px;
-  height: 800px;
-  margin: 0 auto;
-}
-.mainContainer nav {
+nav {
   height: 80px;
   background-color: pink;
   border-bottom: 3px solid orange;
 }
-.mainContainer nav ul {
+nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.mainContainer nav ul li {
+nav ul li {
   text-align: center;
   width: 100px;
   height: 80px;
   line-height: 80px;
   cursor: pointer;
 }
-.mainContainer nav ul li a {
+nav ul li a {
   display: block;
   width: 100px;
   height: 100%;
 }
-.mainContainer nav ul li:hover {
+nav ul li:hover {
   background-color: skyblue;
+}
+.mainContainer {
+  width: 1200px;
+  height: 800px;
+  margin: 0 auto;
 }
 .mainContainer .content {
   padding: 20px;

@@ -1,3 +1,44 @@
 .container {
   padding-bottom: 153px;
+  width: 1200px;
+  margin: 0 auto;
+}
+.container .head {
+  box-sizing: border-box;
+  padding: 15px;
+  height: 100px;
+  border-bottom: 4px solid #ff6666;
+}
+.container .head .logo {
+  float: left;
+}
+.container .head .logo img {
+  float: left;
+  width: 200px;
+  border-radius: 3px;
+}
+.container .head .logo span {
+  height: 70px;
+  font-size: 28px;
+  line-height: 70px;
+  width: 100px;
+}
+.container .head .jindu {
+  margin-left: 50px;
+  float: left;
+}
+.container .head .jindu span {
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  margin: 15px 10px;
+  line-height: 40px;
+  background-color: #f6f6f6;
+  font-size: 14px;
+  font-weight: 700;
+}
+.container .head .jindu .current {
+  color: #fff;
+  background-color: #ff6666;
 }

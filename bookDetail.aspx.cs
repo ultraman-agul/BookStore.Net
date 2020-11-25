@@ -41,7 +41,8 @@ namespace DDbook
                     db.OffData();
                     Response.Write("<script>alter('连接数据库失败')</script>");
                 }
-                commentData(); // 评论
+                CommentNumber(); // 获取评论数量
+                commentData(0); // 评论
             }
         }
 
@@ -53,7 +54,6 @@ namespace DDbook
                 string bookid = Request.QueryString["Id"].ToString().Trim();
                 AddData(bookid);
                 Response.Redirect("~/shoppingCart.aspx");
-
             }
             else
             {
@@ -139,6 +139,7 @@ namespace DDbook
             db.OffData();
         }
 
+        // 发表评论
         protected void LinkButton6_Click(object sender, EventArgs e)
         {
             if(Session["USERID"] == null)
@@ -147,20 +148,33 @@ namespace DDbook
             }
             else
             {
-                DB db = new DB();
-                string bid = Request.QueryString["Id"].ToString().Trim();
-                string commentlevel = "";
-                string date = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("hh:mm:ss");
-                string sql = "insert into LeaveWord values('"+ bid +"','"+Session["USERID"]+"','"+commentlevel+"','"+TextBox1.Text.Trim()+"','"+date+"')";
-                db.ExecuteNonQuery(sql);
+                if (TextBox1.Text.Trim() != null)
+                {
+                    DB db = new DB();
+                    string bid = Request.QueryString["Id"].ToString().Trim();
+                    int commentlevel = Convert.ToInt32(Request.QueryString["Comment"].Trim());
+                    string date = DateTime.Now.ToString("yyyy-MM-dd") + " " + DateTime.Now.ToString("hh:mm:ss");
+                    string sql = "insert into LeaveWord(BookID,CustomerID,CommentLevel,LeaveContent,LeaveDate) values('"+ bid +"','"+Session["USERID"]+"','"+commentlevel+"','"+TextBox1.Text.Trim()+"','"+date+"')";
+                    db.ExecuteNonQuery(sql);
+                    TextBox1.Text = "";
+                    commentData(0);
+                    CommentNumber(); // 获取评论数量
+                }
+                else
+                {
+                    Response.Write("<script>alert('评论内容不能为空');</script>");
+                }
+                
             }
         }
         
-        protected void commentData()
+        // 评论数据
+        protected void commentData(int flag)
         {
+            string selectNum = flag == 0 ? "top 5" : "";
             DB db = new DB();
             string bid = Request.QueryString["Id"].ToString().Trim();
-            string sql = "select LoginName, lw.* from Customer as ct,LeaveWord as lw where ct.Id in (select CustomerID from LeaveWord where BookID = "+bid+ ") and lw.BookID = " +bid;
+            string sql = "select "+ selectNum + " LoginName, lw.* from Customer as ct,LeaveWord as lw where ct.Id in (select CustomerID from LeaveWord where BookID = "+bid+ ") and lw.BookID = " +bid;
             db.LoadExecuteData(sql);
             CommentDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
             CommentDataList.DataKeyField = "Id";
@@ -168,9 +182,55 @@ namespace DDbook
             db.OffData();
         }
 
+        // 点击回复跳转回复页
         protected void CommentCommand(object source, DataListCommandEventArgs e)
         {
-            Response.Redirect("./reply.aspx?Id=" + Request.QueryString["Id"].ToString().Trim() + "&&Lid=" + e.CommandArgument.ToString());
+            Response.Redirect("./reply.aspx?Id=" + Request.QueryString["Id"].ToString().Trim() + "&Lid=" + e.CommandArgument.ToString());
+        }
+
+        // 总的评论条数
+        protected void CommentNumber()
+        {
+            string sql = "select count(*) as number from LeaveWord where BookID=" + Request.QueryString["Id"].ToString();
+            DB db = new DB();
+            Label16.Text = "累计评论(" + db.DataReader(sql,"number")[0].ToString() + ")条";
+        }
+        
+        // 多少星评论
+        protected void LinkButton8_Click(object sender, EventArgs e)
+        {
+            string bid = Request.QueryString["Id"].ToString().Trim();
+            Response.Redirect("./bookDetail.aspx?Id="+bid+"&Comment=1");
+        }
+
+        protected void LinkButton9_Click(object sender, EventArgs e)
+        {
+            string bid = Request.QueryString["Id"].ToString().Trim();
+            Response.Redirect("./bookDetail.aspx?Id=" + bid + "&Comment=2");
+        }
+
+        protected void LinkButton10_Click(object sender, EventArgs e)
+        {
+            string bid = Request.QueryString["Id"].ToString().Trim();
+            Response.Redirect("./bookDetail.aspx?Id=" + bid + "&Comment=3");
+        }
+
+        protected void LinkButton11_Click(object sender, EventArgs e)
+        {
+            string bid = Request.QueryString["Id"].ToString().Trim();
+            Response.Redirect("./bookDetail.aspx?Id=" + bid + "&Comment=4");
+        }
+
+        protected void LinkButton12_Click(object sender, EventArgs e)
+        {
+            string bid = Request.QueryString["Id"].ToString().Trim();
+            Response.Redirect("./bookDetail.aspx?Id=" + bid + "&Comment=5");
+        }
+
+        // 查看更多
+        protected void LinkButton13_Click(object sender, EventArgs e)
+        {
+            commentData(1);
         }
     }
 }

@@ -1,6 +1,50 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Orders.aspx.cs" Inherits="DDbook.Orders" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="./css/Orders.css">
+    <style>
+       .CartData{
+            background-color:#7fffd4;
+            width: 100%;
+        }
+        td .items{
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+        }
+        td .items div{
+            /* float: left; */
+            height: 150px;
+            width: 150px;
+            margin: 20px 20px;
+            line-height: 150px;
+        }
+        td .items div img{
+            width: 100px;
+            height: 140px;
+        }
+        td .items div span{
+            width:80%;
+        }
+
+        td .editItems{
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around; 
+        }
+        td .editItems div{
+            height: 150px;
+            width: 150px;
+            margin: 20px 20px;
+            line-height: 150px;
+        }
+        td .editItems div img{
+            width: 100px;
+            height: 140px;
+        }
+        td .editItems div span{
+            width: 80%;
+        }
+    </style>
 </asp:Content>
 <%--<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>--%>
@@ -8,15 +52,30 @@
 </asp:Content> --%>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <div class="container">
+        <!-- 头部 -->
+        <div class="head">
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/index.aspx">
+                <div class="logo">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/logo.png"/>
+                    <span>购物车</span>
+                </div>
+            </asp:HyperLink>
+            <div class="jindu">
+                <span>我的购物车</span>
+                <span class="current">填写订单</span>
+                <span>完成订单</span>
+            </div>
+        </div>
+        <!-- 头部结束 -->
         <div class="title"><h2>请核对购物车清单</h2></div>
         <div class="showBook">
-        <asp:DataList ID="DataList1" runat="server">
+        <asp:DataList ID="DataList1" runat="server" CssClass="CartData">
             <ItemTemplate>
-                <div class="descTable">
-                    <div class="Oimg">
+                <div class="items">
+                    <div>
                         <img src='./images/img/<%# Eval("Pic") %>' alt="Alternate Text" />
                     </div>
-                    <div class="Oname">
+                    <div>
                         <h3>
                             <asp:Label ID="Label5" runat="server" Text='<%# Eval("BookName") %>'></asp:Label>
                         </h3>
@@ -91,7 +150,6 @@
                 <asp:Button ID="Button2" runat="server" Text="提交订单" OnClick="Button2_Click" />
         </div>
         
-    </div>
     </div>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">

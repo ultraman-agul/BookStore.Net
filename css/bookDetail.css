@@ -1,4 +1,5 @@
 .detailContainer {
+  background: url(../images/cool-background\ \(2\).png);
   width: 1200px;
   margin: 0 auto;
   padding-bottom: 154px;
@@ -98,34 +99,26 @@
   margin: 50px auto 0;
   border: 1px solid #ccc;
 }
-.detailContainer .mainContain .tabbox ul {
+.detailContainer .mainContain .tabbox div {
   width: 100%;
   background-color: #eee;
   overflow: hidden;
 }
-.detailContainer .mainContain .tabbox ul li {
+.detailContainer .mainContain .tabbox div a {
+  display: block;
   text-align: center;
   float: left;
   width: 100px;
   height: 40px;
   line-height: 40px;
 }
-.detailContainer .mainContain .tabbox ul .clickli {
+.detailContainer .mainContain .tabbox div .clickli {
   background-color: #fff;
   color: orange;
-}
-.detailContainer .mainContain .tabbox .description .normal {
-  display: none;
-}
-.detailContainer .mainContain .tabbox .description .current {
-  display: block;
 }
 .detailContainer .mainContain .tabbox .description #dv1 {
   padding: 30px;
   width: 95%;
-}
-.detailContainer .mainContain .tabbox .description #dv2 {
-  overflow: hidden;
 }
 .detailContainer .mainContain .tabbox .description #dv2 .CommentNum {
   padding: 0;
@@ -147,12 +140,38 @@
   overflow: hidden;
 }
 .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .left {
+  width: 300px;
   float: left;
+  height: 50px;
 }
 .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .Lcontent {
+  width: 300px;
   float: left;
-  padding-left: 50px;
+  font-size: 14px;
+  height: 50px;
 }
 .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .right {
+  width: 200px;
   float: right;
+  height: 50px;
+}
+.detailContainer .mainContain .tabbox .description #dv2 .inputword .top {
+  padding-left: 100px;
+}
+.detailContainer .mainContain .tabbox .description #dv2 .inputword .top a {
+  display: inline !important;
+  width: 20px;
+}
+.detailContainer .mainContain .tabbox .description #dv2 .inputword .top i {
+  color: #aaa !important;
+}
+.detailContainer .mainContain .tabbox .description #dv2 .inputword .top .active {
+  color: orange !important;
+}
+.detailContainer .mainContain .tabbox .description #dv2 .inputword .txtbox {
+  margin-left: 100px;
+}
+.detailContainer .mainContain .tabbox .description #dv2 .inputword .gobtn {
+  margin-left: 400px;
+  background-color: #8adf7e;
 }

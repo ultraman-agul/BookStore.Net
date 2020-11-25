@@ -66,7 +66,6 @@
                      <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="* 小破站卖无字天书恐怕不太好" ControlToValidate="TextBox8" ForeColor="Red"></asp:RequiredFieldValidator>
                 </div>
                 
-                
                 <div class="items">
                     <span>单  价：</span>
                     <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>

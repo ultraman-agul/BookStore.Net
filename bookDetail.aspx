@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="bookDetail.aspx.cs" Inherits="DDbook.bookDetail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="./css/bookDetail.css">
+    <link href="./js/jquery-3.5.1.min.js" rel="stylesheet" />
 </asp:Content>
 <%-- <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>--%>
@@ -81,17 +82,17 @@
                     </div>
                 </div>
             </div>
-            <div class="tabbox">
-                <ul>
-                    <li id="tab1" class="clickli">书籍简介</li>
-                    <li id="tab2">评论</li>
-                </ul>
+            <div class="tabbox" id="desc">
+                <div>
+                    <a id="tab1" href="#desc" class="clickli">书籍简介</a>
+                    <a id="tab2" href="#comment">评论</a>
+                </div>
                 <div class="description">
                     <div id="dv1" class="current">
                         <asp:Label ID="Label11" runat="server" Text="Label"></asp:Label></div>
                     <div id="dv2" class="normal">
-                        <div class="CommentNum">
-                            <span>累计评论(<asp:HyperLink ID="HyperLink2" runat="server" Text="0"></asp:HyperLink>)条</span>
+                        <div class="CommentNum" id="comment">
+                           <asp:Label ID="Label16" runat="server" Text="Label"></asp:Label>
                         </div>
                         <asp:DataList ID="CommentDataList" runat="server" CssClass="commentdl" OnItemCommand="CommentCommand" >
                             <ItemTemplate>
@@ -105,14 +106,40 @@
                                     <asp:Label ID="Label14" runat="server" Text='<%# Eval("LeaveContent") %>'></asp:Label>
                                 </div>
                                 <div class="right">
-                                    <asp:LinkButton ID="LinkButton7" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="describe">回复</asp:LinkButton>
+                                    <asp:LinkButton ID="LinkButton7" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="describe">回复(<asp:Label ID="Label15" runat="server" Text='<%# Eval("ReplyNumber") %>'></asp:Label>)</asp:LinkButton>                    
                                 </div>                        
                             </ItemTemplate>
                         </asp:DataList>
+                        <asp:LinkButton ID="LinkButton13" runat="server" OnClick="LinkButton13_Click">查看更多>></asp:LinkButton>
                         <div class="inputword">
-                            <div class="top"></div>
-                            <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Height="200" MaxLength="500" Width="900"></asp:TextBox>
-                            <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">发表</asp:LinkButton>
+                            <div class="top">发表评论
+                                <br />
+                                <asp:ScriptManager runat="server"></asp:ScriptManager>
+                                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                     <ContentTemplate>
+                                <asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton8_Click">
+                                    <i id="i1" class="iconfont icon-aixin1"></i>
+                                </asp:LinkButton>
+                                <asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton9_Click">
+                                    <i id="i2" class="iconfont icon-aixin1"></i>
+                                </asp:LinkButton>
+                               <asp:LinkButton ID="LinkButton10" runat="server" OnClick="LinkButton10_Click">
+                                   <i id="i3" class="iconfont icon-aixin1"></i>
+                               </asp:LinkButton>
+                               <asp:LinkButton ID="LinkButton11" runat="server" OnClick="LinkButton11_Click">
+                                   <i id="i4" class="iconfont icon-aixin1"></i>
+                               </asp:LinkButton>
+                               <asp:LinkButton ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" >
+                                   <i id="i5" class="iconfont icon-aixin1"></i>
+                               </asp:LinkButton>
+                                     </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </div>
+                            <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Height="200" MaxLength="500" Width="700" CssClass="txtbox"></asp:TextBox>
+                            <br>
+                            <br>
+                            <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click" CssClass="gobtn">发表评论 
+                            </asp:LinkButton>
                         </div> 
                     </div>
                 </div>
