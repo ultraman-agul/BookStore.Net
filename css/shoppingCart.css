@@ -1,6 +1,6 @@
 .SCartcontainer {
+  font-size: 14px;
   width: 1200px;
-  background-color: #ccc;
   margin: 0 auto;
   padding-bottom: 153px;
 }
@@ -46,27 +46,83 @@
 .SCartcontainer .listBody .biaoti {
   height: 50px;
   margin-top: 20px;
-  background-color: pink;
   border: 1px solid #ccc;
 }
 .SCartcontainer .listBody .biaoti ul {
+  background-color: #e9e9e9;
   overflow: hidden;
   padding-left: 250px;
 }
 .SCartcontainer .listBody .biaoti ul li {
   line-height: 50px;
   float: left;
-  margin-right: 150px;
+  margin-right: 130px;
+}
+.SCartcontainer .listBody .CartData {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+.SCartcontainer .listBody .CartData td .items {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+.SCartcontainer .listBody .CartData td .items div {
+  height: 150px;
+  width: 150px;
+  margin: 20px 20px;
+  line-height: 150px;
+}
+.SCartcontainer .listBody .CartData td .items div img {
+  width: 100px;
+  height: 140px;
+}
+.SCartcontainer .listBody .CartData td .items div span {
+  width: 80%;
+}
+.SCartcontainer .listBody .CartData td .items div .Mathbtn1 {
+  display: inline-block;
+  background: url(../images//减.png) no-repeat center center;
+  background-size: 20px;
+  border: 1px solid #ccc;
+  width: 20px;
+  height: 20px;
+}
+.SCartcontainer .listBody .CartData td .items div .Mathbtn2 {
+  display: inline-block;
+  background: url(../images//加.png) no-repeat center center;
+  background-size: 20px;
+  border: 1px solid #ccc;
+  width: 20px;
+  height: 20px;
+}
+.SCartcontainer .listBody .CartData td .editItems {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+.SCartcontainer .listBody .CartData td .editItems div {
+  height: 150px;
+  width: 150px;
+  margin: 20px 20px;
+  line-height: 150px;
+}
+.SCartcontainer .listBody .CartData td .editItems div img {
+  width: 100px;
+  height: 140px;
+}
+.SCartcontainer .listBody .CartData td .editItems div span {
+  width: 80%;
 }
 .SCartcontainer .CartBottom {
-  width: 100%;
-  height: 100px;
-  background-color: green;
+  height: 80px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
 }
 .SCartcontainer .CartBottom div {
   margin: 0 auto;
   width: 100%;
-  line-height: 100px;
+  line-height: 80px;
 }
 .SCartcontainer .CartBottom div .pick {
   width: 100px;
@@ -84,10 +140,34 @@
   width: 100px;
   float: right;
 }
-.SCartcontainer .CartBottom div a {
+.SCartcontainer .CartBottom div .go a {
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  height: 80px;
   width: 100px;
-  padding: 10px;
+  text-align: center;
+  background-color: #e54346;
+  transition: all 0.4s;
+}
+.SCartcontainer .CartBottom div .go a:hover {
   background-color: orange;
+  color: #fff;
+}
+.SCartcontainer .CartBottom div .pick {
+  width: 100px;
+}
+.SCartcontainer .CartBottom div .pick a {
+  display: block;
+  height: 80px;
+  width: 100px;
+  text-align: center;
+  background-color: #e54346;
+  transition: all 0.4s;
+}
+.SCartcontainer .CartBottom div .pick a:hover {
+  background-color: orange;
+  color: #fff;
 }
 .SCartcontainer .CartBottom div a:hover {
   color: #fff;

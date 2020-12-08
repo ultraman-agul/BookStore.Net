@@ -1,52 +1,61 @@
-﻿.showDataList{
+﻿
+.showDataList{
     width: 100%;
     display: flex;
     justify-content: center;
-    border-right: 1px solid #e5e5e5;
-    border-left: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
+    border: 1px solid #e5e5e5;
     td{
-        z-index: 9;
-        float: left;    
-        overflow: hidden;
-        width: 150px;
-        height: 232px;
-        border: 1px solid #e5e5e5;
-        background-color: #fff;
-        margin: 12px 8px;
+        width: 299px;
         a{
-            height: 100%;
-            // width: 100%;
+            padding-bottom: 10px;
+            z-index: 9;
+            overflow: hidden;
+            // width: 310px;
+            height:170px;
+            border: 1px solid #e5e5e5;
+            background-color: #fff;
+            margin: 12px 8px 40px;
             display: block;
             color: #737373;
-            background-color: transparent;
+            overflow: hidden;
             .img-box{
+                float: left;
                 text-align: center;
-                padding-top: 10px;
                 display: block;
                 overflow: hidden;
-                // width: 100%;
-                height: 150px;
+                padding: 10px;
+                padding-right: 20px;
                 margin: 0 auto;
                 background-color: #fff;
                 img{
-                    height: 140px;
-                    width: 100px;  
+                    height: 162px;
+                    width: 114px;  
                     transition: all 0.5s ease-in-out;
+                    box-shadow: 5px 5px 20px rgba(0,0,0,.3);
                 }
                 img:hover{
                     // transform: scale(1.15,1.15);
-                    box-shadow: 0 5px 30px rgba(0,0,0,.2);
+                    // box-shadow: 0 5px 30px rgba(0,0,0,.2);
                     transform: translate3d(0,-2px,0);
                 }
             }
             .info{
-                padding:0 10px; 
+                float: left;
+                padding-bottom: 10px; 
                 .bookname{
+                    width: 120px;
                     height: 36px;
                     display: inline-block;
+                    font-weight: 700;
+                    line-height: 36px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 p{
+                    height: 10px;
+                    width: 120px;
+                    padding: 15px 0;
                     display: block;
                     .author{
                     font-size: 12px;
@@ -69,6 +78,9 @@
                             text-decoration: line-through;
                         }
                     }
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }   
         }
@@ -111,15 +123,84 @@
                 background-color: #e9e7e6;
             }
         }
+        .seemore{
+            display: block;
+            width: 100%;
+            height: 48px;
+            width: 250px;
+            padding: 8px 0;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 50px;
+            text-align: center;
+            background-color: #e9e7e6;
+        }
     }
     .Pmain{
         float: right;
         width: 940px;
+        #rotation{
+            width: 940px;
+            height: 310px;
+            position: relative;
+            // left: 261px;
+            // top: 98px;
+            overflow: hidden;
+            img{
+                position: absolute;
+                width: 940px;
+                height: 310px;
+                top:0;
+                left: 0;
+            }
+            #dot_area{
+                height: 9px;
+                padding: 0px;
+                position: absolute;
+                bottom: 45px;
+                right: 34px;
+                cursor: default; /* 规定在这个区域里的鼠标是个指针形状 */ 
+                .dot_li{
+                    width: 5px;
+                    height: 5px;
+                    margin-right: 3px;
+                    display: inline-block;
+                    border-radius: 50%;
+                    border: 2px solid #939393;
+                    background-color: #5c8382;
+                    cursor: pointer;
+                }  
+                li[check='true']{
+                    background-color: white;
+                }            
+            }
+            .arrow_left,.arrow_right{
+                height: 68px;
+                width: 41px;
+                line-height: 68px; /* 设置行高等于div的高度 */
+                text-align: center; 
+                color: white;
+                opacity: 0.5;
+                cursor: pointer;
+            }
+            .arrow_left{
+                position: absolute;
+                top: 125px;
+            }
+            .arrow_right{
+                position: absolute;
+                right: 0px;
+                top: 125px;
+            }
+        }
         nav{
+            margin-top: 20px;
             border-bottom: 2px solid #f6f6f6;
             height: 36px;
             line-height: 36px;
             a{
+                font-size: 20px;
+                font-weight: 800;
                 display: block;
                 width: 80px;
                 text-align: center;
@@ -127,10 +208,13 @@
                 margin-right: 20px;
             }
             .active{
-                border-bottom: 2px solid orange;
+                border-bottom: 3px solid orange;
             }
         }
-        background-color: pink;
+        // background-color: pink;
+        .dl{
+            margin-top: 30px;
+        }
     }
 
 }

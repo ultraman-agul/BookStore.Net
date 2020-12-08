@@ -19,7 +19,7 @@
     <div class="column1">
             <ul>
                 <li>
-                <span><a href="bookPackage.aspx?Id=1">小说</a></span>
+                <span><a href="/users/bookPackage.aspx?Id=1">小说</a></span>
                 <div class="adv">
                 <asp:DataList ID="xiaoShuoDataList" runat="server" OnItemCommand="xiaoShuoDataList_ItemCommand" RepeatColumns="3" CssClass="booktypeTb"> 
                     <ItemTemplate>
@@ -29,7 +29,7 @@
                 </div>
                 </li>
                 <li>
-                    <span><a href="bookPackage.aspx?Id=2">文艺</a></span>
+                    <span><a href="/users/bookPackage.aspx?Id=2">文艺</a></span>
                     <div class="adv">
                         <asp:DataList ID="wenYiDataList" runat="server" OnItemCommand="xiaoShuoDataList_ItemCommand" RepeatColumns="3" CssClass="booktypeTb"> 
                     <ItemTemplate>
@@ -39,7 +39,7 @@
                     </div>
                 </li>
                 <li>
-                    <span><a href="bookPackage.aspx?Id=3">历史</a></span>
+                    <span><a href="/users/bookPackage.aspx?Id=3">历史</a></span>
                     <div class="adv">
                         <asp:DataList ID="liShiDataList" runat="server" OnItemCommand="xiaoShuoDataList_ItemCommand" RepeatColumns="3" CssClass="booktypeTb"> 
                     <ItemTemplate>
@@ -49,7 +49,7 @@
                     </div>
                 </li>
                 <li>
-                    <span><a href="bookPackage.aspx?Id=4">经济</a></span>
+                    <span><a href="/users/bookPackage.aspx?Id=4">经济</a></span>
                     <div class="adv">
                     <asp:DataList ID="jingJiDataList" runat="server" OnItemCommand="xiaoShuoDataList_ItemCommand" RepeatColumns="3" CssClass="booktypeTb"> 
                     <ItemTemplate>
@@ -59,7 +59,7 @@
                     </div>
                 </li>
                 <li>
-                    <span><a href="bookPackage.aspx?Id=5">心理</a></span>
+                    <span><a href="/users/bookPackage.aspx?Id=5">心理</a></span>
                     <div class="adv">
                     <asp:DataList ID="xinLiDataList" runat="server" OnItemCommand="xiaoShuoDataList_ItemCommand" RepeatColumns="3" CssClass="booktypeTb"> 
                     <ItemTemplate>
@@ -69,7 +69,7 @@
                     </div>
                 </li>
                 <li>
-                    <span><a href="bookPackage.aspx?Id=6">生活</a></span>
+                    <span><a href="/users/bookPackage.aspx?Id=6">生活</a></span>
                     <div class="adv">
                         <asp:DataList ID="shengHuoDataList" runat="server" OnItemCommand="xiaoShuoDataList_ItemCommand" RepeatColumns="3" CssClass="booktypeTb"> 
                     <ItemTemplate>
@@ -79,7 +79,7 @@
                     </div>
                 </li>
                 <li>
-                    <span><a href="bookPackage.aspx?Id=7">童书</a></span>
+                    <span><a href="/users/bookPackage.aspx?Id=7">童书</a></span>
                     <div class="adv">
                     <asp:DataList ID="tongShuDataList" runat="server" OnItemCommand="xiaoShuoDataList_ItemCommand" RepeatColumns="3" CssClass="booktypeTb"> 
                     <ItemTemplate>
@@ -89,7 +89,7 @@
                     </div>
                 </li>
                 <li>
-                    <span><a href="bookPackage.aspx?Id=8">科技</a></span>
+                    <span><a href="/users/bookPackage.aspx?Id=8">科技</a></span>
                     <div class="adv">
                         <asp:DataList ID="keJiDataList" runat="server" OnItemCommand="xiaoShuoDataList_ItemCommand" RepeatColumns="3" CssClass="booktypeTb"> 
                     <ItemTemplate>
@@ -99,7 +99,7 @@
                     </div>
                 </li>
                 <li>
-                    <span><a href="bookPackage.aspx?Id=9">原创书</a></span>
+                    <span><a href="/users/bookPackage.aspx?Id=9">原创书</a></span>
                     <div class="adv">
                         <asp:DataList ID="yuanChuangDataList" runat="server" OnItemCommand="xiaoShuoDataList_ItemCommand" RepeatColumns="3" CssClass="booktypeTb"> 
                     <ItemTemplate>
@@ -109,18 +109,19 @@
                     </div>
                 </li>
             </ul>
+        <asp:LinkButton ID="LinkButton15" runat="server" PostBackUrl="~/users/bookPackage.aspx?Id=0" CssClass="seemore">查看更多>></asp:LinkButton>
         </div>
     <!-- 中间部分 -->
     <div class="column2">
         <div id="slider"></div>
         <div class="xianshi">
-            <p>限时秒杀</p>
+            <p class="iconfont icon-xianshiqianggou"> 限时秒杀</p>
         </div>
         <asp:DataList ID="SpecialPriceDataList1" runat="server" RepeatColumns="4" OnItemCommand="DataList1_ItemCommand" CssClass="showDataList" DataKeyField="Id">
             <ItemTemplate>
                 <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("Id")%>' CommandName="discribe">
                     <span class="img-box">
-                        <img src="./images/img/<%# Eval("Pic") %>"/>
+                        <img src="/images/img/<%# Eval("Pic") %>"/>
                     </span> 
                     <div class="info">
                         <asp:Label ID="Label1" CssClass="bookname" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
@@ -153,7 +154,7 @@
             </a>
         </div>
             <div class="biaoti">
-                <p>畅销榜</p>
+                <p class="iconfont icon-hot">畅销榜</p>
             </div>
         <div class="saleBox">
             <asp:DataList ID="SalesDataList" CssClass="sales" runat="server" OnItemCommand="SalesDataList_ItemCommand">
@@ -215,11 +216,35 @@
                  </asp:UpdatePanel>
         </div>
         <div class="rightContent">
+            <div class="biaoti">
+                <p class="iconfont icon-paihangbang-">龙虎榜</p>
+            </div>
             <asp:DataList ID="rightCommendDataList" runat="server" OnItemCommand="rightCommendCommand" CssClass="rightdl">
                 <ItemTemplate>
                     <asp:LinkButton ID="LinkButton12" runat="server" CommandArgument='<%# Eval("Id")%>' CommandName="describe">
-                        <div class="img-box">
-                        <img src='./images/img/<%# Eval("Pic") %>' /></div>
+                      <span class="img-box">
+                            <img src="/images/img/<%# Eval("Pic") %>"/>
+                        </span> 
+                        <div class="info">
+                            <h3><asp:Label ID="Label1" CssClass="bookname" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
+                            </h3>
+                        <p>
+                            <asp:Label ID="Label4" CssClass="author" runat="server" Text='<%# Eval("Author") %>'></asp:Label>
+                        </p>
+                        <p>
+                            <span class="specialPrice">
+                                ￥
+                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("SpecialPrice") %>'></asp:Label>
+                            </span>
+                            <span class="originPrice">
+                                ￥
+                                <asp:Label ID="Label3" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
+                            </span>
+                        </p>
+                        <p>
+                            <asp:Label ID="Label5" runat="server" Text='<%# Eval("Description") %>'></asp:Label>
+                        </p>
+                        </div>
                     </asp:LinkButton>
                 </ItemTemplate>
             </asp:DataList>
@@ -259,7 +284,7 @@
         </div>
         <div class="rightContent">
             <div class="biaoti">
-                <p>新书榜</p>
+                <p class="iconfont icon-paihangbang">新书榜</p>
             </div>
             <div class="new-box">
                 <asp:DataList ID="newBookRankDataList" runat="server" OnItemCommand="newBookRankCommand" CssClass="newb">

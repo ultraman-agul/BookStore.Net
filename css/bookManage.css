@@ -1,0 +1,86 @@
+.connav {
+  background-color: pink;
+  width: 100%;
+  border-bottom: 2px solid orange;
+  border-top: 2px solid orange;
+}
+.connav nav {
+  width: 1200px;
+  height: 80px;
+}
+.connav nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.connav nav ul li {
+  font-size: 16px;
+  border-radius: 4px;
+  transition: all 0.8s;
+  text-align: center;
+  width: 100px;
+  height: 80px;
+  line-height: 80px;
+  cursor: pointer;
+}
+.connav nav ul li a {
+  display: block;
+  width: 100px;
+  height: 100%;
+}
+.connav nav ul li:hover {
+  background-color: skyblue;
+}
+.ManageCon {
+  width: 1600px;
+  margin: 0 auto;
+  padding-bottom: 153px;
+  font-size: 14px;
+}
+.ManageCon table {
+  margin: 15px auto;
+  border: 0;
+}
+.ManageCon table img {
+  height: 140px;
+  width: 100px;
+}
+.ManageCon table th {
+  font-size: 18px;
+  background-color: #FF5675;
+  color: #FFFFFF;
+  padding: 4px;
+  border-collapse: collapse;
+  border: 1px solid #fe2047;
+  border-width: 1px 0 1px 0;
+  border: 2px inset #ffffff;
+}
+.ManageCon table tr {
+  border: 1px solid #ffffff;
+}
+.ManageCon table tr td {
+  padding: 4px;
+  border-collapse: collapse;
+  border: 1px solid #fe2047;
+  border-width: 1px 0 1px 0;
+  border: 2px inset #ffffff;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ManageCon table tr td .mlength {
+  display: block;
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.ManageCon table tr:nth-child(odd) {
+  background-color: #fec6d1;
+}
+.ManageCon table tr:nth-child(even) {
+  background-color: #fff;
+}

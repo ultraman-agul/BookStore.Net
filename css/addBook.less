@@ -2,94 +2,97 @@
 .mainContainer{
     width: 1200px;
     margin: 0 auto;
-    nav{
-        height: 80px;
-        background-color: pink;
-        border-bottom: 3px solid orange;
-        ul{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            li{
-                text-align: center;
+    overflow: hidden;
+    background-color: skyblue;
+    height: 860px;
+    padding-bottom: 85px;
+        .rightcontent{
+        
+        border-left: 2px solid orange;
+        float: left;
+        padding-top: 50px;
+        padding-left: 200px;
+        font-size: 18px;
+        table{
+            .left{
                 width: 100px;
-                height: 80px;
-                line-height: 80px;
-                cursor: pointer;
-                a{
-                    display: block;
+            }
+            tr{
+                margin-bottom: 10px;
+            }
+            td{
+                height: 40px;
+                line-height: 40px;
+                input{
+                    width: 250px;
+                    height: 28px;
+                    font-size: 16px;
+                }
+                textarea{
+                    width: 300px;
+                    font-size: 18px;
+                }
+                .number{
                     width: 100px;
-                    height: 100%;
+                }
+                table{
+                    td{
+                        height: 20px;
+                        line-height: 20px;
+                    }
+                }
+                select{
+                    width: 100px;
+                    height: 30px;
+                    font-size: 16px;
                 }
             }
-            li:hover{
-                background-color: skyblue;
+            .rdo{
+                input{
+                    width: 40px;
+                    height: 20px;
+                    
+                }
+            }
+        }
+        .showResult{
+            position: absolute;
+            font-size: 20px;
+            color: red;
+            font-weight: 700;
+            left: 950px;
+            // top: -50px;
+            width: 200px;
+            background-color: rgb(163, 248, 163);
+            display: block;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border-radius: 3px;
+        }
+
+        .btn{ 
+            height: 100px;
+            padding: 30px;
+            .btnok{
+                margin-left: 100px;
+                color: orange;
+                width: 160px;
+                background-color: rgb(163, 248, 163);
+                font-size: 20px;  
+                font-weight: 700;
+                text-align: center;
+                height: 50px;
+                line-height: 50px; 
+                border: 0;
+                border-radius: 3px;
+                transition: all 0.8s;
+            }
+            .btnok:hover{
+                background-color: orange;
+                color: rgb(163, 248, 163);
             }
         }
     }
-    .content{
-        overflow: hidden;
-        padding: 20px;
-        background-color: skyblue;
-         .leftcontent{
-            float: left;
-            margin-left: 100px;         
-            p{
-                cursor: pointer;
-                display: block;
-                width: 100px;
-                text-align: center;
-                margin: 10px;
-                a{
-                    width: 100%;
-                    font-size: 22px;
-                }
-            }
-            p:hover{
-                background-color: pink;
-            } 
-         }
-         .rightcontent{
-            float: left;
-            border-left: 2px solid orange;
-            padding: 50px;
-            .showResult{
-                position: absolute;
-                font-size: 24px;
-                color: red;
-                left: 700px;
-
-            }
-            .items{
-                height: 50px;
-            }
-            .publishdate{
-                margin-top: 40px;
-            }
-            .zishu{
-                margin-top: 100px;
-            }
-            .btn{
-                
-                height: 160px;
-                .btnok{
-                    color: green;
-                    background-color: #ccc;
-                    font-size: 20px;  
-                    height: 40px;
-                    width: 70px;
-                    // text-align: center;
-                    // vertical-align: middle;
-                    line-height: 30px; 
-                }
-                .btnok:hover{
-                    background-color: orange;
-                    color: rgb(163, 248, 163);
-                }
-            }
-            // .date{
-            //     padding-left: 50px;
-            // }
-         }
-    }
 }
+

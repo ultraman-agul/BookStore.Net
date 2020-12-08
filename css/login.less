@@ -1,3 +1,6 @@
+body{
+    background: url(../images/cool-background\ \(2\).png) !important;
+}
 .login_main{
     position: relative;
     height: 800px;
@@ -5,25 +8,56 @@
     margin: 0 auto;
     overflow: hidden;
     img{
+        overflow: hidden;
         border-radius: 5px;
-        position: absolute;
-        top: 100px;
-        left: -50%;
+        width: 600px;
+        height: 500px;
+        // padding: 100px;
+        margin-top: 20px;
     }
     .login_box{
         border: 1px solid #aaa;
-        padding: 50px;
+        padding: 30px 80px;
         position: absolute;
-        top: 100px;
-        right: 50px;
+        top: 50px;
+        right: 100px;
         ul{
             li{
+                font-size: 18px;
+                input{
+                    font-size: 18px;
+                    outline: none;
+                }
+                img{
+                    margin:0;
+                    vertical-align: middle;
+                }
                 p{
                     font-size: 18px;
                 }
                 height: 60px;
                 line-height: 60px;
-                
+                table{
+                    td{
+                        padding-right: 20px;
+                    }
+                }
+                .btn{
+                    margin: 0 auto;
+                    width: 200px;
+                    height: 50px;
+                    background-color: #61b15a;
+                    text-align: center;
+                    line-height: 50px;
+                    font-size: 22px;
+                    outline: none;
+                    border:0;
+                    cursor: pointer;
+                }
+                .zhuce{
+                    font-size: 20px;
+                    color: #61b15a;
+                }
             }
         }
     }

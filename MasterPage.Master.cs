@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -17,21 +18,33 @@ namespace DDbook
             {
                 HyperLink1.Text = Session["USERName"].ToString();
                 HyperLink2.Text = "退出";
-                HyperLink2.NavigateUrl = "~/login.aspx";
+                HyperLink2.NavigateUrl = "~/users/login.aspx";
                 HyperLink1.NavigateUrl = "#";
+
+                //头像
+                DB db = new DB();
+                ArrayList al = new ArrayList();
+                al = db.DataReader("select Pic from Customer where Id =" + Session["USERID"], "Pic");
+                Image1.ImageUrl = al[0].ToString() == "" ? "/images/wenhao.png" : "/images/img/"+al[0].ToString();
+                Image1.Visible = true;
             }
             else if (Session["Adminame"] != null && Session["AdminPWD"] != null)
             {
                 HyperLink1.Text = Session["Adminame"].ToString();
                 HyperLink2.Text = "退出";
-                HyperLink2.NavigateUrl = "~/login.aspx";
+                HyperLink2.NavigateUrl = "~/users/login.aspx";
+
+                Image1.Visible = false;
+
             }
             else
             {
                 HyperLink1.Text = "你好，请登录";
-                HyperLink1.NavigateUrl = "~/login.aspx";
+                HyperLink1.NavigateUrl = "~/users/login.aspx";
                 HyperLink2.Text = "注册";
-                HyperLink2.NavigateUrl = "~/register.aspx";
+                HyperLink2.NavigateUrl = "~/users/register.aspx";
+
+                Image1.Visible = false;
             }
 
             if (Session["USERName"] != null && Session["USERPWD"] != null)
@@ -49,6 +62,21 @@ namespace DDbook
                 db.OffData();
             }
 
+
+            
+
+        }
+
+
+        // 搜索
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            string sql = "select * from Book where Name like '%" + TextBox1.Text.Trim() + "%' or Author like '%"+TextBox1.Text.Trim()+"%'" ;
+            DB db = new DB();
+            ArrayList result = db.DataReader(sql, "Id");
+            Session["result"] = result;
+            db.OffData();
+            Response.Redirect("~/users/bookPackage.aspx?id=search");
         }
     }
 }

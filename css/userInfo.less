@@ -1,57 +1,115 @@
-nav{
-    height: 80px;
+.connav{
     background-color: pink;
-    border-bottom: 3px solid orange;
-    ul{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        li{
-            text-align: center;
-            width: 100px;
-            height: 80px;
-            line-height: 80px;
-            cursor: pointer;
-            a{
-                display: block;
+    border-bottom: 2px solid orange;
+    border-top: 2px solid orange;
+    width: 100%;
+    nav{
+        width: 1200px;
+        height: 80px;
+
+        ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            li{
+                font-size: 16px;
+                border-radius: 4px;
+                transition: all 0.8s;
+                text-align: center;
                 width: 100px;
-                height: 100%;
+                height: 80px;
+                line-height: 80px;
+                cursor: pointer;
+                a{
+                    display: block;
+                    width: 100px;
+                    height: 100%;
+                }
             }
-        }
-        li:hover{
-            background-color: skyblue;
+            li:hover{
+                background-color: skyblue;
+            }
         }
     }
 }
 
+
 .mainContainer{
     width: 1200px;
-    height: 800px;
+    height: 582px;
     margin: 0 auto;
-    
-    .content{
-        padding: 20px;
-        background-color: skyblue;
-         .leftcontent{
-            float: left;
-            margin-left: 100px;
-            border-right: 2px solid orange;
-            p{
-                cursor: pointer;
-                display: block;
-                width: 100px;
-                text-align: center;
-                margin: 10px;
-                a{
-                    width: 100%;
-                    font-size: 22px;
+    font-size: 16px;
+    .leftContain{
+        padding:20px;
+        float: left;
+        font-size: 20px;
+        h2{
+            border-bottom: 2px solid orange;
+            margin-bottom: 10px;
+            i{
+                font-size: 30px !important;
+                font-weight: 800 !important;
+            }
+        }
+        p{
+            cursor: pointer;
+            display: block;
+            // width: 100px;
+            text-align: center;
+            margin: 10px;
+            a{
+                width: 100%;
+                font-size: 22px;
+            }
+        }
+        p:hover{
+            background-color: pink;
+        }
+        height: 100%;
+    }
+    .rightContain{
+        h2{
+            padding-top: 20px;
+        }
+        height: 582px;
+        border-left: 2px solid orange;
+        padding-left: 40px;
+        float: left;
+        .mainGV{
+            table{
+                width:100%;
+                margin:5px 0 15px;
+                border:0;
+                th{
+                    font-size: 18px;
+                    background-color:#FF5675;
+                    color:#FFFFFF;
+                    padding:4px;
+                    border-collapse:collapse;
+                    border: 1px solid #fe2047;
+                    border-width:1px 0 1px 0;
+                    border:2px inset #ffffff;            
+                }
+                tr{
+                    border: 1px solid #ffffff;
+
+                    td{
+                        word-break: break-all;
+                        text-align:center;
+                        padding:4px;
+                        border-collapse:collapse;
+                        border: 1px solid #fe2047;
+                        border-width:1px 0 1px 0;
+                        border:2px inset #ffffff;
+                    }
+                }
+                tr:nth-child(odd){
+                    background-color:#fec6d1;
+                }
+                tr:nth-child(even){
+                    background-color: #fff;
                 }
             }
-            p:hover{
-                background-color: pink;
-            }
-            height: 800px;
-            
-         }
+        }
     }
 }

@@ -1,4 +1,5 @@
 .container {
+  font-size: 14px;
   padding-bottom: 153px;
   width: 1200px;
   margin: 0 auto;
@@ -41,4 +42,244 @@
 .container .head .jindu .current {
   color: #fff;
   background-color: #ff6666;
+}
+.container .title h2 {
+  margin: 20px 0;
+}
+.container .showBook .CartData {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+.container .showBook .CartData td .items {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+.container .showBook .CartData td .items div {
+  height: 150px;
+  width: 150px;
+  margin: 20px 20px;
+  line-height: 150px;
+}
+.container .showBook .CartData td .items div img {
+  width: 100px;
+  height: 140px;
+}
+.container .showBook .CartData td .items div span {
+  width: 80%;
+}
+.container .showBook .CartData td .items div .Mathbtn1 {
+  display: inline-block;
+  background: url(../images//减.png) no-repeat center center;
+  background-size: 20px;
+  border: 1px solid #ccc;
+  width: 20px;
+  height: 20px;
+}
+.container .showBook .CartData td .items div .Mathbtn2 {
+  display: inline-block;
+  background: url(../images//加.png) no-repeat center center;
+  background-size: 20px;
+  border: 1px solid #ccc;
+  width: 20px;
+  height: 20px;
+}
+.container .showBook .CartData td .editItems {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+.container .showBook .CartData td .editItems div {
+  height: 150px;
+  width: 150px;
+  margin: 20px 20px;
+  line-height: 150px;
+}
+.container .showBook .CartData td .editItems div img {
+  width: 100px;
+  height: 140px;
+}
+.container .showBook .CartData td .editItems div span {
+  width: 80%;
+}
+.container .info {
+  overflow: hidden;
+}
+.container .info .contBottom {
+  float: left;
+  width: 600px;
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+.container .info .contBottom .addressinfo {
+  padding: 10px;
+}
+.container .info .contBottom .addressinfo h2 {
+  margin-bottom: 10px;
+}
+.container .info .contBottom .addressinfo .addl {
+  margin-left: 100px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.container .info .contBottom .addressinfo .addl td div {
+  padding: 0 20px;
+  margin: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+.container .info .contBottom .addressinfo .addl td div span {
+  margin: 0 10px;
+}
+.container .info .contBottom .addressinfo .addl td div:hover {
+  background-color: #ffce89;
+}
+.container .info .contBottom .addressinfo #addlink {
+  margin-left: 400px;
+  color: blue;
+}
+.container .info .contBottom .addAddress {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  height: 400px;
+  width: 500px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+}
+.container .info .contBottom .addAddress .title {
+  background-color: #aaa;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+}
+.container .info .contBottom .addAddress .title span {
+  float: left;
+  font-size: 16px;
+}
+.container .info .contBottom .addAddress .title a {
+  box-sizing: border-box;
+  font-size: 20px;
+  padding: 0 10px;
+  float: right;
+  height: 40px;
+}
+.container .info .contBottom .addAddress .userinfo {
+  padding: 70px;
+}
+.container .info .contBottom .addAddress .userinfo td {
+  margin-top: 10px;
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+.container .info .contBottom .addAddress .userinfo td input {
+  outline: none;
+  width: 225px;
+  height: 18px;
+  border: 1px solid #aaa;
+}
+.container .info .contBottom .addAddress .userinfo .left {
+  padding-right: 20px;
+}
+.container .info .contBottom .addAddress .userinfo .saveInfo {
+  width: 120px;
+  display: block;
+  background-color: #e74649;
+  text-align: center;
+  border-radius: 2px;
+  height: 22px;
+  line-height: 22px;
+  color: #fff;
+  margin-left: 100px;
+}
+.container .info .contBottom .item {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.container .info .contBottom .item select {
+  margin-left: 100px;
+  font-size: 16px;
+}
+.container .info .contBottom .item textarea {
+  margin-left: 100px;
+  padding: 10px;
+  outline: none;
+}
+.container .info .contBottom .item div {
+  margin-left: 100px;
+}
+.container .info .contBottom .item div a {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ff6666;
+  text-align: center;
+  margin-right: 10px;
+}
+.container .info .contBottom .item div .active {
+  background-color: #ff6666;
+  color: #fff;
+  border: 1px solid #ccc;
+}
+.container .info .rightImg {
+  float: left;
+}
+.container .info .rightImg img {
+  width: 500px;
+}
+.container .apply {
+  margin-top: 10px;
+  background-color: #ccc;
+  overflow: hidden;
+}
+.container .apply .small {
+  padding: 20px;
+  float: right;
+}
+.container .apply .small .num {
+  color: #ff6666;
+}
+.container .apply .small .totalPrice {
+  margin-right: 100px;
+}
+.container .apply .small div {
+  overflow: hidden;
+}
+.container .apply .small div .yun {
+  float: left;
+  display: block;
+  width: 80px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.container .apply .small .totalMon {
+  font-size: 28px;
+  color: #e74649;
+}
+.container .bottom {
+  height: 100px;
+  padding: 30px;
+}
+.container .bottom .btndv {
+  float: left;
+  width: 200px;
+  margin-left: 700px;
+}
+.container .bottom .btndv input {
+  float: right;
+  padding: 18px 49px;
+  cursor: pointer;
+}
+.container .bottom .btngo {
+  float: right;
+}
+.container .bottom .btngo input {
+  float: right;
+  margin-right: 30px;
+  border: none;
+  cursor: pointer;
 }

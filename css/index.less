@@ -5,21 +5,17 @@
     border-right: 1px solid #e5e5e5;
     border-left: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
-    td{
-        z-index: 9;
-        float: left;    
-        overflow: hidden;
-        width: 150px;
-        height: 232px;
-        border: 1px solid #e5e5e5;
-        background-color: #fff;
-        margin: 12px 8px;
-        a{
+    td{ 
+        a{ 
+            overflow: hidden;
+            width: 150px;
+            height: 232px;
+            border: 1px solid #e5e5e5;
+            background-color: #fff;
+            margin: 12px 8px;
             height: 100%;
-            // width: 100%;
             display: block;
             color: #737373;
-            background-color: transparent;
             .img-box{
                 text-align: center;
                 padding-top: 10px;
@@ -114,10 +110,18 @@
                 background-color: #e9e7e6;
             }
         }
-        /*.adv{
-            // padding: 20px;
-        }*/
-        
+        .seemore{
+            display: block;
+            width: 100%;
+            height: 48px;
+            width: 250px;
+            padding: 8px 0;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 50px;
+            text-align: center;
+            background-color: #e9e7e6;
+        }
     }
     // 中间栏
     .column2{
@@ -176,15 +180,21 @@
             .sales{
                 margin: 0 auto;
                 td{
+                    height: 50px;
+                    line-height: 50px;
                     a{
                         overflow: hidden;
                         border-top: 1px solid #dddad8;
                         display: block;
                         height: 100%;
+                        
                         span{
-                            height: 40px;
-                            line-height: 40px;
+                            height: 50px;
+                            line-height: 50px;
                             float: left;
+                        }
+                        span:hover{
+                            color: orange;
                         }
                         .nam{
                             overflow: hidden;
@@ -195,8 +205,7 @@
                         .pric{
                             float: right;
                         }
-                    }
-                    
+                    }   
                 }
             }
         }
@@ -222,6 +231,7 @@
                     width: 110px;
                     text-align: center;
                     font-size: 14px;
+
                 }
                 .active{
                 font-size: 18px;
@@ -235,55 +245,111 @@
             width: 245px;
             height: 585px;
             margin-left: 15px;
-            // background-color:blue;
+            .biaoti{
+                border-bottom: 2px solid orange;
+                height: 34px;
+                line-height: 34px;
+                p{
+                    display: block;
+                    width: 110px;
+                    text-align: center;
+                    font-size: 18px; 
+                    background-color: orange;
+                    color:#fff;
+                }
+            }
             .rightdl{
-                width: 245px;
+                width: 100%;
                 display: flex;
                 justify-content: center;
-                border-right: 1px solid #e5e5e5;
-                border-left: 1px solid #e5e5e5;
-                border-bottom: 1px solid #e5e5e5;
+                border: 1px solid #e5e5e5;
                 td{
-                    z-index: 9;
-                    float: left;    
-                    overflow: hidden;
-                    width: 150px;
-                    height: 170px;
-                    border: 1px solid #e5e5e5;
-                    background-color: #fff;
-                    margin: 8px 8px;
+                    width: 299px;
                     a{
-                        height: 100%;
-                        // width: 100%;
+                        padding-bottom: 10px;
+                        z-index: 9;
+                        overflow: hidden;
+                        // width: 310px;
+                        height:140px;
+                        border: 1px solid #e5e5e5;
+                        background-color: #fff;
+                        margin: 12px 8px 5px;
                         display: block;
                         color: #737373;
-                        background-color: transparent;
+                        overflow: hidden;
                         .img-box{
+                            float: left;
                             text-align: center;
-                            padding-top: 15px;
                             display: block;
                             overflow: hidden;
-                            // width: 100%;
-                            height: 150px;
+                            padding: 3px;
+                            padding-right: 20px;
+                            padding-bottom: 10px;
                             margin: 0 auto;
                             background-color: #fff;
                             img{
-                                height: 140px;
-                                width: 100px;  
+                                margin-top: 10px;
+                                height: 120px;
+                                width: 80px;  
                                 transition: all 0.5s ease-in-out;
+                                box-shadow: 5px 5px 20px rgba(0,0,0,.3);
                             }
                             img:hover{
                                 // transform: scale(1.15,1.15);
-                                box-shadow: 0 5px 30px rgba(0,0,0,.2);
+                                // box-shadow: 0 5px 30px rgba(0,0,0,.2);
                                 transform: translate3d(0,-2px,0);
                             }
+                        }
+                        .info{
+                            float: left;
+                            // padding:0 10px; 
+                            .bookname{
+                                width: 120px;
+                                height: 36px;
+                                display: inline-block;
+                                font-weight: 700;
+                                line-height: 36px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                            p{
+                                height: 10px;
+                                width: 120px;
+                                padding: 10px 0;
+                                display: block;
+                                .author{
+                                font-size: 12px;
+                                color: #888888;
+                                }
+                                .specialPrice{
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    color: red;
+                                    span{
+                                        color: red;
+                                    }
+                                }
+                                .originPrice{
+                                    font-size: 10px;
+                                    text-decoration: line-through;
+                                    color: #8888888;
+                                    text-align: right;  
+                                    span{
+                                        text-decoration: line-through;
+                                    }
+                                }
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
                     }
                 }
             }
-        }
+
         }
     }
-
     .newBook{
         overflow: hidden;
         margin-top:40px;
@@ -328,19 +394,24 @@
                 }
             }
             .new-box{
-                padding: 15px;
+                padding: 0 15px;
                 border: 1px solid #dddad8;
                 .newb{
                     td{
+                        height: 50px;
+                        line-height: 50px;
                         a{
                             overflow: hidden;
                             border-top: 1px solid #dddad8;
                             display: block;
                             height: 100%;
                             span{
-                                height: 40px;
-                                line-height: 40px;
+                                height: 50px;
+                                line-height: 50px;
                                 float: left;
+                            }
+                            span:hover{
+                                color: orange;
                             }
                             .nam{
                                 overflow: hidden;

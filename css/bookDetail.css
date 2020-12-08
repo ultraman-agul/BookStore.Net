@@ -1,50 +1,57 @@
-.detailContainer {
+.box {
   background: url(../images/cool-background\ \(2\).png);
+}
+.box .detailContainer {
   width: 1200px;
   margin: 0 auto;
+  font-size: 16px !important;
   padding-bottom: 154px;
 }
-.detailContainer .breadcrumbs {
+.box .detailContainer .breadcrumbs {
+  height: 30px;
+  line-height: 30px;
   font-size: 16px;
 }
-.detailContainer .breadcrumbs .typelabel {
+.box .detailContainer .breadcrumbs .typelabel {
   color: orange;
 }
-.detailContainer .mainContain .topContent {
-  height: 600px;
+.box .detailContainer .mainContain {
+  padding: 0 50px;
+}
+.box .detailContainer .mainContain .topContent {
   clear: both;
   margin-top: 10px;
   overflow: hidden;
   border: 1px solid #ccc;
   padding: 30px;
 }
-.detailContainer .mainContain .topContent .imgbox {
+.box .detailContainer .mainContain .topContent .imgbox {
   float: left;
   padding: 0 100px;
   height: 394px;
   overflow: hidden;
 }
-.detailContainer .mainContain .topContent .imgbox img {
+.box .detailContainer .mainContain .topContent .imgbox img {
   height: 300px;
   width: auto;
 }
-.detailContainer .mainContain .topContent .bookinfo {
+.box .detailContainer .mainContain .topContent .bookinfo {
   overflow: hidden;
   padding: 30px;
   float: left;
-  width: 500px;
-  background-color: #eee;
+  background-color: #f5f5f5;
+  border-radius: 5px;
 }
-.detailContainer .mainContain .topContent .bookinfo .price {
+.box .detailContainer .mainContain .topContent .bookinfo .price {
   line-height: 24px;
 }
-.detailContainer .mainContain .topContent .bookinfo .price .qianggou {
+.box .detailContainer .mainContain .topContent .bookinfo .price .qianggou {
   background: url(../images/price_bg.png) left top no-repeat;
   padding: 3px 10px;
   line-height: 22px;
   position: relative;
 }
-.detailContainer .mainContain .topContent .bookinfo .price .qianggou span {
+.box .detailContainer .mainContain .topContent .bookinfo .price .qianggou span {
   color: #fff;
   overflow: hidden;
   width: 50px;
@@ -53,58 +60,59 @@
   vertical-align: middle;
   line-height: 22px;
 }
-.detailContainer .mainContain .topContent .bookinfo .price .yuanjia {
-  background-color: #ccc;
+.box .detailContainer .mainContain .topContent .bookinfo .price .yuanjia {
+  background-color: #f5f5f5;
   text-decoration: line-through;
 }
-.detailContainer .mainContain .topContent .bookinfo .attribute {
+.box .detailContainer .mainContain .topContent .bookinfo .attribute {
   margin-bottom: 15px;
   margin-top: 50px;
   padding-bottom: 15px;
   border-bottom: 1px solid #d9d9d9;
 }
-.detailContainer .mainContain .topContent .bookinfo .attribute dl {
+.box .detailContainer .mainContain .topContent .bookinfo .attribute dl {
   font-size: 12px;
   margin: 12px 0;
 }
-.detailContainer .mainContain .topContent .bookinfo .attribute dl dt {
+.box .detailContainer .mainContain .topContent .bookinfo .attribute dl dt {
   display: inline-block;
   width: 60px;
 }
-.detailContainer .mainContain .topContent .bookinfo .attribute dl dd {
+.box .detailContainer .mainContain .topContent .bookinfo .attribute dl dd {
   display: inline;
   margin-left: 70px;
 }
-.detailContainer .mainContain .topContent .bookinfo .buydiv {
+.box .detailContainer .mainContain .topContent .bookinfo .buydiv {
   margin-left: 100px;
   overflow: hidden;
 }
-.detailContainer .mainContain .topContent .bookinfo .buydiv div {
+.box .detailContainer .mainContain .topContent .bookinfo .buydiv div {
   float: left;
 }
-.detailContainer .mainContain .topContent .bookinfo .buydiv div a {
+.box .detailContainer .mainContain .topContent .bookinfo .buydiv div a {
+  font-weight: 600;
   display: block;
   padding: 0 15px;
-  background-color: aquamarine;
+  background-color: #ec5858;
   margin-right: 10px;
   height: 40px;
   line-height: 40px;
 }
-.detailContainer .mainContain .topContent .bookinfo .buydiv div a:hover {
+.box .detailContainer .mainContain .topContent .bookinfo .buydiv div a:hover {
   background-color: orange;
-  color: aquamarine;
+  color: #ec5858;
 }
-.detailContainer .mainContain .tabbox {
-  width: 935px;
-  margin: 50px auto 0;
+.box .detailContainer .mainContain .tabbox {
+  width: 1089px;
+  margin-top: 50px;
   border: 1px solid #ccc;
 }
-.detailContainer .mainContain .tabbox div {
+.box .detailContainer .mainContain .tabbox div {
   width: 100%;
-  background-color: #eee;
+  background-color: #f5f5f5;
   overflow: hidden;
 }
-.detailContainer .mainContain .tabbox div a {
+.box .detailContainer .mainContain .tabbox div a {
   display: block;
   text-align: center;
   float: left;
@@ -112,19 +120,19 @@
   height: 40px;
   line-height: 40px;
 }
-.detailContainer .mainContain .tabbox div .clickli {
+.box .detailContainer .mainContain .tabbox div .clickli {
   background-color: #fff;
   color: orange;
 }
-.detailContainer .mainContain .tabbox .description #dv1 {
+.box .detailContainer .mainContain .tabbox .description #dv1 {
   padding: 30px;
   width: 95%;
 }
-.detailContainer .mainContain .tabbox .description #dv2 .CommentNum {
+.box .detailContainer .mainContain .tabbox .description #dv2 .CommentNum {
   padding: 0;
   border-bottom: 2px solid orange;
 }
-.detailContainer .mainContain .tabbox .description #dv2 .CommentNum span {
+.box .detailContainer .mainContain .tabbox .description #dv2 .CommentNum span {
   display: block;
   width: 120px;
   text-align: center;
@@ -134,44 +142,96 @@
   height: 36px;
   line-height: 36px;
 }
-.detailContainer .mainContain .tabbox .description #dv2 .commentdl td {
-  width: 900px;
+.box .detailContainer .mainContain .tabbox .description #dv2 .commentdl {
+  width: 100%;
+}
+.box .detailContainer .mainContain .tabbox .description #dv2 .commentdl td {
   padding: 20px;
   overflow: hidden;
 }
-.detailContainer .mainContain .tabbox .description #dv2 .commentdl td .left {
+.box .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .left {
   width: 300px;
   float: left;
-  height: 50px;
+  height: 60px;
 }
-.detailContainer .mainContain .tabbox .description #dv2 .commentdl td .Lcontent {
-  width: 300px;
+.box .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .left .imgb {
+  width: 35px;
+}
+.box .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .left .imgb img {
+  height: 35px;
+  width: 35px;
+  border-radius: 16px;
+}
+.box .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .Lcontent {
+  width: 400px;
   float: left;
-  font-size: 14px;
-  height: 50px;
+  font-size: 18px;
+  height: 60px;
 }
-.detailContainer .mainContain .tabbox .description #dv2 .commentdl td .right {
-  width: 200px;
+.box .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .right {
+  width: 100px;
   float: right;
+  height: 60px;
+  text-align: center;
+}
+.box .detailContainer .mainContain .tabbox .description #dv2 div {
+  overflow: hidden;
+}
+.box .detailContainer .mainContain .tabbox .description #dv2 div .more {
   height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #8adf7e;
+  text-align: center;
+  line-height: 50px;
+  float: right;
+  margin-right: 30px;
+  transition: all 0.4s;
 }
-.detailContainer .mainContain .tabbox .description #dv2 .inputword .top {
+.box .detailContainer .mainContain .tabbox .description #dv2 div .more:hover {
+  background-color: orange;
+  color: #fff;
+}
+.box .detailContainer .mainContain .tabbox .description #dv2 .inputword {
+  width: 100%;
+}
+.box .detailContainer .mainContain .tabbox .description #dv2 .inputword .top {
   padding-left: 100px;
+  margin-bottom: 20px;
 }
-.detailContainer .mainContain .tabbox .description #dv2 .inputword .top a {
+.box .detailContainer .mainContain .tabbox .description #dv2 .inputword .top a {
   display: inline !important;
   width: 20px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 700;
 }
-.detailContainer .mainContain .tabbox .description #dv2 .inputword .top i {
-  color: #aaa !important;
+.box .detailContainer .mainContain .tabbox .description #dv2 .inputword .top .active {
+  background-color: orange;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 700;
 }
-.detailContainer .mainContain .tabbox .description #dv2 .inputword .top .active {
-  color: orange !important;
-}
-.detailContainer .mainContain .tabbox .description #dv2 .inputword .txtbox {
+.box .detailContainer .mainContain .tabbox .description #dv2 .inputword .txtbox {
   margin-left: 100px;
 }
-.detailContainer .mainContain .tabbox .description #dv2 .inputword .gobtn {
-  margin-left: 400px;
+.box .detailContainer .mainContain .tabbox .description #dv2 .inputword textarea {
+  font-size: 16px;
+  padding: 10px;
+}
+.box .detailContainer .mainContain .tabbox .description #dv2 .inputword div {
+  width: 100%;
+}
+.box .detailContainer .mainContain .tabbox .description #dv2 .inputword div .gobtn {
+  transition: all 0.4s;
+  display: block;
+  width: 100px;
+  border-radius: 5px;
+  margin-left: 450px;
+  margin-bottom: 50px;
   background-color: #8adf7e;
+}
+.box .detailContainer .mainContain .tabbox .description #dv2 .inputword div .gobtn:hover {
+  background-color: orange;
+  color: #fff;
 }

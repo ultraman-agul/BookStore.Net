@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -31,6 +32,7 @@ namespace DDbook
             newBookData();//新书推荐
             newBookRankData();//新书排行榜
         }
+        
         // 特价
         protected void FillData1()
         {
@@ -47,7 +49,7 @@ namespace DDbook
             if (e.CommandName == "discribe")
             {
                 string id = e.CommandArgument.ToString();
-                Response.Redirect("./BookDetail.aspx?Id=" + id);
+                Response.Redirect("~/users/BookDetail.aspx?Id=" + id);
             }
         }
         // 特价结束
@@ -147,11 +149,12 @@ namespace DDbook
             if (e.CommandName == "discribe")
             {
                 string id = e.CommandArgument.ToString();
-                Response.Redirect("./BookPackage.aspx?Id=" + id);
+                Response.Redirect("/users/bookPackage.aspx?Id=" + id);
             }
         }
         #endregion 分类结束
 
+        // 畅销榜
         protected void SalesData()
         {
             DB db = new DB();
@@ -168,10 +171,11 @@ namespace DDbook
             if (e.CommandName == "discribe")
             {
                 string id = e.CommandArgument.ToString();
-                Response.Redirect("./bookDetail.aspx?Id=" + id);
+                Response.Redirect("~/users/bookDetail.aspx?Id=" + id);
             }
         }
 
+        // 推荐
         protected void CommendData(int typeId)
         {
             DB db = new DB();
@@ -195,10 +199,11 @@ namespace DDbook
             if(e.CommandName == "describe")
             {
                 string id = e.CommandArgument.ToString();
-                Response.Redirect("./bookDetail.aspx?Id=" + id);
+                Response.Redirect("~/users/bookDetail.aspx?Id=" + id);
             }
         }
 
+        // 改变按钮样式
         protected void forClass(LinkButton lkbt)
         {
             LinkButton4.Attributes.Remove("class");
@@ -270,10 +275,11 @@ namespace DDbook
         {
             if(e.CommandName == "describe" )
             {
-                Response.Redirect("./bookDetail.aspx?Id=" + e.CommandArgument.ToString());
+                Response.Redirect("~/users/bookDetail.aspx?Id=" + e.CommandArgument.ToString());
             }
         }
 
+        // 新书推荐
         protected void newBookData()
         {
             DB db = new DB();
@@ -288,10 +294,11 @@ namespace DDbook
         {
             if (e.CommandName == "describe")
             {
-                Response.Redirect("./bookDetail.aspx?Id=" + e.CommandArgument.ToString());
+                Response.Redirect("~/users/bookDetail.aspx?Id=" + e.CommandArgument.ToString());
             }
         }
 
+        // 新书榜
         protected void newBookRankData()
         {
             DB db = new DB();
@@ -306,7 +313,7 @@ namespace DDbook
         {
             if (e.CommandName == "describe")
             {
-                Response.Redirect("./bookDetail.aspx?Id=" + e.CommandArgument.ToString());
+                Response.Redirect("~/users/bookDetail.aspx?Id=" + e.CommandArgument.ToString());
             }
         }
     }

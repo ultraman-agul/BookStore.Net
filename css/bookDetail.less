@@ -1,9 +1,14 @@
-.detailContainer{
+.box{
     background: url(../images/cool-background\ \(2\).png);
+    .detailContainer{
+    
     width: 1200px;
     margin: 0 auto;
+    font-size: 16px !important;
     padding-bottom: 154px;
     .breadcrumbs{
+        height: 30px;
+        line-height: 30px;
         font-size: 16px;
         .typelabel{
             color: orange;
@@ -11,8 +16,8 @@
     }
     
     .mainContain{
+        padding: 0 50px;
         .topContent{
-            height: 600px;
             clear: both;
             margin-top: 10px;
             overflow: hidden;
@@ -32,8 +37,8 @@
                 overflow: hidden;
                 padding: 30px;
                 float: left;
-                width: 500px;
-                background-color: #eee;
+                background-color: #f5f5f5;
+                border-radius: 5px;
                 .price{
                     line-height: 24px;  
                     .qianggou{                  
@@ -52,7 +57,7 @@
                         }
                     }
                     .yuanjia{
-                        background-color: #ccc;
+                        background-color: #f5f5f5;
                         text-decoration: line-through;
                     }
                 }
@@ -80,28 +85,30 @@
                     div{
                         float: left;
                         a{
+                            font-weight: 600;
                             display: block;
                             padding: 0 15px;
-                            background-color: aquamarine;
+                            background-color: #ec5858;
                             margin-right: 10px;
                             height: 40px;
                             line-height: 40px;
                         }
                         a:hover{
                             background-color: orange;
-                            color: aquamarine;
+                            color: #ec5858;
                         }
                     }
                 }           
             }        
         }
         .tabbox{
-            width: 935px;
-            margin: 50px auto 0;
+            width: 1089px;
+            margin-top: 50px;
             border: 1px solid #ccc;
+            // padding-bottom: 50px;
             div{
                 width: 100%;
-                background-color: #eee;
+                background-color: #f5f5f5;
                 overflow: hidden;
                 a{
                     display: block;
@@ -123,8 +130,6 @@
                     width: 95%;
                 }
                 #dv2{
-                    // height: 500px;
-                    // overflow: hidden;
                     .CommentNum{
                         padding: 0;
                         span{
@@ -140,56 +145,109 @@
                         border-bottom: 2px solid orange;
                     }
                     .commentdl{
+                        width: 100%;
                         td{
-                            width: 900px;
                             padding: 20px;
                             overflow: hidden;
                             .left{
                                 width: 300px;
                                 float: left;
-                                height: 50px;
+                                height: 60px;
+                    
+                                .imgb{
+                                    width: 35px;
+                                    img{
+                                      
+                                        height: 35px;
+                                        width: 35px;
+                                        border-radius: 16px;
+                                        // overflow: hidden;
+                                    }
+                                }
                             }
                             .Lcontent{
-                                width: 300px;
+                                width: 400px;
                                 float: left;
-                                // padding-left: 50px;
-                                font-size: 14px;
-                                height: 50px;
+                                font-size: 18px;
+                                height: 60px;
 
                             }
                             .right{
-                                width: 200px;
+                                width: 100px;
                                 float: right;
-                                height: 50px;
-
+                                height: 60px;
+                                text-align: center;
                             }
                            
                         }
                     }
+                    div{
+                        overflow: hidden;
+                        .more{
+                            height: 50px;
+                            width: 100px;
+                            // font-weight: 600;
+                            border-radius: 5px;
+                            background-color: rgb(138, 223, 126);
+                            text-align: center;
+                            line-height: 50px;
+                            float: right;
+                            margin-right: 30px;
+                            transition: all 0.4s;
+                        }
+                        .more:hover{
+                            background-color: orange;
+                            color: #fff;
+                        }
+                    }
+                    
                     .inputword{
+                        width: 100%;
                         .top{
                             padding-left: 100px;
+                            margin-bottom: 20px;
                             a{
                                 display: inline !important;
                                 width: 20px;
-                            }
-                            i{
-                                color: #aaa !important;
+                                height: 30px;
+                                line-height: 30px;
+                                font-weight: 700;
                             }
                             .active{
-                                color: orange !important;
+                                background-color: orange;
+                                border-radius: 12px;
+                                color: #fff;
+                                font-weight: 700;
                             }
                         }
                        .txtbox{
                            margin-left: 100px;
                        }
-                       .gobtn{
-                           margin-left: 400px;
-                           background-color: rgb(138, 223, 126);
+                       textarea{
+                           font-size: 16px;
+                           padding: 10px;
                        }
+                       div{
+                        //    text-align: center;
+                        width: 100%;
+                        .gobtn{
+                            transition: all 0.4s;
+                             display: block;
+                             width: 100px;
+                              border-radius: 5px;
+                             margin-left: 450px;
+                             margin-bottom: 50px;
+                             background-color: rgb(138, 223,126);
+                         }
+                         .gobtn:hover{
+                             background-color: orange;
+                             color: #fff;
+                         }
+                        }
                     }
                 }
             }
         }
+    }
     }
 }

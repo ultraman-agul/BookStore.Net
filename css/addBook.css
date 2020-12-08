@@ -1,87 +1,86 @@
 .mainContainer {
   width: 1200px;
   margin: 0 auto;
-}
-.mainContainer nav {
-  height: 80px;
-  background-color: pink;
-  border-bottom: 3px solid orange;
-}
-.mainContainer nav ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.mainContainer nav ul li {
-  text-align: center;
-  width: 100px;
-  height: 80px;
-  line-height: 80px;
-  cursor: pointer;
-}
-.mainContainer nav ul li a {
-  display: block;
-  width: 100px;
-  height: 100%;
-}
-.mainContainer nav ul li:hover {
-  background-color: skyblue;
-}
-.mainContainer .content {
   overflow: hidden;
-  padding: 20px;
   background-color: skyblue;
+  height: 860px;
+  padding-bottom: 85px;
 }
-.mainContainer .content .leftcontent {
-  float: left;
-  margin-left: 100px;
-}
-.mainContainer .content .leftcontent p {
-  cursor: pointer;
-  display: block;
-  width: 100px;
-  text-align: center;
-  margin: 10px;
-}
-.mainContainer .content .leftcontent p a {
-  width: 100%;
-  font-size: 22px;
-}
-.mainContainer .content .leftcontent p:hover {
-  background-color: pink;
-}
-.mainContainer .content .rightcontent {
-  float: left;
+.mainContainer .rightcontent {
   border-left: 2px solid orange;
-  padding: 50px;
+  float: left;
+  padding-top: 50px;
+  padding-left: 200px;
+  font-size: 18px;
 }
-.mainContainer .content .rightcontent .showResult {
-  position: absolute;
-  font-size: 24px;
-  color: red;
-  left: 700px;
+.mainContainer .rightcontent table .left {
+  width: 100px;
 }
-.mainContainer .content .rightcontent .items {
-  height: 50px;
+.mainContainer .rightcontent table tr {
+  margin-bottom: 10px;
 }
-.mainContainer .content .rightcontent .publishdate {
-  margin-top: 40px;
-}
-.mainContainer .content .rightcontent .zishu {
-  margin-top: 100px;
-}
-.mainContainer .content .rightcontent .btn {
-  height: 160px;
-}
-.mainContainer .content .rightcontent .btn .btnok {
-  color: green;
-  background-color: #ccc;
-  font-size: 20px;
+.mainContainer .rightcontent table td {
   height: 40px;
-  width: 70px;
-  line-height: 30px;
+  line-height: 40px;
 }
-.mainContainer .content .rightcontent .btn .btnok:hover {
+.mainContainer .rightcontent table td input {
+  width: 250px;
+  height: 28px;
+  font-size: 16px;
+}
+.mainContainer .rightcontent table td textarea {
+  width: 300px;
+  font-size: 18px;
+}
+.mainContainer .rightcontent table td .number {
+  width: 100px;
+}
+.mainContainer .rightcontent table td table td {
+  height: 20px;
+  line-height: 20px;
+}
+.mainContainer .rightcontent table td select {
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+}
+.mainContainer .rightcontent table .rdo input {
+  width: 40px;
+  height: 20px;
+}
+.mainContainer .rightcontent .showResult {
+  position: absolute;
+  font-size: 20px;
+  color: red;
+  font-weight: 700;
+  left: 950px;
+  width: 200px;
+  background-color: #a3f8a3;
+  display: block;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  border-radius: 3px;
+}
+.mainContainer .rightcontent .btn {
+  height: 100px;
+  padding: 30px;
+}
+.mainContainer .rightcontent .btn .btnok {
+  margin-left: 100px;
+  color: orange;
+  width: 160px;
+  background-color: #a3f8a3;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  border: 0;
+  border-radius: 3px;
+  transition: all 0.8s;
+}
+.mainContainer .rightcontent .btn .btnok:hover {
   background-color: orange;
   color: #a3f8a3;
 }

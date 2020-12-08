@@ -1,5 +1,109 @@
-.mainContainer {
+.box {
+  background: url(../images/cool-background\ \(2\).png);
+}
+.box .mainContainer {
+  padding-top: 20px;
   padding-bottom: 154px;
   width: 950px;
   margin: 0 auto;
+  font-size: 16px;
+}
+.box .mainContainer .replyDL td .top {
+  padding: 30px;
+  border: 1px solid #ccc;
+}
+.box .mainContainer .replyDL td .top p {
+  color: #999;
+}
+.box .mainContainer .replyDL td .top p img {
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+  border-radius: 17px;
+}
+.box .mainContainer .replyDL td .top p span {
+  color: #000;
+  margin-right: 20px;
+}
+.box .mainContainer .replyDL td .top .content {
+  padding: 20px 40px;
+}
+.box .mainContainer .replyDL td .bookinfo {
+  background-color: #f7f7f7;
+  margin-top: 30px;
+  padding: 30px;
+  overflow: hidden;
+}
+.box .mainContainer .replyDL td .bookinfo .img-box {
+  float: left;
+  margin-right: 25px;
+}
+.box .mainContainer .replyDL td .bookinfo .img-box img {
+  width: 102px;
+  height: 150px;
+}
+.box .mainContainer .replyDL td .bookinfo .txtinfo {
+  width: 750px;
+  float: right;
+}
+.box .mainContainer .replyDL td .bookinfo .txtinfo p h3 {
+  font-weight: 700;
+}
+.box .mainContainer .replyDL td .bookinfo .txtinfo .author {
+  margin: 20px 0;
+}
+.box .mainContainer .fabu {
+  padding: 30px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+.box .mainContainer .fabu h3 {
+  font-weight: 700;
+  font-size: 22px;
+}
+.box .mainContainer .fabu textarea {
+  margin: 20px 0;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+.box .mainContainer .fabu .godv {
+  overflow: hidden;
+}
+.box .mainContainer .fabu .godv .go {
+  float: right;
+  width: 70px;
+  height: 35px;
+  background-color: orange;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+}
+.box .mainContainer .replyContent {
+  margin-top: 30px;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 30px;
+}
+.box .mainContainer .replyContent td {
+  width: 80%;
+  padding: 30px 50px;
+  border-bottom: 1px dotted #999;
+}
+.box .mainContainer .replyContent td p .repImg {
+  height: 35px;
+  width: 35px;
+  border-radius: 16px;
+  vertical-align: middle;
+}
+.box .mainContainer .replyContent td p span {
+  color: #999;
+  margin-right: 30px;
+}
+.box .mainContainer .replyContent td p .content {
+  height: 50px;
+  line-height: 50px;
+  margin-left: 200px;
+  color: #000;
 }

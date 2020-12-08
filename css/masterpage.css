@@ -34,7 +34,7 @@ header .container .login {
   float: left;
 }
 header .container .menu {
-  width: 500px;
+  width: 400px;
   float: right;
 }
 header .container .menu li {
@@ -43,6 +43,17 @@ header .container .menu li {
 header .container .menu li span {
   margin: 0 8px;
   color: #ccc;
+}
+header .container .menu li a {
+  position: relative;
+}
+header .container .menu li a img {
+  left: 20px;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 17px;
+  overflow: hidden;
 }
 .search_container {
   position: relative;
@@ -89,11 +100,15 @@ header .container .menu li span {
   color: #222;
 }
 .search_container .search_input .searchbtn {
-  height: 46px;
+  display: inline-block;
+  height: 40px;
   width: 80px;
+  text-align: center;
+  line-height: 40px;
   background-color: orange;
   border: 3px solid #00c29a;
   font-size: 14px;
+  transition: all 0.5s;
 }
 .search_container .search_input .searchbtn:hover {
   background-color: #00c29a;
@@ -102,17 +117,27 @@ header .container .menu li span {
 .search_container .shoppcart {
   float: left;
   margin-left: 40px;
-  height: 40px;
-  line-height: 40px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+.search_container .shoppcart a {
+  display: block;
+  width: 80px;
+  line-height: 40px;
+  height: 40px;
   padding: 0 13px;
+  text-align: center;
+  transition: all 0.5s;
 }
 .search_container .shoppcart a i {
   font-size: 14px;
 }
 .search_container .shoppcart a span {
   font-size: 14px;
+}
+.search_container .shoppcart a:hover {
+  background-color: orange;
+  color: #fff;
 }
 .search_container .hotsearch {
   position: absolute;
@@ -124,38 +149,44 @@ header .container .menu li span {
   margin-right: 10px;
   color: #aaa;
 }
-nav {
+.connav {
+  width: 100%;
+}
+.connav nav {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  height: 20px;
   position: relative;
   width: 1200px;
   margin: 0 auto;
 }
-nav a {
+.connav nav a {
   font-size: 14px;
   font-weight: 700;
 }
-nav div {
+.connav nav div {
   margin-top: -19px;
   width: 675px;
   margin-left: 265px;
 }
-nav div ul {
+.connav nav div ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-nav div ul li a {
+.connav nav div ul li a {
   border-bottom: 2px solid #fff;
   box-sizing: border-box;
   display: block;
   font-size: 14px;
   font-weight: 700;
-  padding: 10px;
+  padding: 6px;
   padding-top: 0;
 }
-nav div ul a:hover {
+.connav nav div ul a:hover {
   border-bottom: 2px solid #00c29a;
 }
-nav .lasta {
+.connav nav .lasta {
   position: absolute;
   right: 0;
   top: 0;
@@ -163,19 +194,21 @@ nav .lasta {
 .hr {
   border-bottom: 1px solid #eee;
 }
-.aboutme1 {
+.aboutwe {
   border-top: 2px solid #aaa;
+}
+.aboutwe .aboutme1 {
   width: 1200px;
   margin: 0 auto;
   height: 300px;
   padding: 100px;
 }
-.aboutme1 ul li {
+.aboutwe .aboutme1 ul li {
   margin-left: 100px;
   float: left;
   width: 250px;
 }
-.aboutme1 ul li .left {
+.aboutwe .aboutme1 ul li .left {
   margin-right: 20px;
   text-align: center;
   width: 50px;
@@ -186,43 +219,56 @@ nav .lasta {
   background-color: #aaa;
   border-radius: 25px;
 }
-.aboutme1 ul li .left i {
+.aboutwe .aboutme1 ul li .left i {
   font-size: 25px;
   color: #fff;
   vertical-align: middle;
 }
-.aboutme1 ul li .right {
+.aboutwe .aboutme1 ul li .right {
   float: left;
   width: 150px;
 }
-.aboutme1 ul li .right ul li {
+.aboutwe .aboutme1 ul li .right ul li {
   margin: 0;
   line-height: 24px;
 }
-.aboutme1 ul li .right ul li:nth-child(1) {
+.aboutwe .aboutme1 ul li .right ul li:nth-child(1) {
   font-size: 18px;
   line-height: 30px;
 }
-.aboutme1 ul li .right ul li:nth-child(2) {
+.aboutwe .aboutme1 ul li .right ul li:nth-child(2) {
   line-height: 30px;
   font-size: 14px;
 }
-.aboutme1 ul li .right ul li:nth-child(4),
-.aboutme1 ul li .right ul li:nth-child(5) {
+.aboutwe .aboutme1 ul li .right ul li:nth-child(4),
+.aboutwe .aboutme1 ul li .right ul li:nth-child(5) {
   height: 50px;
   line-height: 50px;
 }
-.aboutme1 ul li .right ul li:nth-child(4) i,
-.aboutme1 ul li .right ul li:nth-child(5) i {
+.aboutwe .aboutme1 ul li .right ul li:nth-child(4) i,
+.aboutwe .aboutme1 ul li .right ul li:nth-child(5) i {
   font-size: 30px;
   margin-right: 0px;
   vertical-align: middle;
   margin-right: 10px;
   color: #aaa;
 }
-.aboutme1 ul li .right ul li:nth-child(4) i:hover,
-.aboutme1 ul li .right ul li:nth-child(5) i:hover {
+.aboutwe .aboutme1 ul li .right ul li:nth-child(4) i:hover,
+.aboutwe .aboutme1 ul li .right ul li:nth-child(5) i:hover {
   color: orange;
+}
+.aboutwe .aboutme1 ul li .right ul #wechat {
+  position: relative;
+}
+.aboutwe .aboutme1 ul li .right ul #wechat #imgbox {
+  position: absolute;
+  left: 100px;
+  top: -10px;
+  width: 90px;
+  display: none;
+}
+.aboutwe .aboutme1 ul li .right ul #wechat #imgbox img {
+  width: 100px;
 }
 footer {
   box-sizing: border-box;

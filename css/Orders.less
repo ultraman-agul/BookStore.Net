@@ -1,4 +1,5 @@
 .container{
+    font-size: 14px;
     padding-bottom: 153px;
     width: 1200px;
     // background-color: #ccc;
@@ -39,6 +40,266 @@
             .current{
                 color: #fff;
                 background-color: #ff6666;
+            }
+        }
+    }
+
+    .title{
+        h2{
+            margin: 20px 0;
+        }
+    }
+
+    .showBook{
+        .CartData{
+            // background-color:#7fffd4;
+            border: 1px solid #ccc;
+            width: 100%;
+            td{
+                .items{
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: space-around;
+                    
+                    div{
+                        height: 150px;
+                        width: 150px;
+                        margin: 20px 20px;
+                        line-height: 150px;
+                        img{
+                            width: 100px;
+                            height: 140px;
+                        }
+                        span{
+                            width: 80%;
+                        }
+                        .Mathbtn1{
+                            display: inline-block;
+                            background: url(../images//减.png) no-repeat center center;
+                            background-size: 20px;
+                            border:1px solid #ccc;
+                            width:20px;
+                            height: 20px;
+                            
+                        }
+                        .Mathbtn2{
+                            display: inline-block;
+                            background: url(../images//加.png) no-repeat center center;
+                            background-size: 20px;
+                            border:1px solid #ccc;
+                            width:20px;
+                            height: 20px;
+                        }
+                    }
+                }
+                .editItems{
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: space-around;
+                    div{
+                        height: 150px;
+                        width: 150px;
+                        margin: 20px 20px;
+                        line-height: 150px;
+                        img{
+                            width: 100px;
+                            height: 140px;
+                        }
+                        span{
+                            width: 80%;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+    .info{
+        overflow: hidden;
+       .contBottom{
+            float: left;
+            width: 600px;
+            margin-top: 30px;
+            border:1px solid #ccc;
+            padding: 20px;
+            .addressinfo{
+                padding: 10px;
+                h2{
+                    margin-bottom: 10px;
+                }
+                .addl{
+                    margin-left: 100px;
+                    border: 1px solid #ccc;
+                    margin-bottom: 20px;
+
+                    td{
+                        div{
+                            padding: 0 20px;
+                            margin: 10px;
+                            height: 30px;
+                            line-height: 30px;
+                            span{
+                                margin: 0 10px;
+                            } 
+                        }
+                        div:hover{
+                            background-color: #ffce89;
+                        }
+                    }
+                    
+                }
+                #addlink{
+                    margin-left: 400px;
+                    color: blue;
+                }
+            }
+            .addAddress{
+                position: absolute;
+                top: 30%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                display: none;
+                height: 400px;
+                width: 500px;
+                border: 2px solid #ccc;
+                background-color: #fff;
+                .title{
+                    background-color: #aaa;
+                    height: 40px;
+                    line-height: 40px;
+                    overflow: hidden;
+                    span{
+                        float: left;
+                        font-size: 16px;
+                    }   
+                    a{
+                        box-sizing: border-box;
+                        font-size: 20px;
+                        padding: 0 10px;
+                        float: right;
+                        height: 40px;
+                    }
+                }
+                .userinfo{
+                    padding: 70px;
+                    td{
+                        margin-top: 10px;
+                        line-height: 25px;
+                        padding-bottom: 20px;
+                        input{
+                            outline: none;
+                            width: 225px;
+                            height: 18px;
+                            border: 1px solid #aaa;
+                        }
+                    }
+                    .left{
+                        padding-right: 20px;
+                    }
+                    .saveInfo{
+                        width: 120px;
+                        display: block;
+                        background-color: #e74649;
+                        text-align: center;
+                        border-radius: 2px;
+                        height: 22px;
+                        line-height: 22px;
+                        color: #fff;
+                        margin-left: 100px;
+                    }
+                }
+            }
+
+            .item{
+                padding: 20px;
+                border-bottom:1px solid #ccc;
+                select{
+                    margin-left: 100px;
+                    font-size: 16px;
+                }
+                textarea{
+                    margin-left: 100px;
+                    padding: 10px;
+                    outline: none;
+                }
+                div{
+                    margin-left: 100px;
+                    a{
+                        display: inline-block;
+                        width: 100px;
+                        height: 30px;
+                        line-height: 30px;
+                        border: 1px solid #ff6666;
+                        text-align: center;
+                        margin-right: 10px;
+                    }
+                    .active{
+                        background-color: #ff6666;
+                        color: #fff;
+                        border: 1px solid #ccc;
+                    }
+                }
+            }
+        } 
+        .rightImg{
+            float: left;
+            img{
+                width: 500px;
+            }
+        }
+    }
+    
+    .apply{
+        margin-top: 10px;
+        background-color: #ccc;
+        overflow: hidden;
+        .small{
+            padding: 20px;
+            float: right;
+            .num{
+                color: #ff6666;
+            }
+            .totalPrice{
+                margin-right: 100px;
+            }
+            div{
+                overflow: hidden;
+                .yun{
+                    float: left;
+                    display: block;
+                    width: 80px;
+                    margin-left: 60px;
+                    margin-right: 60px;
+                }
+            }
+            
+            .totalMon{
+                font-size: 28px;
+                color: #e74649;
+            }
+        }
+        
+    }
+    .bottom{
+        height: 100px;
+        padding: 30px;
+        .btndv{
+            float: left;
+            width: 200px;
+            margin-left: 700px;
+            input{
+                float: right;
+                padding: 18px 49px;
+                cursor: pointer;
+            }
+        }
+        .btngo{
+            float: right;         
+            input{
+                float: right;
+                margin-right: 30px;   
+                border:none;
+                cursor: pointer;
+
             }
         }
     }

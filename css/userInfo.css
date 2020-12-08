@@ -1,54 +1,108 @@
-nav {
-  height: 80px;
+.connav {
   background-color: pink;
-  border-bottom: 3px solid orange;
+  border-bottom: 2px solid orange;
+  border-top: 2px solid orange;
+  width: 100%;
 }
-nav ul {
+.connav nav {
+  width: 1200px;
+  height: 80px;
+}
+.connav nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-nav ul li {
+.connav nav ul li {
+  font-size: 16px;
+  border-radius: 4px;
+  transition: all 0.8s;
   text-align: center;
   width: 100px;
   height: 80px;
   line-height: 80px;
   cursor: pointer;
 }
-nav ul li a {
+.connav nav ul li a {
   display: block;
   width: 100px;
   height: 100%;
 }
-nav ul li:hover {
+.connav nav ul li:hover {
   background-color: skyblue;
 }
 .mainContainer {
   width: 1200px;
-  height: 800px;
+  height: 582px;
   margin: 0 auto;
+  font-size: 16px;
 }
-.mainContainer .content {
+.mainContainer .leftContain {
   padding: 20px;
-  background-color: skyblue;
-}
-.mainContainer .content .leftcontent {
   float: left;
-  margin-left: 100px;
-  border-right: 2px solid orange;
-  height: 800px;
+  font-size: 20px;
+  height: 100%;
 }
-.mainContainer .content .leftcontent p {
+.mainContainer .leftContain h2 {
+  border-bottom: 2px solid orange;
+  margin-bottom: 10px;
+}
+.mainContainer .leftContain h2 i {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+}
+.mainContainer .leftContain p {
   cursor: pointer;
   display: block;
-  width: 100px;
   text-align: center;
   margin: 10px;
 }
-.mainContainer .content .leftcontent p a {
+.mainContainer .leftContain p a {
   width: 100%;
   font-size: 22px;
 }
-.mainContainer .content .leftcontent p:hover {
+.mainContainer .leftContain p:hover {
   background-color: pink;
+}
+.mainContainer .rightContain {
+  height: 582px;
+  border-left: 2px solid orange;
+  padding-left: 40px;
+  float: left;
+}
+.mainContainer .rightContain h2 {
+  padding-top: 20px;
+}
+.mainContainer .rightContain .mainGV table {
+  width: 100%;
+  margin: 5px 0 15px;
+  border: 0;
+}
+.mainContainer .rightContain .mainGV table th {
+  font-size: 18px;
+  background-color: #FF5675;
+  color: #FFFFFF;
+  padding: 4px;
+  border-collapse: collapse;
+  border: 1px solid #fe2047;
+  border-width: 1px 0 1px 0;
+  border: 2px inset #ffffff;
+}
+.mainContainer .rightContain .mainGV table tr {
+  border: 1px solid #ffffff;
+}
+.mainContainer .rightContain .mainGV table tr td {
+  word-break: break-all;
+  text-align: center;
+  padding: 4px;
+  border-collapse: collapse;
+  border: 1px solid #fe2047;
+  border-width: 1px 0 1px 0;
+  border: 2px inset #ffffff;
+}
+.mainContainer .rightContain .mainGV table tr:nth-child(odd) {
+  background-color: #fec6d1;
+}
+.mainContainer .rightContain .mainGV table tr:nth-child(even) {
+  background-color: #fff;
 }

@@ -6,21 +6,16 @@
   border-left: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
 }
-.showDataList td {
-  z-index: 9;
-  float: left;
+.showDataList td a {
   overflow: hidden;
   width: 150px;
   height: 232px;
   border: 1px solid #e5e5e5;
   background-color: #fff;
   margin: 12px 8px;
-}
-.showDataList td a {
   height: 100%;
   display: block;
   color: #737373;
-  background-color: transparent;
 }
 .showDataList td a .img-box {
   text-align: center;
@@ -83,9 +78,6 @@
   float: left;
   padding-right: 15px;
   width: 250px;
-  /*.adv{
-            // padding: 20px;
-        }*/
 }
 .mainContainer .topdv .column1 ul li {
   background-color: #f6f6f6;
@@ -104,6 +96,18 @@
   margin-right: 15px !important;
 }
 .mainContainer .topdv .column1 ul li:nth-child(2n) {
+  background-color: #e9e7e6;
+}
+.mainContainer .topdv .column1 .seemore {
+  display: block;
+  width: 100%;
+  height: 48px;
+  width: 250px;
+  padding: 8px 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
   background-color: #e9e7e6;
 }
 .mainContainer .topdv .column2 {
@@ -160,6 +164,10 @@
 .mainContainer .topdv .column3 .saleBox .sales {
   margin: 0 auto;
 }
+.mainContainer .topdv .column3 .saleBox .sales td {
+  height: 50px;
+  line-height: 50px;
+}
 .mainContainer .topdv .column3 .saleBox .sales td a {
   overflow: hidden;
   border-top: 1px solid #dddad8;
@@ -167,9 +175,12 @@
   height: 100%;
 }
 .mainContainer .topdv .column3 .saleBox .sales td a span {
-  height: 40px;
-  line-height: 40px;
+  height: 50px;
+  line-height: 50px;
   float: left;
+}
+.mainContainer .topdv .column3 .saleBox .sales td a span:hover {
+  color: orange;
 }
 .mainContainer .topdv .column3 .saleBox .sales td a .nam {
   overflow: hidden;
@@ -211,47 +222,102 @@
   height: 585px;
   margin-left: 15px;
 }
+.mainContainer .commend .rightContent .biaoti {
+  border-bottom: 2px solid orange;
+  height: 34px;
+  line-height: 34px;
+}
+.mainContainer .commend .rightContent .biaoti p {
+  display: block;
+  width: 110px;
+  text-align: center;
+  font-size: 18px;
+  background-color: orange;
+  color: #fff;
+}
 .mainContainer .commend .rightContent .rightdl {
-  width: 245px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  border-right: 1px solid #e5e5e5;
-  border-left: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  border: 1px solid #e5e5e5;
 }
 .mainContainer .commend .rightContent .rightdl td {
-  z-index: 9;
-  float: left;
-  overflow: hidden;
-  width: 150px;
-  height: 170px;
-  border: 1px solid #e5e5e5;
-  background-color: #fff;
-  margin: 8px 8px;
+  width: 299px;
 }
 .mainContainer .commend .rightContent .rightdl td a {
-  height: 100%;
+  padding-bottom: 10px;
+  z-index: 9;
+  height: 140px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  margin: 12px 8px 5px;
   display: block;
   color: #737373;
-  background-color: transparent;
+  overflow: hidden;
 }
 .mainContainer .commend .rightContent .rightdl td a .img-box {
+  float: left;
   text-align: center;
-  padding-top: 15px;
   display: block;
   overflow: hidden;
-  height: 150px;
+  padding: 3px;
+  padding-right: 20px;
+  padding-bottom: 10px;
   margin: 0 auto;
   background-color: #fff;
 }
 .mainContainer .commend .rightContent .rightdl td a .img-box img {
-  height: 140px;
-  width: 100px;
+  margin-top: 10px;
+  height: 120px;
+  width: 80px;
   transition: all 0.5s ease-in-out;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
 }
 .mainContainer .commend .rightContent .rightdl td a .img-box img:hover {
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
   transform: translate3d(0, -2px, 0);
+}
+.mainContainer .commend .rightContent .rightdl td a .info {
+  float: left;
+}
+.mainContainer .commend .rightContent .rightdl td a .info .bookname {
+  width: 120px;
+  height: 36px;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 36px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mainContainer .commend .rightContent .rightdl td a .info p {
+  height: 10px;
+  width: 120px;
+  padding: 10px 0;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mainContainer .commend .rightContent .rightdl td a .info p .author {
+  font-size: 12px;
+  color: #888888;
+}
+.mainContainer .commend .rightContent .rightdl td a .info p .specialPrice {
+  font-size: 16px;
+  font-weight: 700;
+  color: red;
+}
+.mainContainer .commend .rightContent .rightdl td a .info p .specialPrice span {
+  color: red;
+}
+.mainContainer .commend .rightContent .rightdl td a .info p .originPrice {
+  font-size: 10px;
+  text-decoration: line-through;
+  color: #888888 8;
+  text-align: right;
+}
+.mainContainer .commend .rightContent .rightdl td a .info p .originPrice span {
+  text-decoration: line-through;
 }
 .mainContainer .newBook {
   overflow: hidden;
@@ -295,8 +361,12 @@
   color: #fff;
 }
 .mainContainer .newBook .rightContent .new-box {
-  padding: 15px;
+  padding: 0 15px;
   border: 1px solid #dddad8;
+}
+.mainContainer .newBook .rightContent .new-box .newb td {
+  height: 50px;
+  line-height: 50px;
 }
 .mainContainer .newBook .rightContent .new-box .newb td a {
   overflow: hidden;
@@ -305,9 +375,12 @@
   height: 100%;
 }
 .mainContainer .newBook .rightContent .new-box .newb td a span {
-  height: 40px;
-  line-height: 40px;
+  height: 50px;
+  line-height: 50px;
   float: left;
+}
+.mainContainer .newBook .rightContent .new-box .newb td a span:hover {
+  color: orange;
 }
 .mainContainer .newBook .rightContent .new-box .newb td a .nam {
   overflow: hidden;

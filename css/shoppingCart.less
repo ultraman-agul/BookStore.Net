@@ -1,6 +1,7 @@
 ﻿.SCartcontainer{
+    font-size: 14px;
     width: 1200px;
-    background-color: #ccc;
+    // background-color: #ccc;
     margin: 0 auto;
     padding-bottom: 153px;
     .head{
@@ -46,47 +47,92 @@
          .biaoti{
             height: 50px;
             margin-top: 20px;
-            background-color: pink;
+            // background-color: pink;
             border: 1px solid #ccc;
             ul{
+                background-color: #e9e9e9;
                 overflow: hidden;
                 padding-left: 250px;
                 li{
                     line-height: 50px;
                     float: left;
-                    margin-right: 150px;
+                    margin-right: 130px;
                 }
             }
         }
-        // .CartData{
-        //     background-color: green;
-        //     td{
-        //         .items{
-        //             overflow: hidden;
+        .CartData{
+            // background-color:#7fffd4;
+            border: 1px solid #ccc;
+            width: 100%;
+            td{
+                .items{
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: space-around;
                     
-        //             div{
-        //                 float: left;
-        //                 height: 150px;
-        //                 margin: 20px 20px;
-        //                 img{
-        //                     width: 100px;
-        //                     height: 140px;
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
+                    div{
+                        height: 150px;
+                        width: 150px;
+                        margin: 20px 20px;
+                        line-height: 150px;
+                        img{
+                            width: 100px;
+                            height: 140px;
+                        }
+                        span{
+                            width: 80%;
+                        }
+                        .Mathbtn1{
+                            display: inline-block;
+                            background: url(../images//减.png) no-repeat center center;
+                            background-size: 20px;
+                            border:1px solid #ccc;
+                            width:20px;
+                            height: 20px;
+                            
+                        }
+                        .Mathbtn2{
+                            display: inline-block;
+                            background: url(../images//加.png) no-repeat center center;
+                            background-size: 20px;
+                            border:1px solid #ccc;
+                            width:20px;
+                            height: 20px;
+                        }
+                    }
+                }
+                .editItems{
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: space-around;
+                    div{
+                        height: 150px;
+                        width: 150px;
+                        margin: 20px 20px;
+                        line-height: 150px;
+                        img{
+                            width: 100px;
+                            height: 140px;
+                        }
+                        span{
+                            width: 80%;
+                        }
+                    } 
+                }
+            }
+        }
 
 
     }
     .CartBottom{
-        width: 100%;
-        height: 100px;
-        background-color: green;
+        // width: 100%;
+        height: 80px;
+        padding-left: 20px;
+        border: 1px solid #ccc;
         div{
             margin: 0 auto;
             width: 100%;
-            line-height: 100px;
+            line-height: 80px;
             .pick{
                 width: 100px;
                 float: left;
@@ -102,11 +148,39 @@
             .go{
                 width: 100px;
                 float: right;
+                a{
+                    font-size: 16px;
+                    font-weight: 700;
+                    display: block;
+                    height: 80px;
+                    width: 100px;
+                    text-align: center;
+                    // padding: 10px;
+                    background-color: #e54346;
+                    transition: all 0.4s;
+                }
+                a:hover{
+                    background-color: orange;
+                    color: #fff;
+                }
             }
-            a{
+            .pick{
                 width: 100px;
-                padding: 10px;
-                background-color: orange;
+                // float: right;
+                a{
+                    display: block;
+                    height: 80px;
+                    width: 100px;
+                    text-align: center;
+                    // padding: 10px;
+                    background-color: #e54346;
+                    transition: all 0.4s;
+
+                }
+                a:hover{
+                    background-color: orange;
+                    color: #fff;
+                }
             }
             a:hover{
                 color: #fff;

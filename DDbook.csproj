@@ -67,12 +67,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="addBook.aspx" />
-    <Content Include="bookDetail.aspx" />
-    <Content Include="bookPackage.aspx" />
+    <Content Include="admin\addBook.aspx" />
+    <Content Include="admin\adminShow.aspx" />
+    <Content Include="App_Data\BookShop_data.mdf" />
+    <Content Include="App_Data\BookShop_log.ldf" />
+    <Content Include="users\myInfo.aspx" />
+    <Content Include="users\bookDetail.aspx" />
+    <Content Include="admin\bookManage.aspx" />
+    <Content Include="users\bookPackage.aspx" />
+    <Content Include="admin\comment.aspx" />
     <Content Include="css\addBook.css" />
     <Content Include="css\bookDetail.css" />
+    <Content Include="css\bookManage.css" />
     <Content Include="css\bookPackage.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\buttons.css" />
     <Content Include="css\editOrder.css" />
     <Content Include="css\iconfont.css" />
     <Content Include="css\index.css" />
@@ -83,6 +92,7 @@
     <Content Include="css\shoppingCart.css" />
     <Content Include="css\slider.css" />
     <Content Include="css\userInfo.css" />
+    <Content Include="users\ImageCode.aspx" />
     <Content Include="images\dzs.jpg" />
     <Content Include="images\img1.jpg" />
     <Content Include="images\img2.jpg" />
@@ -109,37 +119,73 @@
     <Content Include="js\bookDetail.js" />
     <Content Include="js\index.js" />
     <Content Include="js\jquery-3.5.1.min.js" />
-    <Content Include="login.aspx" />
-    <Content Include="myOrders.aspx" />
-    <Content Include="Orders.aspx" />
-    <Content Include="register.aspx" />
-    <Content Include="reply.aspx" />
-    <Content Include="shoppingCart.aspx" />
-    <Content Include="userInfo.aspx" />
+    <Content Include="js\order.js" />
+    <Content Include="users\login.aspx" />
+    <Content Include="users\myOrders.aspx" />
+    <Content Include="users\Orders.aspx" />
+    <Content Include="users\register.aspx" />
+    <Content Include="users\reply.aspx" />
+    <Content Include="users\shoppingCart.aspx" />
+    <Content Include="admin\userInfo.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addBook.aspx.cs">
+    <Compile Include="admin\addBook.aspx.cs">
       <DependentUpon>addBook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="addBook.aspx.designer.cs">
+    <Compile Include="admin\addBook.aspx.designer.cs">
       <DependentUpon>addBook.aspx</DependentUpon>
     </Compile>
-    <Compile Include="bookDetail.aspx.cs">
+    <Compile Include="admin\adminShow.aspx.cs">
+      <DependentUpon>adminShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminShow.aspx.designer.cs">
+      <DependentUpon>adminShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\myInfo.aspx.cs">
+      <DependentUpon>myInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\myInfo.aspx.designer.cs">
+      <DependentUpon>myInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\bookDetail.aspx.cs">
       <DependentUpon>bookDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="bookDetail.aspx.designer.cs">
+    <Compile Include="users\bookDetail.aspx.designer.cs">
       <DependentUpon>bookDetail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="bookPackage.aspx.cs">
+    <Compile Include="admin\bookManage.aspx.cs">
+      <DependentUpon>bookManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\bookManage.aspx.designer.cs">
+      <DependentUpon>bookManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\bookPackage.aspx.cs">
       <DependentUpon>bookPackage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="bookPackage.aspx.designer.cs">
+    <Compile Include="users\bookPackage.aspx.designer.cs">
       <DependentUpon>bookPackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\comment.aspx.cs">
+      <DependentUpon>comment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\comment.aspx.designer.cs">
+      <DependentUpon>comment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\ImageCode.aspx.cs">
+      <DependentUpon>ImageCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\ImageCode.aspx.designer.cs">
+      <DependentUpon>ImageCode.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -148,11 +194,11 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="login.aspx.cs">
+    <Compile Include="users\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="login.aspx.designer.cs">
+    <Compile Include="users\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
@@ -162,48 +208,48 @@
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
-    <Compile Include="myOrders.aspx.cs">
+    <Compile Include="users\myOrders.aspx.cs">
       <DependentUpon>myOrders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="myOrders.aspx.designer.cs">
+    <Compile Include="users\myOrders.aspx.designer.cs">
       <DependentUpon>myOrders.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Orders.aspx.cs">
+    <Compile Include="users\Orders.aspx.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Orders.aspx.designer.cs">
+    <Compile Include="users\Orders.aspx.designer.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="register.aspx.cs">
+    <Compile Include="users\register.aspx.cs">
       <DependentUpon>register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="register.aspx.designer.cs">
+    <Compile Include="users\register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="reply.aspx.cs">
+    <Compile Include="users\reply.aspx.cs">
       <DependentUpon>reply.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="reply.aspx.designer.cs">
+    <Compile Include="users\reply.aspx.designer.cs">
       <DependentUpon>reply.aspx</DependentUpon>
     </Compile>
-    <Compile Include="shoppingCart.aspx.cs">
+    <Compile Include="users\shoppingCart.aspx.cs">
       <DependentUpon>shoppingCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="shoppingCart.aspx.designer.cs">
+    <Compile Include="users\shoppingCart.aspx.designer.cs">
       <DependentUpon>shoppingCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="SqlHelper.cs" />
-    <Compile Include="userInfo.aspx.cs">
+    <Compile Include="admin\userInfo.aspx.cs">
       <DependentUpon>userInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="userInfo.aspx.designer.cs">
+    <Compile Include="admin\userInfo.aspx.designer.cs">
       <DependentUpon>userInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
@@ -227,6 +273,8 @@
     <Content Include="css\userInfo.less" />
     <Content Include="css\bookPackage.less" />
     <Content Include="css\reply.less" />
+    <Content Include="css\bookManage.less" />
+    <Content Include="css\myInfo.less" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -236,6 +284,7 @@
     </None>
     <Content Include="Web.sitemap" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

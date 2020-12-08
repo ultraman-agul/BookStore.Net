@@ -1,0 +1,91 @@
+﻿.connav{
+    background-color: pink;
+    width: 100%;
+    border-bottom: 2px solid orange;
+    border-top: 2px solid orange;
+    nav{
+        width: 1200px;
+        height: 80px;
+        ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            li{
+                font-size: 16px;
+                border-radius: 4px;
+                transition: all 0.8s;
+                text-align: center;
+                width: 100px;
+                height: 80px;
+                line-height: 80px;
+                cursor: pointer;
+                a{
+                    display: block;
+                    width: 100px;
+                    height: 100%;
+                }
+            }
+            li:hover{
+                background-color: skyblue;
+            }
+        }
+    }
+}
+
+.ManageCon{
+    width: 1600px;
+    margin: 0 auto;
+    padding-bottom: 153px;
+    font-size: 14px;
+    table{
+        // width:100%;
+        margin:15px auto;
+        border:0;
+        img{
+            height: 140px;
+            width: 100px;
+        }
+        th{
+            font-size: 18px;
+            background-color:#FF5675;
+            color:#FFFFFF;
+            padding:4px;
+            border-collapse:collapse;
+            border: 1px solid #fe2047;
+            border-width:1px 0 1px 0;
+            border:2px inset #ffffff;            
+        }
+        tr{
+            border: 1px solid #ffffff;
+            td{
+                word-break: break-all;
+                text-align:center;
+                padding:4px;
+                border-collapse:collapse;
+                border: 1px solid #fe2047;
+                border-width:1px 0 1px 0;
+                border:2px inset #ffffff;
+                word-wrap: break-word;
+                word-break: break-all;
+                text-align: center;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                .mlength{
+                    display: block;
+                    width: 200px;
+                    overflow: hidden;  
+                    white-space: nowrap;
+                    -o-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+        tr:nth-child(odd){
+            background-color:#fec6d1;
+        }
+        tr:nth-child(even){
+            background-color: #fff;
+        }
+    }
+}
+

@@ -1,3 +1,132 @@
 .Mcontainer {
-  padding-bottom: 154px;
+  padding-bottom: 153px;
+  margin: 0 auto;
+  width: 1200px;
+  font-size: 16px;
+}
+.Mcontainer .head {
+  box-sizing: border-box;
+  padding: 15px;
+  height: 100px;
+  border-bottom: 4px solid #ff6666;
+}
+.Mcontainer .head .logo {
+  float: left;
+}
+.Mcontainer .head .logo img {
+  float: left;
+  width: 200px;
+  border-radius: 3px;
+}
+.Mcontainer .head .logo span {
+  height: 70px;
+  font-size: 28px;
+  line-height: 70px;
+  width: 100px;
+}
+.Mcontainer .head .jindu {
+  margin-left: 50px;
+  float: left;
+}
+.Mcontainer .head .jindu span {
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  margin: 15px 10px;
+  line-height: 40px;
+  background-color: #f6f6f6;
+  font-size: 14px;
+  font-weight: 700;
+}
+.Mcontainer .head .jindu .current {
+  color: #fff;
+  background-color: #ff6666;
+}
+.Mcontainer .search {
+  height: 30px;
+  padding: 30px;
+}
+.Mcontainer .search input {
+  width: 200px;
+  height: 30px;
+  outline: none;
+}
+.Mcontainer .search a {
+  font-size: 22px;
+  display: inline-block;
+  background-color: orange;
+  height: 32px;
+  line-height: 32px;
+  padding: 5px;
+}
+.Mcontainer .search a:hover {
+  color: #fff;
+}
+.Mcontainer .DLdv {
+  padding: 30px 30px 0;
+}
+.Mcontainer .DLdv .orderDL {
+  width: 100%;
+}
+.Mcontainer .DLdv .orderDL td {
+  margin-bottom: 20px;
+}
+.Mcontainer .DLdv .orderDL td .demo {
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+.Mcontainer .DLdv .orderDL td .demo .title {
+  background-color: #eee;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.Mcontainer .DLdv .orderDL td .demo .title h2 {
+  color: #737373;
+  display: inline;
+  margin-right: 50px;
+}
+.Mcontainer .DLdv .orderDL td .demo .title h2 span {
+  color: #006400;
+}
+.Mcontainer .DLdv .orderDL td .demo .innerDL {
+  width: 700px;
+  margin: 0 auto;
+}
+.Mcontainer .DLdv .orderDL td .demo .innerDL tr td {
+  padding: 30px;
+  border-bottom: 1px dotted #737373;
+}
+.Mcontainer .DLdv .orderDL td .demo .innerDL tr td .toplist {
+  overflow: hidden;
+}
+.Mcontainer .DLdv .orderDL td .demo .innerDL tr td .toplist div {
+  float: left;
+  height: 100px;
+  line-height: 100px;
+  margin-right: 50px;
+}
+.Mcontainer .DLdv .orderDL td .demo .innerDL tr td .toplist div img {
+  height: 100px;
+  width: 80px;
+}
+.Mcontainer .DLdv .orderDL td .demo .innerDL tr td .toplist .text div h3 span {
+  color: #737373;
+}
+.Mcontainer .DLdv .orderDL td .demo .bottom {
+  padding-left: 220px;
+}
+.Mcontainer .DLdv .orderDL td .demo .bottom p {
+  height: 40px;
+  line-height: 40px;
+}
+.Mcontainer .DLdv .orderDL td .demo .bottom p .left {
+  display: inline-block;
+  width: 150px;
+}
+.Mcontainer .DLdv .orderDL td .demo .bottom p .totalMoney {
+  font-size: 30px;
+  font-weight: 500;
+  color: #ff6666;
 }

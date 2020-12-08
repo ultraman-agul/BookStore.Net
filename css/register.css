@@ -1,30 +1,75 @@
-.mainContainer {
-  background-color: #f6f9fd;
-  border-top: 1px solid #eee;
+body {
+  background: url(../images/cool-background\ \(2\).png) !important;
 }
-.mainContainer .registerBox {
+.mainContainer {
   height: 700px;
   width: 1200px;
   margin: 0 auto;
-  padding: 50px;
-  background-color: #fff;
+  border-top: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 153px;
+}
+.mainContainer h1 {
+  margin-left: 800px;
+}
+.mainContainer .leftImg {
+  float: left;
+}
+.mainContainer .leftImg #addlink {
+  margin-left: 400px;
+  color: blue;
+}
+.mainContainer .registerBox {
+  float: right;
 }
 .mainContainer .registerBox table {
+  font-size: 18px;
   border-spacing: 2px;
   width: 100%;
-  border: 0;
+  border: 1px solid #aaa;
 }
 .mainContainer .registerBox table tbody {
   vertical-align: middle;
 }
 .mainContainer .registerBox table tbody tr td {
-  width: 300px;
   height: 50px;
   line-height: 50px;
 }
+.mainContainer .registerBox table tbody tr td .xiugai {
+  margin-left: 20px;
+  border-radius: 5px;
+  height: 50px;
+  width: 60px;
+  background-color: #999b84;
+  text-align: center;
+  line-height: 50px;
+  font-size: 22px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+.mainContainer .registerBox table tbody tr td .xiugai:hover,
+.mainContainer .registerBox table tbody tr td .registerbtn:hover {
+  background-color: orange;
+}
+.mainContainer .registerBox table tbody tr td .registerbtn {
+  margin-left: 30px;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #61b15a;
+  text-align: center;
+  line-height: 50px;
+  font-size: 22px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
 .mainContainer .registerBox table tbody tr .left {
-  width: 350px;
+  width: 150px;
   text-align: right;
+  padding-right: 20px;
 }
 .mainContainer .registerBox table tbody tr .right {
   width: 500px;
