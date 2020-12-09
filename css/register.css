@@ -5,16 +5,26 @@ body {
   height: 700px;
   width: 1200px;
   margin: 0 auto;
+  padding-top: 20px;
   border-top: 1px solid #eee;
   position: relative;
   overflow: hidden;
   padding-bottom: 153px;
 }
 .mainContainer h1 {
+  display: inline-block;
+  width: 150px;
   margin-left: 800px;
 }
 .mainContainer .leftImg {
   float: left;
+  margin-top: -28px;
+}
+.mainContainer .leftImg img {
+  overflow: hidden;
+  border-radius: 5px;
+  width: 600px;
+  height: 500px;
 }
 .mainContainer .leftImg #addlink {
   margin-left: 400px;
@@ -37,7 +47,7 @@ body {
   line-height: 50px;
 }
 .mainContainer .registerBox table tbody tr td .xiugai {
-  margin-left: 20px;
+  margin-left: 100px;
   border-radius: 5px;
   height: 50px;
   width: 60px;
@@ -50,11 +60,25 @@ body {
   cursor: pointer;
 }
 .mainContainer .registerBox table tbody tr td .xiugai:hover,
-.mainContainer .registerBox table tbody tr td .registerbtn:hover {
+.mainContainer .registerBox table tbody tr td .registerbtn:hover,
+.mainContainer .registerBox table tbody tr td .registerbtn1:hover {
   background-color: orange;
 }
 .mainContainer .registerBox table tbody tr td .registerbtn {
-  margin-left: 30px;
+  margin-left: 100px;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #61b15a;
+  text-align: center;
+  line-height: 50px;
+  font-size: 22px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+.mainContainer .registerBox table tbody tr td .registerbtn1 {
+  margin-left: 20px;
   width: 200px;
   height: 50px;
   border-radius: 5px;

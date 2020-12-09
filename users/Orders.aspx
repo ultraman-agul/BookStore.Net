@@ -163,6 +163,7 @@
             </div>
         </div>
     </div>
+    <script src="/js/order.js"></script>
 </asp:Content>
 <%-- <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
 </asp:Content>--%>

@@ -1,26 +1,25 @@
 .mainContainer {
-  padding-top: 20px;
+  font-size: 16px;
 }
 .mainContainer .leftImg .addl {
   border: 1px solid #ccc;
   margin-bottom: 20px;
 }
 .mainContainer .leftImg .addl td {
-  width: 80px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   border-bottom: 1px solid #ccc;
 }
 .mainContainer .leftImg .addl td div {
-  padding: 0 20px;
+  padding: 0 10px;
   margin: 10px;
   height: 30px;
   line-height: 30px;
 }
 .mainContainer .leftImg .addl td div span {
   text-align: center;
-  margin: 0 10px;
+  margin: 0 5px;
   width: 100px;
   display: inline-block;
   overflow: hidden;

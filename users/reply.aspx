@@ -13,7 +13,7 @@
             <ItemTemplate>
                 <div class="top">
                     <p>
-                    <asp:Image ID="Image2" runat="server" ImageUrl='<%# string.IsNullOrEmpty(Eval("Pic").ToString()) ? "/images/wenhao.png" : "/images/img/" + Eval("cPic") %>'/>
+                    <asp:Image ID="Image2" runat="server" ImageUrl='<%# string.IsNullOrEmpty(Eval("cPic").ToString()) ? "/images/wenhao.png" : "/images/img/" + Eval("cPic") %>'/>
                 作者：<asp:Label ID="Label1" runat="server" Text='<%# Eval("LoginName") %>'></asp:Label>
                 发布时间：<asp:Label ID="Label2" runat="server" Text='<%# Eval("LeaveDate") %>'></asp:Label>
                     </p>

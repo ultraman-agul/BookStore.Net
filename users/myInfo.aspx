@@ -54,7 +54,9 @@
                     <tbody>
                         <tr>
                             <td class="left">收货人</td><td>
-                                <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox></td>
+                                <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                                
+                                                     </td>
                         </tr>
                         <tr>
                             <td class="left">详细地址</td><td>
@@ -122,7 +124,7 @@
                             </tr>
                         <tr><td colspan="2">
                             <asp:Button ID="Button2" runat="server" Text="修改" CssClass="xiugai" OnClick="Button2_Click"/>
-                            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" CssClass="registerbtn" Text="保存" TabIndex="9" /></td></tr>
+                            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" CssClass="registerbtn1" Text="保存" TabIndex="9" /></td></tr>
                         </tbody>
                     </table>    
                 </div>

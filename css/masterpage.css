@@ -54,6 +54,10 @@ header .container .menu li a img {
   height: 35px;
   border-radius: 17px;
   overflow: hidden;
+  transition: all 1s;
+}
+header .container .menu li a img:hover {
+  transform: rotate(-360deg);
 }
 .search_container {
   position: relative;
