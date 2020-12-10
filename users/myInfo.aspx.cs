@@ -20,8 +20,6 @@ namespace DDbook
                 TextBox2.Text = db.GetValue("Realname");
                 TextBox3.Text = db.GetValue("LinkTel");
                 TextBox7.Text = db.GetValue("PostCode");
-                TextBox4.Text = db.GetValue("Password");
-                TextBox5.Text = db.GetValue("Password");
                 TextBox1.Enabled = TextBox2.Enabled = TextBox3.Enabled= TextBox7.Enabled= TextBox4.Enabled= TextBox5.Enabled= Button1.Enabled = FileUpload1.Enabled = false;
                 db.OffData();
             }

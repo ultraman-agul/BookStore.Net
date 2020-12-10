@@ -71,6 +71,7 @@
     <Content Include="admin\adminShow.aspx" />
     <Content Include="App_Data\BookShop_data.mdf" />
     <Content Include="App_Data\BookShop_log.ldf" />
+    <Content Include="js\login.js" />
     <Content Include="users\myInfo.aspx" />
     <Content Include="users\bookDetail.aspx" />
     <Content Include="admin\bookManage.aspx" />
@@ -284,7 +285,9 @@
     </None>
     <Content Include="Web.sitemap" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="images\img1\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

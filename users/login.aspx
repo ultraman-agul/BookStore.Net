@@ -10,17 +10,25 @@
             <div class="login_main">
                 <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Size="Medium"></asp:SiteMapPath>
                 <br>
-                <img src="/images/book.jpg " alt=" ">
+                <div id="slider">
+                    <img src="/images/img1/img1.jpg" alt=" " class="active">
+                    <img src="/images/img1/img2.jpg" alt=" ">
+                    <img src="/images/img1/img3.jpg" alt=" ">
+
+                </div>
+                
                 <div class="login_box">
                     <ul>
                         <li>
                             <p>密码登陆</p>
                         </li>
                         <li>
-                            <asp:TextBox ID="TextBox1" runat="server" ToolTip="账号" TabIndex="1"></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" ToolTip="账号" TabIndex="1" MaxLength="10"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="非空" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
                         </li>
                         <li>
-                            <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" TabIndex="2" ToolTip="密码">密码</asp:TextBox>
+                            <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" TabIndex="2" ToolTip="密码" MaxLength="20">密码</asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="非空" ControlToValidate="TextBox2"></asp:RequiredFieldValidator>
                         </li>
                         <li>
                             <asp:Label ID="Label1" runat="server" Text="验证码" style="font-size:12px;"></asp:Label>
@@ -34,7 +42,8 @@
                                 }
                               </script>
 
-                            <asp:TextBox ID="tbx_yzm" runat="server" Width="70px" TabIndex="3" ToolTip="验证码"></asp:TextBox>
+                            <asp:TextBox ID="tbx_yzm" runat="server" Width="70px" TabIndex="3" ToolTip="验证码" MaxLength="4"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="非空" ControlToValidate="tbx_yzm"></asp:RequiredFieldValidator>
                         </li>
                         <li>
 
@@ -51,6 +60,8 @@
                     </ul>
                 </div>
             </div>
+        <script src="/js/jquery-3.5.1.min.js"></script>
+        <script src="/js/login.js"></script>
         </asp:Content>
         <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
         </asp:Content>

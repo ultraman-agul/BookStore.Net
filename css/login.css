@@ -8,12 +8,25 @@ body {
   margin: 0 auto;
   overflow: hidden;
 }
-.login_main img {
-  overflow: hidden;
-  border-radius: 5px;
+.login_main #slider {
+  position: relative;
   width: 600px;
   height: 500px;
   margin-top: 20px;
+}
+.login_main #slider img {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+  width: 600px;
+  height: 500px;
+  transition: all 1s;
+  opacity: 0;
+}
+.login_main #slider .active {
+  opacity: 1;
 }
 .login_main .login_box {
   border: 1px solid #aaa;

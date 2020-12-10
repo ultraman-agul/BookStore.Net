@@ -80,24 +80,36 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td class="left">收货人</td><td>
-                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
+                            <td class="left">收货人</td>
+                            <td>
+                                <asp:TextBox ID="TextBox1" runat="server" MaxLength="10"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="非空" ControlToValidate="TextBox1" ValidationGroup="group3"></asp:RequiredFieldValidator>
+                                                     </td>
                         </tr>
                         <tr>
-                            <td class="left">详细地址</td><td>
-                                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>
+                            <td class="left">详细地址</td>
+                            <td>
+                                <asp:TextBox ID="TextBox2" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="非空" ControlToValidate="TextBox2" ValidationGroup="group3"></asp:RequiredFieldValidator>
+                                                      </td>
                         </tr>
                         <tr>
-                            <td class="left">手机号码</td><td>
-                                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></td>
+                            <td class="left">手机号码</td>
+                            <td>
+                                <asp:TextBox ID="TextBox3" runat="server" MaxLength="11"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="非空" ControlToValidate="TextBox3" ValidationGroup="group3"></asp:RequiredFieldValidator>
+                                                      </td>
                         </tr>
                         <tr>
-                            <td class="left">邮政编码</td><td>
-                                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox></td>
+                            <td class="left">邮政编码</td>
+                            <td>
+                                <asp:TextBox ID="TextBox4" runat="server" MaxLength="6"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="非空" ControlToValidate="TextBox4" ValidationGroup="group3"></asp:RequiredFieldValidator>
+                                                      </td>
                         </tr>
                     </tbody>
                 </table>
-                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="saveInfo" OnClick="LinkButton1_Click">保存收货人信息</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="saveInfo" OnClick="LinkButton1_Click" ValidationGroup="group3">保存收货人信息</asp:LinkButton>
             </div>
             </div>
             <div class="item" style="border-top: 1px solid #ccc;">

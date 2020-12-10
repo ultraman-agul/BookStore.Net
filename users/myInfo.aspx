@@ -44,7 +44,7 @@
                 </EditItemTemplate>
                 </asp:DataList>
                     <a id="addlink" href="javascript:void(0)" onclick="showBox()" class="iconfont icon-tianjia">新增收货地址</a>
-                    <div class="addAddress" id="addBox">
+               <div class="addAddress" id="addBox">
                 <div class="title">
                     <span>新增收货人信息</span>
                     <a class="close" id="close" onclick="hideBox()">X</a>
@@ -53,26 +53,41 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td class="left">收货人</td><td>
-                                <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-                                
+                            <td class="left">收货人</td>
+                            <td>
+                                <asp:TextBox ID="TextBox6" runat="server" MaxLength="10"></asp:TextBox>
+
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="非空" ControlToValidate="TextBox6" ValidationGroup="group1"></asp:RequiredFieldValidator>
                                                      </td>
                         </tr>
                         <tr>
-                            <td class="left">详细地址</td><td>
-                                <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox></td>
+                            <td class="left">详细地址</td>
+                            <td>
+                                <asp:TextBox ID="TextBox8" runat="server" MaxLength="50"></asp:TextBox>
+
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="非空" ControlToValidate="TextBox8" ValidationGroup="group1"></asp:RequiredFieldValidator>
+                                                      </td>
                         </tr>
                         <tr>
-                            <td class="left">手机号码</td><td>
-                                <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox></td>
+                            <td class="left">手机号码</td>
+                            <td>
+
+                                <asp:TextBox ID="TextBox9" runat="server" MaxLength="11"></asp:TextBox>
+
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="非空" ControlToValidate="TextBox9" ValidationGroup="group1"></asp:RequiredFieldValidator>
+                                                      </td>
                         </tr>
                         <tr>
-                            <td class="left">邮政编码</td><td>
-                                <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox></td>
+                            <td class="left">邮政编码</td>
+                            <td>
+                                <asp:TextBox ID="TextBox10" runat="server" MaxLength="6"></asp:TextBox>
+                                
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="非空" ControlToValidate="TextBox10" ValidationGroup="group1"></asp:RequiredFieldValidator>
+                                                      </td>
                         </tr>
                     </tbody>
                 </table>
-                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="saveInfo" OnClick="LinkButton1_Click">保存收货人信息</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="saveInfo" OnClick="LinkButton1_Click" ValidationGroup="group1">保存收货人信息</asp:LinkButton>
             </div>
             </div>
             </div>
@@ -82,37 +97,42 @@
                             <tr>
                                 <td class="left">用户名</td>
                                 <td>
-                                    <asp:TextBox ID="TextBox1" runat="server" TabIndex="1"></asp:TextBox>
+                                    <asp:TextBox ID="TextBox1" runat="server" TabIndex="1" MaxLength="10"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="非空" ControlToValidate="TextBox1" ValidationGroup="group2"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="left">真实姓名</td>
                                 <td>
-                                    <asp:TextBox ID="TextBox2" runat="server" TabIndex="2"></asp:TextBox>
+                                    <asp:TextBox ID="TextBox2" runat="server" TabIndex="2" MaxLength="10"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="非空" ControlToValidate="TextBox2" ValidationGroup="group2"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="left">手机号码</td>
                                 <td>
-                                    <asp:TextBox ID="TextBox3" runat="server" TabIndex="3"></asp:TextBox>
+                                    <asp:TextBox ID="TextBox3" runat="server" TabIndex="3" MaxLength="11"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="非空" ControlToValidate="TextBox3" ValidationGroup="group2"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="left">邮政编码</td>
                                 <td>
-                                    <asp:TextBox ID="TextBox7" runat="server" TabIndex="5"></asp:TextBox>
+                                    <asp:TextBox ID="TextBox7" runat="server" TabIndex="5" MaxLength="6"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="非空" ControlToValidate="TextBox7" ValidationGroup="group2"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="left">密码</td>
                                 <td>
-                                    <asp:TextBox ID="TextBox4" runat="server" ControlToCompare="TextBox4" TextMode="Password" TabIndex="6"></asp:TextBox>
+                                    <asp:TextBox ID="TextBox4" runat="server" ControlToCompare="TextBox4" TextMode="Password" TabIndex="6" MaxLength="20"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="非空" ControlToValidate="TextBox4" ValidationGroup="group2"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="left">确认密码</td>
                                 <td>
-                                    <asp:TextBox ID="TextBox5" runat="server" TextMode="Password" TabIndex="7"></asp:TextBox>
+                                    <asp:TextBox ID="TextBox5" runat="server" TextMode="Password" TabIndex="7" MaxLength="20"></asp:TextBox>
                                     <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="密码不一致" ControlToValidate="TextBox5" ControlToCompare="TextBox4"></asp:CompareValidator>
                                 </td>       
                             </tr>
@@ -124,7 +144,7 @@
                             </tr>
                         <tr><td colspan="2">
                             <asp:Button ID="Button2" runat="server" Text="修改" CssClass="xiugai" OnClick="Button2_Click"/>
-                            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" CssClass="registerbtn1" Text="保存" TabIndex="9" /></td></tr>
+                            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" CssClass="registerbtn1" Text="保存" TabIndex="9" ValidationGroup="group2" /></td></tr>
                         </tbody>
                     </table>    
                 </div>

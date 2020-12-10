@@ -20,12 +20,25 @@ body{
     .leftImg{
         float: left;
         margin-top: -28px;
-        img{
-            overflow: hidden;
-            border-radius: 5px;
+        #slider{
+            position: relative;
             width: 600px;
             height: 500px;
-            // padding: 100px;
+            margin-top: 20px;
+            img{
+                position: absolute;
+                overflow: hidden;
+                left: 0;
+                top: 0;
+                border-radius: 5px;
+                width: 600px;
+                height: 500px;
+                transition: all 1s;
+                opacity: 0;
+            }
+            .active{
+                opacity: 1;
+            }
         }
         #addlink{
             margin-left: 400px;

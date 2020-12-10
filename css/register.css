@@ -20,11 +20,25 @@ body {
   float: left;
   margin-top: -28px;
 }
-.mainContainer .leftImg img {
+.mainContainer .leftImg #slider {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  margin-top: 20px;
+}
+.mainContainer .leftImg #slider img {
+  position: absolute;
   overflow: hidden;
+  left: 0;
+  top: 0;
   border-radius: 5px;
   width: 600px;
   height: 500px;
+  transition: all 1s;
+  opacity: 0;
+}
+.mainContainer .leftImg #slider .active {
+  opacity: 1;
 }
 .mainContainer .leftImg #addlink {
   margin-left: 400px;
