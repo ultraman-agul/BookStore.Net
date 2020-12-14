@@ -6,23 +6,38 @@ body{
     width:1200px;
     margin: 0 auto;
     padding-top: 20px;
-
-    // background-color: #f6f9fd;
     border-top: 1px solid #eee;
     position: relative;
     overflow: hidden;
     padding-bottom: 153px;
     h1{
+        margin-left: 800px;
+    }
+    .rightTitle{
         display: inline-block;
         width: 150px;
         margin-left: 800px;
+        position: relative;
+        img{
+           position: absolute;
+           right: 0;
+           top: -5px;       
+           width: 35px;
+           height: 35px;
+           border-radius: 17px; 
+           overflow: hidden;
+           transition: all 1s;
+        }
+        img:hover{
+            transform: rotate(-360deg);
+        }
     }
     .leftImg{
         float: left;
         margin-top: -28px;
         #slider{
             position: relative;
-            width: 600px;
+            width: 710px;
             height: 500px;
             margin-top: 20px;
             img{
@@ -31,7 +46,7 @@ body{
                 left: 0;
                 top: 0;
                 border-radius: 5px;
-                width: 600px;
+                width: 710px;
                 height: 500px;
                 transition: all 1s;
                 opacity: 0;
@@ -47,8 +62,6 @@ body{
     }
     .registerBox{
         float: right;
-        
-        // background-color: #fff;
         table{
             font-size: 18px;
             border-spacing: 2px;
@@ -104,6 +117,9 @@ body{
                             outline: none;
                             border:0;
                             cursor: pointer;
+                        }
+                        .huan{
+                            text-decoration: underline; font-size:14px; 
                         }
                     }
                     .left{

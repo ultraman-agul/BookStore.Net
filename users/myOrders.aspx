@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="myOrders.aspx.cs" Inherits="DDbook.myOrders" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>叮当-我的订单</title>
     <link rel="stylesheet" href="/css/myOrders.css">
 </asp:Content>
 <%-- 

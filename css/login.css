@@ -20,7 +20,7 @@ body {
   left: 0;
   top: 0;
   border-radius: 5px;
-  width: 600px;
+  width: 710px;
   height: 500px;
   transition: all 1s;
   opacity: 0;
@@ -30,10 +30,10 @@ body {
 }
 .login_main .login_box {
   border: 1px solid #aaa;
-  padding: 30px 80px;
+  padding: 30px 50px 0 80px;
   position: absolute;
   top: 50px;
-  right: 100px;
+  right: 0;
 }
 .login_main .login_box ul li {
   font-size: 18px;
@@ -51,8 +51,16 @@ body {
 .login_main .login_box ul li p {
   font-size: 18px;
 }
-.login_main .login_box ul li table td {
-  padding-right: 20px;
+.login_main .login_box ul li .tbx {
+  width: 200px;
+  color: #aaa;
+  padding-left: 5px;
+  height: 30px;
+  outline: none;
+}
+.login_main .login_box ul li .huan {
+  text-decoration: underline;
+  font-size: 14px;
 }
 .login_main .login_box ul li .btn {
   margin: 0 auto;

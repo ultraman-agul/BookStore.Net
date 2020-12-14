@@ -11,20 +11,20 @@ namespace DDbook
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (Session["USERID"] == null)
             {
-                GetData();
-                DB db = new DB();
-                db.LoadExecuteData("select * from Customer where Id = " + Session["USERID"]);
-                TextBox1.Text = db.GetValue("LoginName");
-                TextBox2.Text = db.GetValue("Realname");
-                TextBox3.Text = db.GetValue("LinkTel");
-                TextBox7.Text = db.GetValue("PostCode");
-                TextBox1.Enabled = TextBox2.Enabled = TextBox3.Enabled= TextBox7.Enabled= TextBox4.Enabled= TextBox5.Enabled= Button1.Enabled = FileUpload1.Enabled = false;
-                db.OffData();
+                Response.Write("<script>alert('您尚未登录，请登录');window.location='/users/login.aspx'</script>");
             }
+            else
+            {
+               if (!IsPostBack)
+                {
+                    GetData();
+                    GetDataRight();
+                }
+            }
+           
         }
-
 
         protected void GetData()
         {
@@ -35,6 +35,19 @@ namespace DDbook
             addressDL.DataKeyField = "Id";
             addressDL.DataBind();
             db1.OffData();
+        }
+
+        protected void GetDataRight()
+        {
+            DB db = new DB();
+            db.LoadExecuteData("select * from Customer where Id = " + Session["USERID"]);
+            TextBox1.Text = db.GetValue("LoginName");
+            TextBox2.Text = db.GetValue("Realname");
+            TextBox3.Text = db.GetValue("LinkTel");
+            TextBox7.Text = db.GetValue("PostCode");
+            Image1.ImageUrl = string.IsNullOrEmpty(db.GetValue("Pic").ToString()) ? "/images/wenhao.png" : "/images/img/" + db.GetValue("Pic");
+            TextBox1.Enabled = TextBox2.Enabled = TextBox3.Enabled = TextBox7.Enabled = TextBox4.Enabled = TextBox5.Enabled = Button1.Enabled = FileUpload1.Enabled = false;
+            db.OffData();
         }
 
         // 保存修改
@@ -71,6 +84,7 @@ namespace DDbook
             Response.Write("<script>alert('修改成功！')</script>");
             TextBox1.Enabled = TextBox2.Enabled = TextBox3.Enabled = TextBox7.Enabled = TextBox4.Enabled = TextBox5.Enabled = Button1.Enabled = FileUpload1.Enabled = false;
             db.OffData();
+            GetDataRight();
         }
 
         // 添加地址

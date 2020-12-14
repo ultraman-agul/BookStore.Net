@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="DDbook.login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+        <title>叮当-用户登录</title>
         <link rel="stylesheet" href="/css/login.css">
     </asp:Content>
     <%-- <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -23,24 +24,18 @@
                             <p>密码登陆</p>
                         </li>
                         <li>
-                            <asp:TextBox ID="TextBox1" runat="server" ToolTip="账号" TabIndex="1" MaxLength="10"></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" ToolTip="账号" TabIndex="1" MaxLength="10" CssClass="tbx" placeholder="账号"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="非空" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
                         </li>
                         <li>
-                            <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" TabIndex="2" ToolTip="密码" MaxLength="20">密码</asp:TextBox>
+                            <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" TabIndex="2" ToolTip="密码" MaxLength="20" CssClass="tbx" placeholder="密码">密码</asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="非空" ControlToValidate="TextBox2"></asp:RequiredFieldValidator>
                         </li>
                         <li>
-                            <asp:Label ID="Label1" runat="server" Text="验证码" style="font-size:12px;"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text="验证码" style="font-size:14px;"></asp:Label>
                             <asp:Image ID="ibtn_yzm"  src="./ImageCode.aspx"  runat="server" Width="70px" Height="40px" />
                             
-                            <a href="javascript:changeCode()"style="text-decoration: underline; font-size:10px;">换一张</a>
-                             <script>
-                                function changeCode() 
-                                {
-                                    location.reload();
-                                }
-                              </script>
+                            <a href="#" class="huan">换一张</a>
 
                             <asp:TextBox ID="tbx_yzm" runat="server" Width="70px" TabIndex="3" ToolTip="验证码" MaxLength="4"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="非空" ControlToValidate="tbx_yzm"></asp:RequiredFieldValidator>

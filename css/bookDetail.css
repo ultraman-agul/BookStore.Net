@@ -71,16 +71,16 @@
   border-bottom: 1px solid #d9d9d9;
 }
 .box .detailContainer .mainContain .topContent .bookinfo .attribute dl {
-  font-size: 12px;
+  font-size: 14px;
   margin: 12px 0;
 }
 .box .detailContainer .mainContain .topContent .bookinfo .attribute dl dt {
   display: inline-block;
-  width: 60px;
+  width: 80px;
 }
 .box .detailContainer .mainContain .topContent .bookinfo .attribute dl dd {
   display: inline;
-  margin-left: 70px;
+  margin-left: 50px;
 }
 .box .detailContainer .mainContain .topContent .bookinfo .buydiv {
   margin-left: 100px;
@@ -119,6 +119,12 @@
   width: 100px;
   height: 40px;
   line-height: 40px;
+}
+.box .detailContainer .mainContain .tabbox div #tab1 {
+  border: 2px solid #fff;
+}
+.box .detailContainer .mainContain .tabbox div #tab2 {
+  border: 2px solid #444;
 }
 .box .detailContainer .mainContain .tabbox div .clickli {
   background-color: #fff;

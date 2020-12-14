@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="DDbook.register" %>
     <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+        <title>叮当-用户注册</title>
         <link rel="stylesheet" href="/css/register.css">
     </asp:Content>
     <%-- <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -12,9 +13,9 @@
                 <h1>用户注册</h1>
                 <div class="leftImg">
                     <div id="slider">
-                        <img src="/images/img1/img1.jpg" alt=" " class="active">
-                        <img src="/images/img1/img2.jpg" alt=" ">
-                        <img src="/images/img1/img3.jpg" alt=" ">
+                        <img src="/images/img1/img21.jpg" alt=" " class="active">
+                        <img src="/images/img1/img22.jpg" alt=" ">
+                        <img src="/images/img1/img23.jpg" alt=" ">
                     </div>
                 </div>
                 <div class="registerBox">
@@ -65,15 +66,9 @@
                             <tr> 
                                 <td  class="left"> 
                             <asp:Image ID="ibtn_yzm"  src="./ImageCode.aspx"  runat="server" Width="70px" Height="40px" />
-
-                             <script>
-                                function changeCode() 
-                                {
-                                    location.reload();
-                                }
-                              </script></td>
+                            </td>
                                 <td>
-                            <a href="javascript:changeCode()"style="text-decoration: underline; font-size:16px;">换一张</a>
+                            <a href="#" class="huan">换一张</a>
                                 </td>
                         </tr>
                         <tr>
@@ -90,6 +85,7 @@
                     </table>    
                 </div>
             </div>
+        <script src="/js/jquery-3.5.1.min.js"></script>
         <script src="/js/login.js"></script>
         </asp:Content>
         <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">

@@ -160,7 +160,7 @@ namespace DDbook
                     // 修改商品表的销量和库存
                     string sql2 = "update Book set Sales+="
                     + Convert.ToInt32(db.MyDataSet.Tables["ShoppingCart"].Rows[i]["BookNum"].ToString().Trim()) + ",StockNum-=" + Convert.ToInt32(db.MyDataSet.Tables["ShoppingCart"].Rows[i]["BookNum"].ToString().Trim()) + " where Id=" + Convert.ToInt32(db.MyDataSet.Tables["ShoppingCart"].Rows[i]["BookID"].ToString().Trim());
-                       db.ExecuteNonQuery(sql2);
+                     db.ExecuteNonQuery(sql2);
                 }
             }
             db.OffData();

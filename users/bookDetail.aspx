@@ -1,14 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="bookDetail.aspx.cs" Inherits="DDbook.bookDetail" ValidateRequest="false"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>叮当-书籍详情</title>
     <link rel="stylesheet" href="/css/bookDetail.css">
-    <link href="/js/jquery-3.5.1.min.js" rel="stylesheet" />
 </asp:Content>
 <%-- <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>--%>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-<div class="box">
+    <div class="box">
     <div class="detailContainer">
         <!-- 面包屑导航 -->
         <div class="breadcrumbs">
@@ -32,6 +32,7 @@
                             <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label></h2>
                             <br/>
                         <p>已售：<asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>本</p>
+                        <p>库存：<asp:Label ID="Label17" runat="server" Text="Label"></asp:Label>本</p>
                     </div>
                     <div class="price">
                         <div class="qianggou">
@@ -85,13 +86,13 @@
             </div>
             <div class="tabbox" id="desc">
                 <div>
-                    <pre></pre>
                     <a id="tab1" href="#desc" class="clickli">书籍简介</a>
                     <a id="tab2" href="#comment">评论</a>
                 </div>
                 <div class="description">
                     <div id="dv1" class="current">
-                        <asp:Label ID="Label11" runat="server" Text="Label"></asp:Label></div>
+                        <asp:Label ID="Label11" runat="server" Text="Label"></asp:Label>
+                    </div>
                     <div id="dv2" class="normal">
                         <div class="CommentNum" id="comment">
                            <asp:Label ID="Label16" runat="server" Text="Label"></asp:Label>
@@ -157,9 +158,6 @@
         </div>
     </div>
 </div>
-   
-    <%-- <script src="/js/bookDetail.js"></script> --%>
-
 </asp:Content>
 <%-- <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
 </asp:Content>--%>

@@ -58,6 +58,13 @@
   float: left;
   margin-right: 130px;
 }
+.SCartcontainer .listBody img {
+  width: 600px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
 .SCartcontainer .listBody .CartData {
   border: 1px solid #ccc;
   width: 100%;
@@ -124,8 +131,12 @@
   width: 100%;
   line-height: 80px;
 }
+.SCartcontainer .CartBottom div .allselect {
+  width: 70px;
+  float: left;
+}
 .SCartcontainer .CartBottom div .pick {
-  width: 100px;
+  width: 120px;
   float: left;
 }
 .SCartcontainer .CartBottom div .price {
@@ -152,23 +163,5 @@
 }
 .SCartcontainer .CartBottom div .go a:hover {
   background-color: orange;
-  color: #fff;
-}
-.SCartcontainer .CartBottom div .pick {
-  width: 100px;
-}
-.SCartcontainer .CartBottom div .pick a {
-  display: block;
-  height: 80px;
-  width: 100px;
-  text-align: center;
-  background-color: #e54346;
-  transition: all 0.4s;
-}
-.SCartcontainer .CartBottom div .pick a:hover {
-  background-color: orange;
-  color: #fff;
-}
-.SCartcontainer .CartBottom div a:hover {
   color: #fff;
 }

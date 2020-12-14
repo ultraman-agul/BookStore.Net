@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="shoppingCart.aspx.cs" Inherits="DDbook.shoppingCart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>叮当-我的购物车</title>
     <link rel="stylesheet" href="/css/shoppingCart.css">
 </asp:Content>
 <%-- <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -36,6 +37,7 @@
                     <li>操作</li>
                 </ul>
             </div>
+            <asp:Image ID="Image2" runat="server" ImageUrl="~/images/shoppingcart1.jpg" Visible="False" />
             <asp:DataList ID="DataList1" runat="server" OnCancelCommand="DataList1_CancelCommand" OnEditCommand="DataList1_EditCommand" OnUpdateCommand="DataList1_UpdateCommand" OnDeleteCommand="DataList1_DeleteCommand" OnItemCommand="itemcom" CssClass="CartData">
                 <ItemTemplate>
                     <div class="items">
@@ -48,8 +50,7 @@
                             </asp:LinkButton>
                         </div>
                         <div>
-                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl='<%#"bookDetail.aspx?Id="+Eval("BookID")%>' Text='<%# Eval("BookName")%>'></asp:HyperLink>
-                            <!--<asp:Label ID="Label1" runat="server" Text='<%# Eval("BookName")%>'></asp:Label>-->
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl='<%#"bookDetail.aspx?Id="+Eval("BookID")%>' Text='<%# Eval("BookName")%>'></asp:HyperLink>        
                         </div>
                         <div>
                             <span>￥</span>
@@ -73,7 +74,6 @@
                         </div>
                         <div>
                             <img src='/images/img/<%# Eval("Pic")%>' alt="照片" />
-                            
                         </div>
                         <div>
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("BookName")%>'></asp:Label>
@@ -95,9 +95,12 @@
         </div>
         <div class="CartBottom">
             <div>
-                <div class="allselect pick">
+                <div class="allselect">
                     <asp:CheckBox ID="CheckAll" runat="server" OnCheckedChanged="CheckAll_CheckedChanged" AutoPostBack="True" />
                     全选
+                </div>
+                <div class="pick">
+                    <asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton9_Click" OnClientClick="return confirm('确定删除吗？')">删除选中的商品</asp:LinkButton>
                 </div>
                 <div class="pick">
                     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/index.aspx">继续挑选</asp:HyperLink>
@@ -111,12 +114,10 @@
                     <asp:Label ID="Label4" CssClass="realprice" runat="server" Text="Label"></asp:Label>
                 </div> 
                 <div class="price">
-                已选择<asp:Label ID="Label3" CssClass="realprice" runat="server" Text=""></asp:Label>件商品 
+                已选择<asp:Label ID="Label3" CssClass="realprice" runat="server" Text=""></asp:Label>件商品</asp:Label>
                 </div> 
             </div>
-           
         </div>
-
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>

@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="myInfo.aspx.cs" Inherits="DDbook.myInfo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>叮当-个人中心</title>
     <link href="/css/register.css" rel="stylesheet" />
     <link href="/css/myInfo.css" rel="stylesheet" />
 </asp:Content>
@@ -10,7 +11,10 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <div class="mainContainer">
                 <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Size="Medium"></asp:SiteMapPath>
-                <h1>我的信息</h1>
+                <div class="rightTitle">
+                    <h2>我的信息</h2>
+                    <asp:Image ID="Image1" runat="server" />
+                </div>
                 <div class="leftImg">
                     <h2>收货地址</h2>
                    <asp:DataList ID="addressDL" runat="server" CssClass="addl" OnCancelCommand="addressDL_CancelCommand" OnDeleteCommand="addressDL_DeleteCommand" OnEditCommand="addressDL_EditCommand" OnUpdateCommand="addressDL_UpdateCommand">
@@ -25,16 +29,15 @@
                         <asp:LinkButton ID="LinkButton1" CommandArgument='<%# Eval("Id") %>' CommandName="edit" runat="server">编辑</asp:LinkButton>
                         <asp:LinkButton ID="LinkButton2" CommandName="delete" OnClientClick="javascript: return confirm('是否删除?')" CommandArgument='<%# Eval("Id") %>' runat="server">删除</asp:LinkButton>
                         </span>
-                        <div>
                     </div>
                     </ItemTemplate>
                     <EditItemTemplate>
                     <div class="editItems">
    
-                        <asp:TextBox ID="one" runat="server" Text='<%# Eval("CustomerName") %>'></asp:TextBox>
-                        <asp:TextBox ID="two" runat="server" Text='<%# Eval("AddressName") %>'></asp:TextBox>
-                        <asp:TextBox ID="three" runat="server" Text='<%# Eval("Phone")%>'></asp:TextBox>
-                        <asp:TextBox ID="four" runat="server" Text='<%# Eval("PostCode") %>'></asp:TextBox>
+                        <asp:TextBox ID="one" runat="server" Text='<%# Eval("CustomerName") %>' Width="120px"></asp:TextBox>
+                        <asp:TextBox ID="two" runat="server" Text='<%# Eval("AddressName") %>' Width="120px"></asp:TextBox>
+                        <asp:TextBox ID="three" runat="server" Text='<%# Eval("Phone")%>' Width="120px"></asp:TextBox>
+                        <asp:TextBox ID="four" runat="server" Text='<%# Eval("PostCode") %>' Width="120px"></asp:TextBox>
                         
                             <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="update">更新</asp:LinkButton>
                             <asp:LinkButton ID="LinkButton4" runat="server" CommandName="cancel">取消</asp:LinkButton>

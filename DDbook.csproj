@@ -71,6 +71,9 @@
     <Content Include="admin\adminShow.aspx" />
     <Content Include="App_Data\BookShop_data.mdf" />
     <Content Include="App_Data\BookShop_log.ldf" />
+    <Content Include="images\img1\img1.jpg" />
+    <Content Include="images\img1\img2.jpg" />
+    <Content Include="images\img1\img3.jpg" />
     <Content Include="js\login.js" />
     <Content Include="users\myInfo.aspx" />
     <Content Include="users\bookDetail.aspx" />
@@ -129,7 +132,6 @@
     <Content Include="users\shoppingCart.aspx" />
     <Content Include="admin\userInfo.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin\addBook.aspx.cs">
@@ -253,13 +255,6 @@
     <Compile Include="admin\userInfo.aspx.designer.cs">
       <DependentUpon>userInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage.Master" />
@@ -285,9 +280,7 @@
     </None>
     <Content Include="Web.sitemap" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\img1\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

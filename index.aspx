@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="DDbook.index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>叮当首页</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/slider.css">
     <script src="js/jquery-3.5.1.min.js"></script>

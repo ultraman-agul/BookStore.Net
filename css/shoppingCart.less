@@ -60,6 +60,13 @@
                 }
             }
         }
+        img{
+            width: 600px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+            overflow: hidden;
+        }
         .CartData{
             // background-color:#7fffd4;
             border: 1px solid #ccc;
@@ -133,8 +140,12 @@
             margin: 0 auto;
             width: 100%;
             line-height: 80px;
+            .allselect{
+                width: 70px;
+                float: left;
+            }
             .pick{
-                width: 100px;
+                width: 120px;
                 float: left;
             }
             .price{
@@ -155,7 +166,6 @@
                     height: 80px;
                     width: 100px;
                     text-align: center;
-                    // padding: 10px;
                     background-color: #e54346;
                     transition: all 0.4s;
                 }
@@ -163,27 +173,6 @@
                     background-color: orange;
                     color: #fff;
                 }
-            }
-            .pick{
-                width: 100px;
-                // float: right;
-                a{
-                    display: block;
-                    height: 80px;
-                    width: 100px;
-                    text-align: center;
-                    // padding: 10px;
-                    background-color: #e54346;
-                    transition: all 0.4s;
-
-                }
-                a:hover{
-                    background-color: orange;
-                    color: #fff;
-                }
-            }
-            a:hover{
-                color: #fff;
             }
         }
     }

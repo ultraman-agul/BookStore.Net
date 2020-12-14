@@ -37,6 +37,8 @@ namespace DDbook
                     Label9.Text += db.GetValue("SpecialPrice");
                     Label10.Text = db.GetValue("Price");
                     Label11.Text = db.GetValue("Description");
+                    Label17.Text = db.GetValue("StockNum");
+                    
                 }
                 else
                 {
@@ -51,16 +53,24 @@ namespace DDbook
         // 点击加入购物车
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
-            if (Session["USERName"] != null && Session["USERPWD"] != null)
+            if (Label17.Text.Trim() == "0")
             {
-                string bookid = Request.QueryString["Id"].ToString().Trim();
-                AddData(bookid);
-                Response.Redirect("~/users/shoppingCart.aspx");
+                Response.Write("<script>alert('很抱歉，宝贝当前无库存')</script>");
             }
             else
             {
-                Response.Write("<script>alert('您尚未登陆，请登录');window.location='/users/Login.aspx';</script>");
+                if (Session["USERName"] != null && Session["USERPWD"] != null)
+                {
+                    string bookid = Request.QueryString["Id"].ToString().Trim();
+                    AddData(bookid);
+                    Response.Redirect("~/users/shoppingCart.aspx");
+                }
+                else
+                {
+                    Response.Write("<script>alert('您尚未登陆，请登录');window.location='/users/Login.aspx';</script>");
+                }
             }
+            
         }
 
         // 加入到购物车，如果存在数量加一，否则插入
@@ -94,17 +104,25 @@ namespace DDbook
         // 点击立即购买  将这一件商品插入到空的购物车，然后转到订单
         protected void LinkButton5_Click(object sender, EventArgs e)
         {
-            if (Session["USERName"] != null && Session["USERPWD"] != null)
+            if (Label17.Text.Trim() == "0")
             {
-                string id = Request.QueryString["Id"].ToString().Trim();
-                UpData();
-                AddData2(id);
-                Response.Redirect("~/users/Orders.aspx?");
+                Response.Write("<script>alert('很抱歉，宝贝当前无库存')</script>");
             }
             else
             {
-                Response.Write("<script>alert('您还没登录，请先登录！');window.location='/users/Login.aspx';</script>");
+                if (Session["USERName"] != null && Session["USERPWD"] != null)
+                {
+                    string id = Request.QueryString["Id"].ToString().Trim();
+                    UpData();
+                    AddData2(id);
+                    Response.Redirect("~/users/Orders.aspx?");
+                }
+                else
+                {
+                    Response.Write("<script>alert('您还没登录，请先登录！');window.location='/users/Login.aspx';</script>");
+                }
             }
+           
         }
 
         private void UpData()
@@ -178,7 +196,7 @@ namespace DDbook
             string selectNum = flag == 0 ? "top 5" : "";
             DB db = new DB();
             string bid = Request.QueryString["Id"].ToString().Trim();
-            string sql = "select "+ selectNum + " LoginName,Pic,lw.* from Customer as ct,LeaveWord as lw where ct.Id in (select CustomerID from LeaveWord where BookID = "+bid+ ") and lw.BookID = " +bid + "order by CommentLevel desc, ReplyNumber desc";
+            string sql = "select "+ selectNum + " LoginName,Pic,lw.* from Customer as ct,LeaveWord as lw where ct.Id in (select CustomerID from LeaveWord where BookID = "+bid+ ") and lw.BookID = " +bid + "and ct.Id = lw.CustomerID order by CommentLevel desc, ReplyNumber desc";
             db.LoadExecuteData(sql);
             CommentDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
             CommentDataList.DataKeyField = "Id";

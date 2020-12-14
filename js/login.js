@@ -1,12 +1,12 @@
-﻿function sliderfun(){
-    var slider = document.getElementById('slider')
-    var imgs = slider.getElementsByTagName('img')
-    count = 1
+﻿// 渐变切换
+$(function (){
+    const $imgs = $('#slider img')
+    count = 0
     function sliderIn(){
-        imgs[count].className = "active"
+        $imgs.eq(count).addClass('active')
     }
     function sliderOut(){
-        imgs[count].className = ""
+        $imgs.eq(count).removeClass('active')
     }
     function change(){
         sliderOut()
@@ -18,6 +18,10 @@
         sliderIn()
     }
     setInterval(change, 2000)
-}
+})
 
-sliderfun()
+// 刷新验证码。。
+$('.huan').click(function () 
+{
+    location.reload();
+})

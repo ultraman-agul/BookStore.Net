@@ -81,7 +81,7 @@
         <h2>用户信息</h2>
          <br />
          <div class="mainGV">
-             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sqlConnection %>" SelectCommand="SELECT * FROM [Customer]" UpdateCommand="update Customer set Realname=@Realname,LoginName=@LoginName,PostCode=@PostCode,Address=@Address,LinkTel=@LinkTel where Id=@Id" DeleteCommand="DELETE FROM Customer WHERE (Id = @Id)"></asp:SqlDataSource>
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sqlConnection %>" SelectCommand="SELECT * FROM [Customer]" UpdateCommand="update Customer set Realname=@Realname,LoginName=@LoginName,PostCode=@PostCode,LinkTel=@LinkTel where Id=@Id" DeleteCommand="DELETE FROM Customer WHERE (Id = @Id)"></asp:SqlDataSource>
              <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" PageSize="4" Width="900px">
                  <Columns>
                      <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" >
@@ -95,9 +95,6 @@
                      </asp:BoundField>
                      <asp:BoundField DataField="PostCode" HeaderText="邮编" SortExpression="PostCode" >
                      <ItemStyle Width="80px" />
-                     </asp:BoundField>
-                     <asp:BoundField DataField="Address" HeaderText="地址" SortExpression="Address" >
-                     <ItemStyle Width="100px" />
                      </asp:BoundField>
                      <asp:BoundField DataField="LinkTel" HeaderText="联系电话" SortExpression="LinkTel" >
                      <ItemStyle Width="100px" />

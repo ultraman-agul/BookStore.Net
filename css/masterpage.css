@@ -13,9 +13,10 @@ li {
   list-style: none;
 }
 body {
-  font-size: 12px;
+  font-size: 14px;
   min-height: 100%;
   position: relative;
+  font-family: "Microsoft Yahei";
 }
 header {
   width: 100%;
@@ -110,13 +111,15 @@ header .container .menu li a img:hover {
   text-align: center;
   line-height: 40px;
   background-color: orange;
-  border: 3px solid #00c29a;
+  border: 3px solid #ff6666;
   font-size: 14px;
   transition: all 0.5s;
+  font-weight: 600;
 }
 .search_container .search_input .searchbtn:hover {
-  background-color: #00c29a;
+  background-color: #ff6666;
   border: 3px solid orange;
+  color: #fff;
 }
 .search_container .shoppcart {
   float: left;
@@ -126,7 +129,7 @@ header .container .menu li a img:hover {
 }
 .search_container .shoppcart a {
   display: block;
-  width: 80px;
+  width: 90px;
   line-height: 40px;
   height: 40px;
   padding: 0 13px;
@@ -196,6 +199,7 @@ header .container .menu li a img:hover {
   top: 0;
 }
 .hr {
+  margin-top: 1px;
   border-bottom: 1px solid #eee;
 }
 .aboutwe {

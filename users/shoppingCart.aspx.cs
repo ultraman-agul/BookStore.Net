@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -29,11 +30,19 @@ namespace DDbook
         private void GetData()
         {
             DB db = new DB();
-            string sql = "select * from ShoppingCart where CustomerID = " + Session["USERID"] + "order by CustomerID";
+            string sql = "select ShoppingCart.*, StockNum from ShoppingCart, Book where CustomerID =  "+Session["USERID"]+" and ShoppingCart.BookID = Book.Id order by CustomerID";
             db.LoadExecuteData(sql);
             DataList1.DataKeyField = "BookID";
             DataList1.DataSource = db.MyDataSet.Tables[0].DefaultView;
             DataList1.DataBind();
+            if(db.MyDataSet.Tables[0].Rows.Count <= 0)
+            {
+                Image2.Visible = true;
+            }
+            else
+            {
+                Image2.Visible = false;
+            }
             db.OffData();
             GetPrice();
         }
@@ -97,21 +106,23 @@ namespace DDbook
             {   //只能更改商品数量
                 int bookid = int.Parse(e.CommandArgument.ToString());
                 int num = Convert.ToInt32((e.Item.FindControl("txt_num") as TextBox).Text.Trim());
-                if (num <= 0)
+
+                db.LoadExecuteData("select StockNum from ShoppingCart, Book where CustomerID = " + Session["USERID"] + " and ShoppingCart.BookID = Book.Id and BookID="+bookid, "Stock");
+                int stocknum = Convert.ToInt32(db.MyDataSet.Tables["Stock"].Rows[0]["StockNum"]);
+
+                if (num <= 0 || num > stocknum)
                 {
-                    //Response.Write("<script>alert('数量不能小于等于0！')");
                     throw new Exception();
                 }
                 if (db.Update("BookNum", num, bookid, Convert.ToInt32(Session["USERID"])))
                 {
-                    //Response.Write("<script>alert('修改成功！');</script>");
                     DataList1.EditItemIndex = -1;
                     GetData();
                 }
             }
             catch
             {
-                //Response.Write("<script>alert('修改失败！');window.location='/users/login.aspx';</script>");
+                ScriptManager.RegisterStartupScript(UpdatePanel1, typeof(UpdatePanel), "scriptType", "alert('值小于零或超出库存')", true);
             }
             finally
             {
@@ -133,7 +144,7 @@ namespace DDbook
         {
             if(e.CommandName == "describe")
             {
-                Response.Redirect("/users/bookDetail.aspx?Id=" + e.CommandArgument.ToString()+"&comment=5");
+                Response.Redirect("/users/bookDetail.aspx?Id=" + e.CommandArgument.ToString());
             }
             if(e.CommandName == "sub")
             {
@@ -149,8 +160,19 @@ namespace DDbook
             }
             if (e.CommandName == "add")
             {
+                int num = Convert.ToInt32((e.Item.FindControl("txt_num") as Label).Text.Trim());
                 DB db = new DB();
-                db.LoadExecuteData("update ShoppingCart set BookNum=BookNum+1 where Id="+e.CommandArgument.ToString());
+                db.LoadExecuteData("select StockNum from ShoppingCart, Book where CustomerID = "+Session["USERID"]+" and ShoppingCart.BookID = Book.Id and BookID=(select BookID from ShoppingCart where Id = "+e.CommandArgument.ToString()+")", "Stock");
+                int stocknum = Convert.ToInt32(db.MyDataSet.Tables["Stock"].Rows[0]["StockNum"]);
+                if(num < stocknum)
+                {
+                    db.LoadExecuteData("update ShoppingCart set BookNum=BookNum+1 where Id="+e.CommandArgument.ToString());
+                }
+                else
+                {
+                    // 超出库存不处理
+                    ScriptManager.RegisterStartupScript(UpdatePanel1, typeof(UpdatePanel), "scriptType", "alert('超出库存')", true);
+                }       
                 db.OffData();
                 GetData();
             }
@@ -177,6 +199,19 @@ namespace DDbook
             {
                 Response.Redirect("~/users/Orders.aspx");
             }
+        }
+
+        // 删除选中的商品
+        protected void LinkButton9_Click(object sender, EventArgs e)
+        {
+            string sql = "delete from ShoppingCart where CustomerID=" + Session["USERID"] + " and State=1";
+            DB db = new DB();
+            if(db.ExecuteNonQuery(sql) > 0)
+            {
+                ScriptManager.RegisterStartupScript(UpdatePanel1, typeof(UpdatePanel), "scriptType", "alert('删除成功')", true);
+            }
+            db.OffData();
+            GetData();
         }
     }
 }

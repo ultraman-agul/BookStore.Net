@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="reply.aspx.cs" Inherits="DDbook.reply" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>叮当-评论回复</title>
     <link rel="stylesheet" href="/css/reply.css">
 </asp:Content>
 <%--<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="bookPackage.aspx.cs" Inherits="DDbook.bookPackage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>叮当-书籍分类</title>
     <link rel="stylesheet" href="/css/bookPackage.css">
 </asp:Content>
 <%--<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -126,10 +127,10 @@
                     <ContentTemplate>
             <nav>
                 
-                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">销  量</asp:LinkButton>
-                <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">好  评</asp:LinkButton>
-                <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">最  新</asp:LinkButton>
-                <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">价  格</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">销  量  <i class="iconfont icon-jiantouarrow505"></i></asp:LinkButton>
+                <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">好  评  <i class="iconfont icon-jiantouarrow505"></i></asp:LinkButton>
+                <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">最  新  <i class="iconfont icon-jiantouarrow505"></i></asp:LinkButton>
+                <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">价  格  <i class="iconfont icon-jiantouarrow505"></i></asp:LinkButton>
             </nav>
             <div class="dl">
                 <asp:DataList ID="PackageDataList" runat="server" RepeatColumns="3" CssClass="showDataList" OnItemCommand="PackageCommand">
