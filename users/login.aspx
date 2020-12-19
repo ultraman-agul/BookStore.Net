@@ -15,7 +15,6 @@
                     <img src="/images/img1/img1.jpg" alt=" " class="active">
                     <img src="/images/img1/img2.jpg" alt=" ">
                     <img src="/images/img1/img3.jpg" alt=" ">
-
                 </div>
                 
                 <div class="login_box">
@@ -34,9 +33,7 @@
                         <li>
                             <asp:Label ID="Label1" runat="server" Text="验证码" style="font-size:14px;"></asp:Label>
                             <asp:Image ID="ibtn_yzm"  src="./ImageCode.aspx"  runat="server" Width="70px" Height="40px" />
-                            
                             <a href="#" class="huan">换一张</a>
-
                             <asp:TextBox ID="tbx_yzm" runat="server" Width="70px" TabIndex="3" ToolTip="验证码" MaxLength="4"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="非空" ControlToValidate="tbx_yzm"></asp:RequiredFieldValidator>
                         </li>

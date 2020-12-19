@@ -29,7 +29,7 @@ namespace DDbook
             }
             else
             {
-                this.tbx_yzm.Text = "";
+                tbx_yzm.Text = "";
                 DB db = new DB();
                 if (!db.Fault)//判断是否成功连接数据库
                 {

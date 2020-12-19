@@ -25,9 +25,9 @@ namespace DDbook
                 Session["AdminPWD"] = null;
             }
             //判断是否输入内容
-            if (this.TextBox1.Text == "")
+            if (TextBox1.Text == "")
             {
-                this.TextBox1.Focus();
+                TextBox1.Focus();
             }
         }
 
@@ -43,7 +43,6 @@ namespace DDbook
             else
             {
                 tbx_yzm.Text = "";
-
                 DB db = new DB();
                 //是否连接到数据库
                 if (!db.Fault)
@@ -71,13 +70,13 @@ namespace DDbook
                             else
                             {
                                 db.OffData();
-                                Response.Write("<script> alert('密码错误！')</script>");
+                                Response.Write("<script>alert('密码错误！')</script>");
                             }
                         }
                         else
                         {
                             db.OffData();
-                            Response.Write("<script> alert('用户名错误！')</script>");
+                            Response.Write("<script>alert('用户名错误！')</script>");
                         }
                     }
                     else

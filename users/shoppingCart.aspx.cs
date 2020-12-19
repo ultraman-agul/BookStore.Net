@@ -35,6 +35,7 @@ namespace DDbook
             DataList1.DataKeyField = "BookID";
             DataList1.DataSource = db.MyDataSet.Tables[0].DefaultView;
             DataList1.DataBind();
+            //判断是否为空
             if(db.MyDataSet.Tables[0].Rows.Count <= 0)
             {
                 Image2.Visible = true;
@@ -122,6 +123,7 @@ namespace DDbook
             }
             catch
             {
+                //在updateplane内需要注册事件
                 ScriptManager.RegisterStartupScript(UpdatePanel1, typeof(UpdatePanel), "scriptType", "alert('值小于零或超出库存')", true);
             }
             finally
@@ -140,6 +142,7 @@ namespace DDbook
             GetData();
         }
 
+        //点击加减商品数量判断库存或商品详情 
         protected void itemcom(object source, DataListCommandEventArgs e)
         {
             if(e.CommandName == "describe")
@@ -179,6 +182,8 @@ namespace DDbook
         }
 
         public static int selectall = 0;
+
+        //全选/全不选
         protected void CheckAll_CheckedChanged(object sender, EventArgs e)
         {
             selectall = selectall == 0 ? 1 : 0;
@@ -193,7 +198,7 @@ namespace DDbook
         {
             if(Label3.Text == "0")
             {
-                Response.Redirect("javascript:void(0)");
+                ScriptManager.RegisterStartupScript(UpdatePanel1, typeof(UpdatePanel), "scriptType", "alert('当前购物车为空，请添加商品')", true);
             }
             else
             {

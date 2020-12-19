@@ -26,6 +26,7 @@ namespace DDbook
            
         }
 
+        // 地址信息
         protected void GetData()
         {
             DB db1 = new DB();
@@ -37,6 +38,7 @@ namespace DDbook
             db1.OffData();
         }
 
+        //个人信息
         protected void GetDataRight()
         {
             DB db = new DB();
@@ -97,6 +99,7 @@ namespace DDbook
             GetData();
         }
 
+        // 删除地址
         protected void addressDL_DeleteCommand(object source, DataListCommandEventArgs e)
         {
             int id = int.Parse(e.CommandArgument.ToString());
@@ -106,6 +109,7 @@ namespace DDbook
             GetData();
         }
 
+        // 编辑地址
         protected void addressDL_EditCommand(object source, DataListCommandEventArgs e)
         {
             int id = int.Parse(e.CommandArgument.ToString());
@@ -113,12 +117,14 @@ namespace DDbook
             GetData();
         }
 
+        // 取消编辑
         protected void addressDL_CancelCommand(object source, DataListCommandEventArgs e)
         {
             addressDL.EditItemIndex = -1;
             GetData();
         }
 
+        // 更新地址
         protected void addressDL_UpdateCommand(object source, DataListCommandEventArgs e)
         {
             int id = int.Parse(e.CommandArgument.ToString());

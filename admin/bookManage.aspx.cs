@@ -43,11 +43,6 @@ namespace DDbook
             GetData();
         }
 
-        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-
-        }
-
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             GridView1.PageIndex = e.NewPageIndex;
@@ -81,8 +76,6 @@ namespace DDbook
             DB db = new DB();
             db.ExecuteNonQuery(sql);
             db.OffData();
-
-
             GridView1.EditIndex = -1;
             GetData();
         }

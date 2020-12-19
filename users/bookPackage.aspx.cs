@@ -24,6 +24,8 @@ namespace DDbook
             FillKeJiData();
             FillYuanBanData();
             //分类结束
+
+            //模糊搜索功能，禁用分类排序功能
             if (typeid == "search")
             {
                 LinkButton1.Enabled = false;
@@ -161,6 +163,7 @@ namespace DDbook
         protected static bool flagNew = true;
         protected static bool flagPrice = true;
 
+        //根据分类填充数据
         protected void FillPackageData(string typeid,string sortMethood)
         {
             DB db = new DB();
@@ -180,6 +183,7 @@ namespace DDbook
             PackageDataList.DataBind();
             db.OffData();
         }
+
         protected void PackageCommand(object source, DataListCommandEventArgs e)
         {
             if(e.CommandName=="describe")
@@ -197,6 +201,7 @@ namespace DDbook
             lkbt.Attributes.Add("class", "active");
         }
 
+        // 销量排序
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
             forClass(LinkButton1);
@@ -213,9 +218,9 @@ namespace DDbook
                 FillPackageData(typeids, " order by Sales asc");
                 Image1.Attributes.Add("class", "rotate");
             }
-
         }
 
+        //好评填充
         protected void FillGoodComment(int id, string sortText)
         {
             DB db = new DB();
@@ -234,6 +239,7 @@ namespace DDbook
             PackageDataList.DataBind();
             db.OffData();
         }
+
         // 好评
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
@@ -253,6 +259,7 @@ namespace DDbook
                 Image2.Attributes.Add("class", "rotate");
             }
         }
+
         // 最新
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
@@ -271,6 +278,7 @@ namespace DDbook
                 Image3.Attributes.Add("class", "rotate");
             }
         }
+
         // 价格
         protected void LinkButton4_Click(object sender, EventArgs e)
         {

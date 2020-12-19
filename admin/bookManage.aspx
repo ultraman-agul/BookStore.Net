@@ -24,7 +24,7 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <div class="ManageCon">
-    <asp:GridView ID="GridView1" runat="server" DataKeyNames="Id" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDataBound="GridView1_RowDataBound" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" PageSize="8" AutoGenerateColumns="False">
+    <asp:GridView ID="GridView1" runat="server" DataKeyNames="Id" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit"  OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" PageSize="8" AutoGenerateColumns="False">
         <Columns>
             <asp:ImageField DataImageUrlField="Pic" DataImageUrlFormatString="~/images/img/{0}" HeaderText="展示图">
                 <ItemStyle Height="150px" Width="120px" />

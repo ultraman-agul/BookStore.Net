@@ -19,7 +19,7 @@ namespace DDbook
             }
             else if (!IsPostBack)
             {
-
+                //填充选择分类的dropdownlist
                 DB db = new DB();
                 SqlDataReader parent = db.DataReader("select top 9* from BookType");
                 this.DropDownList1.DataSource = parent;
@@ -41,6 +41,7 @@ namespace DDbook
             }
         }
 
+        // 点击添加按钮
         protected void Button1_Click(object sender, EventArgs e)
         {
             //判断是否上传了 展示图片
@@ -67,15 +68,12 @@ namespace DDbook
                     dB.LoadData("Book");//本地加载数据库
                     if (!dB.QueryValue(TextBox1.Text.Trim(), 1))//查询本地数据库，判断是否存在
                     {
-                        DataRow dr = dB.MyDataSet.Tables[0].NewRow();//根据本地数据库中，表的结构，复制一条空行
+                        DataRow dr = dB.MyDataSet.Tables[0].NewRow();//根据本地数据库中，表的结构，复制一条空行，效果和直接insert一致
                         dr.BeginEdit();//开始编辑行
                         dr["Name"] = TextBox1.Text.Trim(); //书名
                         dr["author"] = TextBox10.Text.Trim(); //作者
                         dr["Description"] = TextBox2.Text.Trim(); // 简介
-
-                        //ArrayList arr = dB.DataReader("select * from BookType where Name = '"+ DropDownList1.SelectedValue.Trim() +"'", "Id");
                         dr["BookTypeID"] = DropDownList2.SelectedValue.Trim(); // 类型
-
                         dr["Price"] = Convert.ToDouble(TextBox4.Text.Trim()); // 单价
                         if(TextBox5.Text.Trim() == "")
                         {
@@ -95,7 +93,6 @@ namespace DDbook
                         dr["Sales"] = 0;
                         dr["WordsCount"] = TextBox8.Text;
                         dB.MyDataSet.Tables[0].Rows.Add(dr); //将编辑的行添加到本地数据库中
-
                         dr.EndEdit();//结束编辑行
                         dB.UploadData();//上传本地数据库
                         if (dB.Fault)
@@ -109,7 +106,6 @@ namespace DDbook
                             Label1.Text = "添加成功！";
                             Label1.Visible = true;
                         }
-
                         dB.OffData();
                         dB.Empty();
                     }
@@ -131,10 +127,10 @@ namespace DDbook
             {
                 Label1.Visible = true;
                 Label1.Text = "添加失败！！";
-                
             }
         }
 
+        // 一二级dropdownlist联动
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
             DB db = new DB();

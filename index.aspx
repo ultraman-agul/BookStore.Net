@@ -305,7 +305,6 @@
     var imgs = ['./images/img1.jpg', './images/img2.jpg', './images/img3.jpg', './images/img4.jpg', './images/img5.jpg'];
     $('#slider').sliderImg(imgs);
 
-    // activeClass();
 </script>
 
 </asp:Content>

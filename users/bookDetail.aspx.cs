@@ -20,7 +20,9 @@ namespace DDbook
                 if (!db.Fault)
                 {
                     string id = Request.QueryString["Id"].ToString().Trim();
+                    //根据id查询Book表一行数据
                     db.LoadData("Book", "Id", Convert.ToInt32(id));
+                    //得到书籍属于分类表中的一级分类和二级分类
                     db.LoadExecuteData("select *  from BookType where Id in(select ParentID from BookType where Id = (select BookTypeID from Book where Id = " + id + ")) or Id = (select BookTypeID from Book where Id = " + id + ")", "bookTypeTable");
                     LinkButton1.Text = db.MyDataSet.Tables["bookTypeTable"].Rows[0][2].ToString();
                     Label1.Text = db.MyDataSet.Tables["bookTypeTable"].Rows[1][2].ToString();
@@ -38,7 +40,6 @@ namespace DDbook
                     Label10.Text = db.GetValue("Price");
                     Label11.Text = db.GetValue("Description");
                     Label17.Text = db.GetValue("StockNum");
-                    
                 }
                 else
                 {
@@ -53,6 +54,7 @@ namespace DDbook
         // 点击加入购物车
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
+            // 判断库存、是否登录
             if (Label17.Text.Trim() == "0")
             {
                 Response.Write("<script>alert('很抱歉，宝贝当前无库存')</script>");
@@ -82,12 +84,12 @@ namespace DDbook
                 db.ExecuteNonQuery("update ShoppingCart set BookNum=BookNum+1,State=1 where BookID=" + id + " and CustomerID=" + Session["USERID"]);//数量+1
             }
             else
-            {
+            {   
+                //数据库是否存在该商品
                 SqlDataReader sdr = db.DataReader("select Name,SpecialPrice,Pic from Book where Id=" + id);
                 string name = null;
                 double price = 0.0;
                 string pic = null;
-                //数据库存在该商品
                 while (sdr.Read())
                 {
                     name = sdr["Name"].ToString().Trim();
@@ -177,16 +179,14 @@ namespace DDbook
                     string sql = "insert into LeaveWord(BookID,CustomerID,CommentLevel,LeaveContent,LeaveDate) values('"+ bid +"','"+Session["USERID"]+"','"+commentlevel+"','"+TextBox1.Text.Trim()+"','"+date+"')";
                     db.ExecuteNonQuery(sql);
                     TextBox1.Text = "";
+                    Response.Write("<script>alert('评论成功');</script>");
                     commentData(0);
                     CommentNumber(); // 获取评论数量
-                    Response.Write("<script>alert('评论成功');</script>");
-
                 }
                 else
                 {
                     Response.Write("<script>alert('评论内容不能为空');</script>");
                 }
-                
             }
         }
         
@@ -218,6 +218,7 @@ namespace DDbook
             Label16.Text = "累计评论(" + db.DataReader(sql,"number")[0].ToString() + ")条";
         }
         
+        // 五星好评样式
         protected void changeCss(int num)
         {
             commentNum = num;
@@ -260,25 +261,21 @@ namespace DDbook
         protected void LinkButton9_Click(object sender, EventArgs e)
         {
             changeCss(2);
-
         }
 
         protected void LinkButton10_Click(object sender, EventArgs e)
         {
             changeCss(3);
-
         }
 
         protected void LinkButton11_Click(object sender, EventArgs e)
         {
             changeCss(4);
-
         }
 
         protected void LinkButton12_Click(object sender, EventArgs e)
         {
             changeCss(5);
-
         }
 
         // 查看更多

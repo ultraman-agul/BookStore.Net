@@ -10,7 +10,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 <div class="box">
     <div class="mainContainer">
-        <asp:DataList ID="ReplyDataList" runat="server" OnItemCommand="ReplyCommand" CssClass="replyDL">
+        <asp:DataList ID="ReplyDataList" runat="server"  CssClass="replyDL">
             <ItemTemplate>
                 <div class="top">
                     <p>

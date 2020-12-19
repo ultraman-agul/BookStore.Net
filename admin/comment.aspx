@@ -108,7 +108,7 @@ LEFT JOIN Reply ON LeaveWord.Id=Reply.LeaveWordID order by LeaveDate desc;" Upda
                      <asp:Parameter Name="Id" />
                  </UpdateParameters>
              </asp:SqlDataSource>
-             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" Height="173px" PageSize="8" Width="920px" DataKeyNames="Id">
+             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1"  PageSize="7"  DataKeyNames="Id">
                  <Columns>
                      <asp:TemplateField HeaderText="评论编号" InsertVisible="False" SortExpression="Id">
                          <EditItemTemplate>
@@ -124,16 +124,28 @@ LEFT JOIN Reply ON LeaveWord.Id=Reply.LeaveWordID order by LeaveDate desc;" Upda
                      </asp:BoundField>
                      <asp:BoundField DataField="CommentLevel" HeaderText="评论等级" SortExpression="CommentLevel" >
                      </asp:BoundField>
-                     <asp:BoundField DataField="LeaveContent" HeaderText="评论内容" SortExpression="LeaveContent" >
-                     <ItemStyle Width="150px" />
-                     </asp:BoundField>
-                     <asp:BoundField DataField="LeaveDate" HeaderText="评论时间" SortExpression="LeaveDate" >
+                     <asp:TemplateField HeaderText="评论内容" SortExpression="LeaveContent">
+                         <EditItemTemplate>
+                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("LeaveContent") %>'></asp:TextBox>
+                         </EditItemTemplate>
+                         <ItemTemplate>
+                             <asp:Label ID="Label2" CssClass="mlength" runat="server" Text='<%# Bind("LeaveContent") %>'></asp:Label>
+                         </ItemTemplate>
+                         <ItemStyle CssClass="overh" Width="150px" />
+                     </asp:TemplateField>
+                     <asp:BoundField DataField="LeaveDate" HeaderText="评论时间" SortExpression="LeaveDate">
                      </asp:BoundField>
                      <asp:BoundField DataField="ReplyNumber" HeaderText="回复数" SortExpression="ReplyNumber" />
                      <asp:BoundField DataField="CustomerID1" HeaderText="回复用户编号" SortExpression="CustomerID1" />
-                     <asp:BoundField DataField="ReplyContent" HeaderText="回复内容" SortExpression="ReplyContent" >
-                     <ItemStyle Width="150px" />
-                     </asp:BoundField>
+                     <asp:TemplateField HeaderText="回复内容" SortExpression="ReplyContent">
+                         <EditItemTemplate>
+                             <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("ReplyContent") %>'></asp:TextBox>
+                         </EditItemTemplate>
+                         <ItemTemplate>
+                             <asp:Label ID="Label3" CssClass="mlength" runat="server" Text='<%# Bind("ReplyContent") %>'></asp:Label>
+                         </ItemTemplate>
+                         <ItemStyle Width="150px" />
+                     </asp:TemplateField>
                      <asp:BoundField DataField="ReplyDate" HeaderText="回复时间" SortExpression="ReplyDate" />
                      <asp:TemplateField ShowHeader="False">
                          <ItemTemplate>

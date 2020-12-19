@@ -15,7 +15,6 @@
   align-items: center;
 }
 .connav nav ul li {
-  font-size: 16px;
   border-radius: 4px;
   transition: all 0.8s;
   text-align: center;
@@ -28,6 +27,7 @@
   display: block;
   width: 100px;
   height: 100%;
+  font-size: 18px;
 }
 .connav nav ul li:hover {
   background-color: skyblue;
@@ -37,10 +37,10 @@
   height: 582px;
   margin: 0 auto;
   font-size: 16px;
+  display: flex;
 }
 .mainContainer .leftContain {
   padding: 20px;
-  float: left;
   font-size: 20px;
   height: 100%;
 }
@@ -69,7 +69,8 @@
   height: 582px;
   border-left: 2px solid orange;
   padding-left: 40px;
-  float: left;
+  flex: 1;
+  width: 100%;
 }
 .mainContainer .rightContain h2 {
   padding-top: 20px;
@@ -81,8 +82,8 @@
 }
 .mainContainer .rightContain .mainGV table th {
   font-size: 18px;
-  background-color: #FF5675;
-  color: #FFFFFF;
+  background-color: #ff5675;
+  color: #ffffff;
   padding: 4px;
   border-collapse: collapse;
   border: 1px solid #fe2047;
@@ -100,6 +101,14 @@
   border: 1px solid #fe2047;
   border-width: 1px 0 1px 0;
   border: 2px inset #ffffff;
+}
+.mainContainer .rightContain .mainGV table tr td .mlength {
+  display: block;
+  width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 .mainContainer .rightContain .mainGV table tr:nth-child(odd) {
   background-color: #fec6d1;

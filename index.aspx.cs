@@ -47,6 +47,7 @@ namespace DDbook
             db.OffData();
         }
 
+        //点击datalist中的链接跳转到详情页
         protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
         {
             if (e.CommandName == "describe")
@@ -169,7 +170,6 @@ namespace DDbook
             db.OffData();
         }
 
-
         // 推荐
         protected void CommendData(int typeId)
         {
@@ -202,7 +202,6 @@ namespace DDbook
             LinkButton9.Attributes.Remove("class");
             LinkButton10.Attributes.Remove("class");
             lkbt.Attributes.Add("class", "active");
-
         }
 
         protected void LinkButton4_Click(object sender, EventArgs e)

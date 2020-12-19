@@ -17,8 +17,12 @@ namespace DDbook
             }
             else
             {
-                GetData();
-                GetDataReply();
+                if(!IsPostBack)
+                {
+                    GetData();
+                    GetDataReply();
+                }
+                
             }
         }
 
@@ -34,11 +38,6 @@ namespace DDbook
             ReplyDataList.DataKeyField = "Id";
             ReplyDataList.DataBind();
             db.OffData();
-        }
-
-        protected void ReplyCommand(object source, DataListCommandEventArgs e)
-        {
-            
         }
 
         //发表回复

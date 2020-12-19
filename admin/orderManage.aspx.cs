@@ -11,7 +11,10 @@ namespace DDbook.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Adminame"] == null)
+            {
+                Response.Write("<script>alert('您还没登录，请先登录');window.location='/users/login.aspx';</script>");
+            }
         }
 
         protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)

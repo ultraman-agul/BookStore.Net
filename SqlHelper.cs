@@ -319,7 +319,6 @@ namespace DDbook
             }
             else
             {
-                //MessageBox.Show(str, "无值");
                 return false;
             }
         }
