@@ -1,0 +1,7 @@
+{
+    "emmet.excludeLanguages": [
+        "markdown"
+    ],
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true
+}

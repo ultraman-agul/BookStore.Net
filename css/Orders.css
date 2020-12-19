@@ -118,13 +118,32 @@
 .container .info .contBottom .addressinfo h2 {
   margin-bottom: 10px;
 }
+.container .info .contBottom .addressinfo .biaoti {
+  height: 50px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  width: 571px;
+  overflow: hidden;
+}
+.container .info .contBottom .addressinfo .biaoti ul {
+  padding-left: 60px;
+  background-color: #e9e9e9;
+  overflow: hidden;
+}
+.container .info .contBottom .addressinfo .biaoti ul li {
+  line-height: 50px;
+  float: left;
+  margin-right: 88px;
+}
+.container .info .contBottom .addressinfo .biaoti ul li:last-child {
+  margin-right: 0;
+}
 .container .info .contBottom .addressinfo .addl {
-  margin-left: 100px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
 }
 .container .info .contBottom .addressinfo .addl td div {
-  padding: 0 20px;
+  padding-left: 20px;
   margin: 10px;
   height: 30px;
   line-height: 30px;

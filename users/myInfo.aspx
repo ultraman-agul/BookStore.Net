@@ -17,13 +17,22 @@
                 </div>
                 <div class="leftImg">
                     <h2>收货地址</h2>
+                    <div class="biaoti">
+                        <ul>
+                            <li>收货人</li>
+                            <li>收货地址</li>
+                            <li>联系电话</li>
+                            <li>邮政编码</li>
+                            <li>操作</li>
+                        </ul>
+                    </div>
                    <asp:DataList ID="addressDL" runat="server" CssClass="addl" OnCancelCommand="addressDL_CancelCommand" OnDeleteCommand="addressDL_DeleteCommand" OnEditCommand="addressDL_EditCommand" OnUpdateCommand="addressDL_UpdateCommand">
                     <ItemTemplate>
                     <div>
     
                         <asp:Label ID="one" runat="server" Text='<%# Eval("CustomerName") %>'></asp:Label>
-                        <asp:Label ID="two" runat="server" Text='<%# Eval("AddressName") %>'></asp:Label>
-                        <asp:Label ID="three" runat="server" Text='<%# Eval("Phone") %>'></asp:Label>
+                        <asp:Label ID="two" runat="server" Width="200px" Text='<%# Eval("AddressName") %>'></asp:Label>
+                        <asp:Label ID="three" runat="server" Text='<%# Eval("Phone") %>' Width="120px"></asp:Label>
                         <asp:Label ID="four" runat="server" Text='<%# Eval("PostCode") %>'></asp:Label>
                         <span>
                         <asp:LinkButton ID="LinkButton1" CommandArgument='<%# Eval("Id") %>' CommandName="edit" runat="server">编辑</asp:LinkButton>
@@ -35,7 +44,7 @@
                     <div class="editItems">
    
                         <asp:TextBox ID="one" runat="server" Text='<%# Eval("CustomerName") %>' Width="120px"></asp:TextBox>
-                        <asp:TextBox ID="two" runat="server" Text='<%# Eval("AddressName") %>' Width="120px"></asp:TextBox>
+                        <asp:TextBox ID="two" runat="server" Text='<%# Eval("AddressName") %>' Width="200px"></asp:TextBox>
                         <asp:TextBox ID="three" runat="server" Text='<%# Eval("Phone")%>' Width="120px"></asp:TextBox>
                         <asp:TextBox ID="four" runat="server" Text='<%# Eval("PostCode") %>' Width="120px"></asp:TextBox>
                         

@@ -61,11 +61,7 @@ namespace DDbook
                 CartLabel1.Text = Convert.ToString(mm);
                 sdr2.Close();
                 db.OffData();
-            }
-
-
-            
-
+            }   
         }
 
 

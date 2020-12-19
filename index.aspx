@@ -120,7 +120,7 @@
         </div>
         <asp:DataList ID="SpecialPriceDataList1" runat="server" RepeatColumns="4" OnItemCommand="DataList1_ItemCommand" CssClass="showDataList" DataKeyField="Id">
             <ItemTemplate>
-                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("Id")%>' CommandName="discribe">
+                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("Id")%>' CommandName="describe">
                     <span class="img-box">
                         <img src="/images/img/<%# Eval("Pic") %>"/>
                     </span> 
@@ -158,9 +158,9 @@
                 <p class="iconfont icon-hot">畅销榜</p>
             </div>
         <div class="saleBox">
-            <asp:DataList ID="SalesDataList" CssClass="sales" runat="server" OnItemCommand="SalesDataList_ItemCommand">
+            <asp:DataList ID="SalesDataList" CssClass="sales" runat="server" OnItemCommand="DataList1_ItemCommand">
                 <ItemTemplate>
-                    <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# Eval("Id") %>'  CommandName="discribe">
+                    <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# Eval("Id") %>'  CommandName="describe">
                         <asp:Label ID="Label5" runat="server" Text='<%# Eval("序号") %>' style="margin-right: 10px;"></asp:Label>
                         <asp:Label ID="Label6" runat="server" Text='<%# Eval("Name") %>' CssClass="nam"></asp:Label>
                         <asp:Label ID="Label7" CssClass="pric" runat="server" Text='<%# "￥" + Eval("Price") %>'></asp:Label>
@@ -177,9 +177,9 @@
         <div class="leftContent">
             <!-- 有一说一，这个局部刷新控件真好用 -->
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional" ViewStateMode="Inherit">
                 <ContentTemplate>
-            <div id="biaoti1">
+            <div class="biaoti1">
                <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">主编推荐</asp:LinkButton>
                <asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">小说</asp:LinkButton>
                <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">文学传记</asp:LinkButton>
@@ -188,7 +188,7 @@
                <asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton9_Click">成功励志</asp:LinkButton>
                <asp:LinkButton ID="LinkButton10" runat="server" OnClick="LinkButton10_Click">科技教育</asp:LinkButton>
             </div>
-            <asp:DataList ID="CommendDataList" OnItemCommand="commendDLCommand" runat="server" CssClass="showDataList" RepeatColumns="5">
+            <asp:DataList ID="CommendDataList" OnItemCommand="DataList1_ItemCommand" runat="server" CssClass="showDataList" RepeatColumns="5">
                 <ItemTemplate>
                     <asp:LinkButton ID="LinkButton11" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="describe">
                         <span class="img-box">
@@ -220,7 +220,7 @@
             <div class="biaoti">
                 <p class="iconfont icon-paihangbang-">龙虎榜</p>
             </div>
-            <asp:DataList ID="rightCommendDataList" runat="server" OnItemCommand="rightCommendCommand" CssClass="rightdl">
+            <asp:DataList ID="rightCommendDataList" runat="server" OnItemCommand="DataList1_ItemCommand" CssClass="rightdl">
                 <ItemTemplate>
                     <asp:LinkButton ID="LinkButton12" runat="server" CommandArgument='<%# Eval("Id")%>' CommandName="describe">
                       <span class="img-box">
@@ -254,10 +254,10 @@
     <!-- 新品推荐 -->
     <div class="newBook">
         <div class="leftContent">
-            <div id="biaoti1">
+            <div class="biaoti1">
                 <span>新书推荐</span>
             </div>
-            <asp:DataList ID="newBookDataList" runat="server" CssClass="showDataList" OnItemCommand="newBookCommand" RepeatColumns="5">
+            <asp:DataList ID="newBookDataList" runat="server" CssClass="showDataList" OnItemCommand="DataList1_ItemCommand" RepeatColumns="5">
                 <ItemTemplate>
                     <asp:LinkButton ID="LinkButton13" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="describe">
                          <span class="img-box">
@@ -288,9 +288,9 @@
                 <p class="iconfont icon-paihangbang">新书榜</p>
             </div>
             <div class="new-box">
-                <asp:DataList ID="newBookRankDataList" runat="server" OnItemCommand="newBookRankCommand" CssClass="newb">
+                <asp:DataList ID="newBookRankDataList" runat="server" OnItemCommand="DataList1_ItemCommand" CssClass="newb">
                     <ItemTemplate>
-                        <asp:LinkButton ID="LinkButton14" runat="server" CommandArgument='<%# Eval("Id") %>'  CommandName="discribe">
+                        <asp:LinkButton ID="LinkButton14" runat="server" CommandArgument='<%# Eval("Id") %>'  CommandName="describe">
                             <asp:Label ID="Label8" runat="server" Text='<%# Eval("序号") %>' style="margin-right:10px"></asp:Label>
                             <asp:Label ID="Label9" runat="server" Text='<%# Eval("Name") %>'  CssClass="nam"></asp:Label>
                             <asp:Label ID="Label10" CssClass="pric" runat="server" Text='<%# "￥" + Eval("Price") %>'></asp:Label>

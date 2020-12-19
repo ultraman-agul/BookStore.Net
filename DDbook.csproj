@@ -69,11 +69,36 @@
   <ItemGroup>
     <Content Include="admin\addBook.aspx" />
     <Content Include="admin\adminShow.aspx" />
+    <Content Include="admin\orderManage.aspx" />
     <Content Include="App_Data\BookShop_data.mdf" />
     <Content Include="App_Data\BookShop_log.ldf" />
+    <Content Include="images\1901228992_ii_cover.jpg" />
+    <Content Include="images\book.jpg" />
+    <Content Include="images\cool-background %281%29.png" />
+    <Content Include="images\cool-background %282%29.png" />
+    <Content Include="images\cool-background %284%29.png" />
+    <Content Include="images\empty_discuss.jpg" />
     <Content Include="images\img1\img1.jpg" />
     <Content Include="images\img1\img2.jpg" />
     <Content Include="images\img1\img3.jpg" />
+    <Content Include="images\jiantou.png" />
+    <Content Include="images\package\img1.jpg" />
+    <Content Include="images\package\img2.jpg" />
+    <Content Include="images\package\img3.jpg" />
+    <Content Include="images\package\img4.jpg" />
+    <Content Include="images\register.jpg" />
+    <Content Include="images\right1.jpg" />
+    <Content Include="images\right2.jpg" />
+    <Content Include="images\right3.jpg" />
+    <Content Include="images\right4.jpg" />
+    <Content Include="images\shoppingcart.jpg" />
+    <Content Include="images\shoppingcart1.jpg" />
+    <Content Include="images\wallhaven-qdzzgq.png" />
+    <Content Include="images\wallhaven-qdzzgq1.png" />
+    <Content Include="images\wenhao.png" />
+    <Content Include="images\减.png" />
+    <Content Include="images\加.png" />
+    <Content Include="images\微信图片_20201205231102.png" />
     <Content Include="js\login.js" />
     <Content Include="users\myInfo.aspx" />
     <Content Include="users\bookDetail.aspx" />
@@ -147,6 +172,13 @@
     </Compile>
     <Compile Include="admin\adminShow.aspx.designer.cs">
       <DependentUpon>adminShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\orderManage.aspx.cs">
+      <DependentUpon>orderManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\orderManage.aspx.designer.cs">
+      <DependentUpon>orderManage.aspx</DependentUpon>
     </Compile>
     <Compile Include="users\myInfo.aspx.cs">
       <DependentUpon>myInfo.aspx</DependentUpon>

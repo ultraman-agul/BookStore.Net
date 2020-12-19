@@ -16,6 +16,8 @@
                     <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/admin/bookManage.aspx">书籍管理</asp:HyperLink></li>
                 <li>
                     <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/admin/comment.aspx">评论管理</asp:HyperLink></li>
+                <li>
+                    <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/admin/orderManage.aspx">订单管理</asp:HyperLink></li>
             </ul>
         </nav>
     </div>
@@ -74,6 +76,18 @@
             </p>
             <p>
                 <asp:HyperLink ID="HyperLink15" runat="server" NavigateUrl="~/admin/bookManage.aspx">&nbsp;&nbsp;&nbsp;&nbsp;书籍信息</asp:HyperLink>
+            </p>
+        </div>
+          <div class="left-item">
+            <span>
+                <i class="iconfont icon-shuji"></i>
+                <asp:HyperLink ID="HyperLink16" runat="server" NavigateUrl="~/admin/orderManage.aspx">
+                    <i class="iconfont"></i> 订单管理
+                </asp:HyperLink>
+            </span>
+            <br />
+            <p>
+                <asp:HyperLink ID="HyperLink17" runat="server" NavigateUrl="~/admin/orderManage.aspx">&nbsp;&nbsp;&nbsp;&nbsp;订单信息</asp:HyperLink>
             </p>
         </div>
     </div>

@@ -145,7 +145,7 @@ namespace DDbook
                 // 尝试添加到订单表
                 try
                 { 
-                    insertSQL = "insert into Torder values("+ id +","+ customerid+","+bookid+","+postcode+",'"+addressInfo+"','"+name+"','"+phone+"','"+message+"','"+date+"','"+delivery+"','"+booknum+"','"+f+"')";
+                    insertSQL = "insert into Torder values("+ id +","+ customerid+","+bookid+","+postcode+",'"+addressInfo+"','"+name+"','"+phone+"','"+message+"','"+date+"','"+delivery+"','"+booknum+"','"+f+"','0')";
                     db.ExecuteNonQuery(insertSQL);
                 }
                 catch

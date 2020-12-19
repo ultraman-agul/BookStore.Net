@@ -91,7 +91,7 @@ namespace DDbook
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
             DB db = new DB();
-            db.ExecuteNonQuery("insert into Address values('" + Session["USERID"] + "','" + TextBox6.Text + "','" + TextBox8.Text + "','" + TextBox9.Text + "','" + TextBox10.Text + "')");
+            db.ExecuteNonQuery("insert into Address values('" + Session["USERID"] + "','" + TextBox8.Text + "','" + TextBox6.Text + "','" + TextBox9.Text + "','" + TextBox10.Text + "')");
             db.OffData();
             Response.Write("<script>alert('添加成功！');</script>");
             GetData();

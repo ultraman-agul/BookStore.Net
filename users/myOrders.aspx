@@ -44,7 +44,7 @@
                         <ItemTemplate>
                             <div class="toplist">
                                 <div>
-                                    <asp:LinkButton ID="LinkButton2" runat="server" CommandName="redirect" CommandArgument='<%# Eval("Id") %>'>
+                                    <asp:LinkButton ID="LinkButton2" runat="server" >
                                     <img src='/images/img/<%# Eval("Pic")%>' alt="Alternate Text" />
                                      </asp:LinkButton>
                                 </div>
@@ -99,6 +99,16 @@
                             <span class="left">总金额：</span>
                             <asp:Label ID="Label12" runat="server" CssClass="totalMoney" Text='<%#  "￥" + GetPrice(Eval("Id").ToString()) %>'></asp:Label>
                         </p>
+                        <div class="pdright">
+                        <p>
+                            <span class="left">支付方式：</span>
+                            <asp:Label ID="Label13" runat="server"  Text='<%#  string.Format("{0}",Eval("Flag")) == "True" ? "已支付" : "货到付款"%>'></asp:Label>
+                        </p>
+                         <p>
+                            <span class="left">状态：</span>
+                            <asp:Label ID="Label14" runat="server"  Text='<%#  string.Format("{0}",Eval("IsSend")) == "True" ? "已发货" : "待发货"%>'></asp:Label>
+                        </p>
+                        </div>
                     </div>
 
                 </div>

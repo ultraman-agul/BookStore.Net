@@ -48,7 +48,10 @@ namespace DDbook
             }
             else 
             {
-                FillPackageData(typeid, " order by Sales");
+                if(!IsPostBack)
+                {
+                    FillPackageData(typeid, " order by Sales");
+                }
             }
         }
         #region 分类列表 开始
@@ -192,7 +195,6 @@ namespace DDbook
             LinkButton3.Attributes.Remove("class");
             LinkButton4.Attributes.Remove("class");
             lkbt.Attributes.Add("class", "active");
-
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
@@ -203,11 +205,13 @@ namespace DDbook
             {
                 flagSale = false;
                 FillPackageData(typeids, " order by Sales desc");
+                Image1.Attributes.Remove("class");
             }
             else
             {
                 flagSale = true;
                 FillPackageData(typeids, " order by Sales asc");
+                Image1.Attributes.Add("class", "rotate");
             }
 
         }
@@ -218,7 +222,7 @@ namespace DDbook
             string sql = "SELECT b.*, CommentLevel FROM(select * from Book where BookTypeID = " + id + ") as b LEFT JOIN LeaveWord ON b.Id = BookID order by CommentLevel " + sortText;
             if (id == 0)
             {
-                sql = "SELECT Book.*, CommentLevel FROM Book LEFT JOIN LeaveWord ON Book.Id = "+id+"order by CommentLevel " + sortText;
+                sql = "select s.* from(select *, row_number() over(partition by Id order by Id) as group_idx from(SELECT top 1000 Book.*, CommentLevel, ReplyNumber FROM Book LEFT JOIN LeaveWord ON Book.Id = LeaveWord.BookID order by CommentLevel "+sortText+", ReplyNumber "+sortText+") ta) s where s.group_idx = 1 order by CommentLevel "+sortText+", ReplyNumber " + sortText;
             }
             if (id > 0 && id < 10)
             {
@@ -239,11 +243,14 @@ namespace DDbook
             {
                 flagComment = false;
                 FillGoodComment(id, "desc");
+                Image2.Attributes.Remove("class");
+
             }
             else
             {
                 flagComment = true;
                 FillGoodComment(id, "asc");
+                Image2.Attributes.Add("class", "rotate");
             }
         }
         // 最新
@@ -255,11 +262,13 @@ namespace DDbook
             {
                 flagNew = false;
                 FillPackageData(typeids, " order by PublishDate desc");
+                Image3.Attributes.Remove("class");
             }
             else
             {
                 flagNew = true;
                 FillPackageData(typeids, " order by PublishDate asc");
+                Image3.Attributes.Add("class", "rotate");
             }
         }
         // 价格
@@ -271,11 +280,13 @@ namespace DDbook
             {
                 flagPrice = false;
                 FillPackageData(typeids, " order by SpecialPrice asc");
+                Image4.Attributes.Remove("class");
             }
             else
             {
                 flagPrice = true;
                 FillPackageData(typeids, " order by SpecialPrice desc");
+                Image4.Attributes.Add("class", "rotate");
             }
         }
     }

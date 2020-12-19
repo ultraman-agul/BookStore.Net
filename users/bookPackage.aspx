@@ -126,11 +126,14 @@
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
             <nav>
-                
-                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">销  量  <i class="iconfont icon-jiantouarrow505"></i></asp:LinkButton>
-                <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">好  评  <i class="iconfont icon-jiantouarrow505"></i></asp:LinkButton>
-                <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">最  新  <i class="iconfont icon-jiantouarrow505"></i></asp:LinkButton>
-                <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">价  格  <i class="iconfont icon-jiantouarrow505"></i></asp:LinkButton>
+                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">销  量  </asp:LinkButton>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/images/jiantou.png" />
+                <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">好  评  </asp:LinkButton>
+                <asp:Image ID="Image2" runat="server" ImageUrl="~/images/jiantou.png"/>
+                <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">最  新  </asp:LinkButton>
+                <asp:Image ID="Image3" runat="server" ImageUrl="~/images/jiantou.png" />
+                <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">价  格  </asp:LinkButton>
+                <asp:Image ID="Image4" runat="server" ImageUrl="~/images/jiantou.png" />
             </nav>
             <div class="dl">
                 <asp:DataList ID="PackageDataList" runat="server" RepeatColumns="3" CssClass="showDataList" OnItemCommand="PackageCommand">

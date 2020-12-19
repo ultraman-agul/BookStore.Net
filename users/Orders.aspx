@@ -53,6 +53,14 @@
             <div class="contBottom">
             <div class="addressinfo">
                 <h2> <i class="iconfont icon-yonghu"></i>收货人信息</h2>
+                <div class="biaoti">
+                        <ul>
+                            <li>收货人</li>
+                            <li>收货地址</li>
+                            <li>联系电话</li>
+                            <li>邮政编码</li>
+                        </ul>
+                    </div>
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
@@ -60,9 +68,10 @@
                     <ItemTemplate>
                     <div>
                         <asp:CheckBox ID="CheckBox1" runat="server" AutoPostBack="True" OnCheckedChanged="CheckedChanged"/>
-                        <asp:Label ID="Label7" runat="server" Text='<%# Eval("CustomerName") %>'></asp:Label>
-                        <asp:Label ID="Label8" runat="server" Text='<%# Eval("AddressName") %>'></asp:Label>
-                        <asp:Label ID="Label9" runat="server" Text='<%# Eval("Phone") %>'></asp:Label>
+                        <asp:Label ID="Label7" runat="server" Text='<%# Eval("CustomerName") %>' Width="60px"></asp:Label>
+                        <asp:Label ID="Label8" runat="server" Width="200px" Text='<%# Eval("AddressName") %>'></asp:Label>
+                        <asp:Label ID="Label9" runat="server" Width="100px" Text='<%# Eval("Phone") %>'></asp:Label>
+                        <asp:Label ID="Label10" runat="server" Width="60px" Text='<%# Eval("PostCode") %>'></asp:Label>
                     </div>
                     </ItemTemplate>
                 </asp:DataList>

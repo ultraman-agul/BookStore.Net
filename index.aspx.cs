@@ -26,7 +26,10 @@ namespace DDbook
             //分类结束
            
             SalesData(); //销售榜
-            CommendData(0);//推荐分类
+            if(!IsPostBack)
+            {
+                CommendData(0);//推荐分类
+            }
             forClass(LinkButton4);
             rightCommendData();// 右侧推荐
             newBookData();//新书推荐
@@ -46,7 +49,7 @@ namespace DDbook
 
         protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
         {
-            if (e.CommandName == "discribe")
+            if (e.CommandName == "describe")
             {
                 string id = e.CommandArgument.ToString();
                 Response.Redirect("~/users/BookDetail.aspx?Id=" + id);
@@ -166,19 +169,12 @@ namespace DDbook
             db.OffData();
         }
 
-        protected void SalesDataList_ItemCommand(object source, DataListCommandEventArgs e)
-        {
-            if (e.CommandName == "discribe")
-            {
-                string id = e.CommandArgument.ToString();
-                Response.Redirect("~/users/bookDetail.aspx?Id=" + id);
-            }
-        }
 
         // 推荐
         protected void CommendData(int typeId)
         {
             DB db = new DB();
+            
             string sql = "";
             if(typeId == 0)
             {
@@ -193,14 +189,6 @@ namespace DDbook
             CommendDataList.DataKeyField = "Id";
             CommendDataList.DataBind();
             db.OffData();
-        }
-        protected void commendDLCommand(object source, DataListCommandEventArgs e)
-        {
-            if(e.CommandName == "describe")
-            {
-                string id = e.CommandArgument.ToString();
-                Response.Redirect("~/users/bookDetail.aspx?Id=" + id);
-            }
         }
 
         // 改变按钮样式
@@ -263,20 +251,12 @@ namespace DDbook
         protected void rightCommendData()
         {
             DB db = new DB();
-            string sql = "select top 3 * from Book where IsCommend = 1";
+            string sql = "select top 3 s.* from( select *, row_number() over(partition by Id order by Id) as group_idx from(SELECT distinct top 10 b.*, CommentLevel, ReplyNumber FROM(select * from Book) as b LEFT JOIN LeaveWord ON b.Id = BookID order by CommentLevel desc, ReplyNumber desc) ta) s where s.group_idx = 1 order by CommentLevel desc, ReplyNumber desc";
             db.LoadExecuteData(sql);
             rightCommendDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
             rightCommendDataList.DataKeyField = "Id";
             rightCommendDataList.DataBind();
             db.OffData();
-        }
-
-        protected void rightCommendCommand(object source, DataListCommandEventArgs e)
-        {
-            if(e.CommandName == "describe" )
-            {
-                Response.Redirect("~/users/bookDetail.aspx?Id=" + e.CommandArgument.ToString());
-            }
         }
 
         // 新书推荐
@@ -290,13 +270,6 @@ namespace DDbook
             newBookDataList.DataBind();
             db.OffData();
         }
-        protected void newBookCommand(object source, DataListCommandEventArgs e)
-        {
-            if (e.CommandName == "describe")
-            {
-                Response.Redirect("~/users/bookDetail.aspx?Id=" + e.CommandArgument.ToString());
-            }
-        }
 
         // 新书榜
         protected void newBookRankData()
@@ -308,13 +281,6 @@ namespace DDbook
             newBookRankDataList.DataKeyField = "Id";
             newBookRankDataList.DataBind();
             db.OffData();
-        }
-        protected void newBookRankCommand(object source, DataListCommandEventArgs e)
-        {
-            if (e.CommandName == "describe")
-            {
-                Response.Redirect("~/users/bookDetail.aspx?Id=" + e.CommandArgument.ToString());
-            }
         }
     }
 }

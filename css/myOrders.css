@@ -73,8 +73,9 @@
   margin-bottom: 20px;
 }
 .Mcontainer .DLdv .orderDL td .demo {
-  border: 1px solid #ccc;
-  margin-bottom: 30px;
+  background-color: #eff;
+  border: 2px solid #ccc;
+  margin-bottom: 70px;
 }
 .Mcontainer .DLdv .orderDL td .demo .title {
   background-color: #eee;
@@ -111,8 +112,18 @@
   height: 100px;
   width: 80px;
 }
+.Mcontainer .DLdv .orderDL td .demo .innerDL tr td .toplist .text div h3 {
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .Mcontainer .DLdv .orderDL td .demo .innerDL tr td .toplist .text div h3 span {
   color: #737373;
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .Mcontainer .DLdv .orderDL td .demo .bottom {
   padding-left: 220px;
@@ -129,4 +140,7 @@
   font-size: 30px;
   font-weight: 500;
   color: #ff6666;
+}
+.Mcontainer .DLdv .orderDL td .demo .bottom .pdright {
+  margin-left: 500px;
 }

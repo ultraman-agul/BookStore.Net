@@ -201,18 +201,18 @@
   width: 940px;
   overflow: hidden;
 }
-.mainContainer .commend .leftContent #biaoti1 {
+.mainContainer .commend .leftContent .biaoti1 {
   border-bottom: 2px solid orange;
   height: 34px;
   line-height: 34px;
 }
-.mainContainer .commend .leftContent #biaoti1 a {
+.mainContainer .commend .leftContent .biaoti1 a {
   float: left;
   width: 110px;
   text-align: center;
   font-size: 14px;
 }
-.mainContainer .commend .leftContent #biaoti1 .active {
+.mainContainer .commend .leftContent .biaoti1 .active {
   font-size: 18px;
   background-color: orange;
   color: #fff;
@@ -330,12 +330,12 @@
   width: 940px;
   overflow: hidden;
 }
-.mainContainer .newBook .leftContent #biaoti1 {
+.mainContainer .newBook .leftContent .biaoti1 {
   border-bottom: 2px solid orange;
   height: 34px;
   line-height: 34px;
 }
-.mainContainer .newBook .leftContent #biaoti1 span {
+.mainContainer .newBook .leftContent .biaoti1 span {
   display: block;
   width: 110px;
   text-align: center;
