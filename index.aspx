@@ -118,7 +118,7 @@
         <div class="xianshi">
             <p class="iconfont icon-xianshiqianggou"> 限时秒杀</p>
         </div>
-        <asp:DataList ID="SpecialPriceDataList1" runat="server" RepeatColumns="4" OnItemCommand="DataList1_ItemCommand" CssClass="showDataList" DataKeyField="Id">
+        <asp:DataList ID="SpecialPriceDataList1" runat="server" RepeatColumns="4" OnItemCommand="DataList1_ItemCommand" CssClass="showDataList" DataKeyField="Id" RepeatDirection="Horizontal">
             <ItemTemplate>
                 <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("Id")%>' CommandName="describe">
                     <span class="img-box">
@@ -188,7 +188,7 @@
                <asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton9_Click">成功励志</asp:LinkButton>
                <asp:LinkButton ID="LinkButton10" runat="server" OnClick="LinkButton10_Click">科技教育</asp:LinkButton>
             </div>
-            <asp:DataList ID="CommendDataList" OnItemCommand="DataList1_ItemCommand" runat="server" CssClass="showDataList" RepeatColumns="5">
+            <asp:DataList ID="CommendDataList" OnItemCommand="DataList1_ItemCommand" runat="server" CssClass="showDataList" RepeatColumns="5" RepeatDirection="Horizontal">
                 <ItemTemplate>
                     <asp:LinkButton ID="LinkButton11" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="describe">
                         <span class="img-box">
@@ -257,7 +257,7 @@
             <div class="biaoti1">
                 <span>新书推荐</span>
             </div>
-            <asp:DataList ID="newBookDataList" runat="server" CssClass="showDataList" OnItemCommand="DataList1_ItemCommand" RepeatColumns="5">
+            <asp:DataList ID="newBookDataList" runat="server" CssClass="showDataList" OnItemCommand="DataList1_ItemCommand" RepeatColumns="5" RepeatDirection="Horizontal">
                 <ItemTemplate>
                     <asp:LinkButton ID="LinkButton13" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="describe">
                          <span class="img-box">

@@ -25,7 +25,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <div class="ManageCon">
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:sqlConnection %>" SelectCommand="SELECT * FROM [Torder]"></asp:SqlDataSource>
-        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" AllowPaging="True" OnRowCommand="GridView2_RowCommand"  DataKeyNames="Id" PageSize="15">
+        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" AllowPaging="True" OnRowCommand="GridView2_RowCommand"  DataKeyNames="Id" PageSize="15" OnRowDataBound="GridView2_RowDataBound">
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="订单编号" SortExpression="Id" />
                 <asp:BoundField DataField="CustomerID" HeaderText="用户编号" SortExpression="CustomerID" />

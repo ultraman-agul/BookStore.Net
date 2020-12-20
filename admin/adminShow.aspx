@@ -94,7 +94,7 @@
          <br />
          <div class="mainGV">
              <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sqlConnection %>" SelectCommand="SELECT * FROM [SysUser]" UpdateCommand="update SysUser set RealName=@RealName,LoginName=@LoginName,Address=@Address,Role=@Role where Id=@Id" DeleteCommand="delete from SysUser where Id=@Id"></asp:SqlDataSource>
-             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="#333333" Height="173px" PageSize="4" Width="900px">
+             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="#333333" Height="173px" PageSize="4" Width="900px" OnRowDataBound="GridView1_RowDataBound">
                  <Columns>
                      <asp:BoundField DataField="Id" HeaderText="编号" ReadOnly="True" SortExpression="Id" >
                      </asp:BoundField>

@@ -2,8 +2,8 @@
   width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  background-color: skyblue;
-  height: 860px;
+  background-color: #eee;
+  height: 960px;
   padding-bottom: 85px;
 }
 .mainContainer .rightcontent {
@@ -29,11 +29,18 @@
   font-size: 16px;
 }
 .mainContainer .rightcontent table td textarea {
-  width: 300px;
+  width: 400px;
   font-size: 18px;
+  height: 100px !important;
 }
 .mainContainer .rightcontent table td .number {
   width: 100px;
+}
+.mainContainer .rightcontent table td table {
+  width: 350px;
+}
+.mainContainer .rightcontent table td table tr th {
+  width: 30px;
 }
 .mainContainer .rightcontent table td table td {
   height: 20px;
@@ -54,7 +61,7 @@
   color: red;
   font-weight: 700;
   left: 950px;
-  width: 200px;
+  width: 250px;
   background-color: #a3f8a3;
   display: block;
   height: 100px;

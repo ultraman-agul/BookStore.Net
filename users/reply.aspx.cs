@@ -68,5 +68,13 @@ namespace DDbook
             ReplyReplyDataList.DataBind();
             db.OffData();
         }
+
+        protected void ReplyDataList_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "describe")
+            {
+                Response.Redirect("/users/bookDetail.aspx?Id=" + e.CommandArgument.ToString());
+            }
+        }
     }
 }

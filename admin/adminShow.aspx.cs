@@ -16,5 +16,14 @@ namespace DDbook
                 Response.Write("<script>alert('您还没登录，请先登录');window.location='/users/login.aspx';</script>");
             }
         }
+
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                e.Row.Attributes.Add("onmouseover", "c=this.style.backgroundColor;this.style.backgroundColor='#99FFCC'");     //鼠标悬停变色
+                e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor=c");      //鼠标移走颜色还原
+            }
+        }
     }
 }

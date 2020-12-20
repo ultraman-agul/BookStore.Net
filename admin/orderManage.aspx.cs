@@ -29,5 +29,14 @@ namespace DDbook.admin
                 db.OffData();
             }
         }
+
+        protected void GridView2_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                e.Row.Attributes.Add("onmouseover", "c=this.style.backgroundColor;this.style.backgroundColor='#99FFCC'");     //鼠标悬停变色
+                e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor=c");      //鼠标移走颜色还原
+            }
+        }
     }
 }

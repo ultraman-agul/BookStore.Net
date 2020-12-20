@@ -105,6 +105,8 @@ namespace DDbook
                             FileUpload1.SaveAs(savePath1);//保存展示图
                             Label1.Text = "添加成功！";
                             Label1.Visible = true;
+
+                            TextBox1.Text = TextBox10.Text = TextBox2.Text = TextBox4.Text = TextBox5.Text = TextBox7.Text = TextBox6.Text = TextBox8.Text = "";
                         }
                         dB.OffData();
                         dB.Empty();

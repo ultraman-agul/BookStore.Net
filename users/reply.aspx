@@ -10,7 +10,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 <div class="box">
     <div class="mainContainer">
-        <asp:DataList ID="ReplyDataList" runat="server"  CssClass="replyDL">
+        <asp:DataList ID="ReplyDataList" runat="server"  CssClass="replyDL" OnItemCommand="ReplyDataList_ItemCommand">
             <ItemTemplate>
                 <div class="top">
                     <p>
@@ -24,7 +24,9 @@
                 </div>
                 <div class="bookinfo">
                     <div class="img-box">
+                        <asp:LinkButton ID="LinkButton2" runat="server"  CommandArgument='<%# Eval("Id") %>' CommandName="describe">
                         <img src='/images/img/<%# Eval("Pic") %>' alt="Alternate Text" />
+                        </asp:LinkButton>
                     </div>
                     <div class="txtinfo">
                         <p>

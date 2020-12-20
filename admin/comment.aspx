@@ -108,7 +108,7 @@ LEFT JOIN Reply ON LeaveWord.Id=Reply.LeaveWordID order by LeaveDate desc;" Upda
                      <asp:Parameter Name="Id" />
                  </UpdateParameters>
              </asp:SqlDataSource>
-             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1"  PageSize="7"  DataKeyNames="Id">
+             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1"  PageSize="7"  DataKeyNames="Id" OnRowDataBound="GridView1_RowDataBound">
                  <Columns>
                      <asp:TemplateField HeaderText="评论编号" InsertVisible="False" SortExpression="Id">
                          <EditItemTemplate>

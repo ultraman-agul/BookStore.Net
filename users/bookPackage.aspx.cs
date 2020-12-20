@@ -283,17 +283,17 @@ namespace DDbook
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
             forClass(LinkButton4);
-            string typeids = Request.QueryString["Id"].ToString().Trim(); ;
+            string typeids = Request.QueryString["Id"].ToString().Trim();
             if (flagPrice)
             {
                 flagPrice = false;
-                FillPackageData(typeids, " order by SpecialPrice asc");
+                FillPackageData(typeids, " order by SpecialPrice desc");
                 Image4.Attributes.Remove("class");
             }
             else
             {
                 flagPrice = true;
-                FillPackageData(typeids, " order by SpecialPrice desc");
+                FillPackageData(typeids, " order by SpecialPrice asc");
                 Image4.Attributes.Add("class", "rotate");
             }
         }

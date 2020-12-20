@@ -96,7 +96,7 @@
          <br />
          <div class="mainGV">
              <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sqlConnection %>" SelectCommand="SELECT * FROM [Customer]" UpdateCommand="update Customer set Realname=@Realname,LoginName=@LoginName,PostCode=@PostCode,LinkTel=@LinkTel where Id=@Id" DeleteCommand="DELETE FROM Customer WHERE (Id = @Id)"></asp:SqlDataSource>
-             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" PageSize="4" Width="900px">
+             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" PageSize="5" Width="900px" OnRowDataBound="GridView1_RowDataBound">
                  <Columns>
                      <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" >
                      <ItemStyle Height="50px" Width="80px" />
