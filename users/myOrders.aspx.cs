@@ -33,6 +33,15 @@ namespace DDbook
             DataList2.DataKeyField = "Id";
             DataList2.DataSource = db.MyDataSet.Tables[0].DefaultView;
             DataList2.DataBind();
+            //判断是否为空
+            if (db.MyDataSet.Tables[0].Rows.Count <= 0)
+            {
+                Image2.Visible = true;
+            }
+            else
+            {
+                Image2.Visible = false;
+            }
             db.OffData();
         }
 
@@ -45,6 +54,15 @@ namespace DDbook
             DataList2.DataKeyField = "Id";
             DataList2.DataSource = db.MyDataSet.Tables[0].DefaultView;
             DataList2.DataBind();
+            //判断是否为空
+            if (db.MyDataSet.Tables[0].Rows.Count <= 0)
+            {
+                Image2.Visible = true;
+            }
+            else
+            {
+                Image2.Visible = false;
+            }
             db.OffData();
         }
 
@@ -76,13 +94,13 @@ namespace DDbook
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            try
+            if(TextBox1.Text.Trim() != "")
             {
                 GetData(TextBox1.Text.Trim());
             }
-            catch
+            else
             {
-                Response.Write("<script>alert('查无此单');</script>");
+                GetData();
             }
         }
 

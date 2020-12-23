@@ -66,6 +66,13 @@
 .Mcontainer .DLdv {
   padding: 30px 30px 0;
 }
+.Mcontainer .DLdv img {
+  width: 900px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
 .Mcontainer .DLdv .orderDL {
   width: 100%;
 }

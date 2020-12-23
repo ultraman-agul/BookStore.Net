@@ -97,6 +97,7 @@
                         <div class="CommentNum" id="comment">
                            <asp:Label ID="Label16" runat="server" Text="Label"></asp:Label>
                         </div>
+                        <asp:Image ID="Image3" runat="server" CssClass="emptyimg" ImageUrl="~/images/empty_discuss.jpg" Visible="False" />
                         <asp:DataList ID="CommentDataList" runat="server" CssClass="commentdl" OnItemCommand="CommentCommand" >
                             <ItemTemplate>
                                 <div class="left">
@@ -107,6 +108,7 @@
     
                                     <div class="imgb">
                                         <asp:Image ID="Image2" runat="server" ImageUrl='<%# string.IsNullOrEmpty(Eval("Pic").ToString()) ? "/images/wenhao.png" : "/images/img/" + Eval("Pic") %>'/>
+                                        <asp:Label ID="Label18" runat="server" Text='<%# Eval("CommentLevel").ToString()=="5" ? "五星好评": Eval("CommentLevel").ToString()=="4" ? "四星好评" : Eval("CommentLevel").ToString()=="3" ? "较好" : Eval("CommentLevel").ToString()=="2" ? "一般" : "差" %>'></asp:Label>
                                     </div>
                                 </div>
                                 <div class="Lcontent">

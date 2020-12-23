@@ -148,6 +148,10 @@
   height: 36px;
   line-height: 36px;
 }
+.box .detailContainer .mainContain .tabbox .description #dv2 .emptyimg {
+  margin: 80px auto;
+  margin-left: 400px;
+}
 .box .detailContainer .mainContain .tabbox .description #dv2 .commentdl {
   width: 100%;
 }
@@ -161,18 +165,26 @@
   height: 60px;
 }
 .box .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .left .imgb {
-  width: 35px;
+  width: 120px;
+  position: relative;
 }
 .box .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .left .imgb img {
   height: 35px;
   width: 35px;
   border-radius: 16px;
 }
+.box .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .left .imgb span {
+  position: absolute;
+  left: 40px;
+  top: 10px;
+  color: orange;
+}
 .box .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .Lcontent {
   width: 400px;
   float: left;
   font-size: 18px;
   height: 60px;
+  word-break: break-all;
 }
 .box .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .right {
   width: 100px;

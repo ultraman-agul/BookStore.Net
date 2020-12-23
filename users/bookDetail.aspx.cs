@@ -201,6 +201,9 @@ namespace DDbook
             CommentDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
             CommentDataList.DataKeyField = "Id";
             CommentDataList.DataBind();
+            //判断是否为空
+            Image3.Visible = db.MyDataSet.Tables[0].Rows.Count <= 0 ? true : false;
+            LinkButton13.Visible = db.MyDataSet.Tables[0].Rows.Count <= 0 ? false : true;
             db.OffData();
         }
 

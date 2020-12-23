@@ -32,7 +32,7 @@
         </div>
         <div class="DLdv">
 
-        
+        <asp:Image ID="Image2" runat="server" ImageUrl="~/images/nullorder1.jpg" Visible="false"/>        
         <asp:DataList ID="DataList2" runat="server" CssClass="orderDL">
             <ItemTemplate>
                 <div class="demo">

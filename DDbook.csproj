@@ -82,6 +82,8 @@
     <Content Include="images\img1\img2.jpg" />
     <Content Include="images\img1\img3.jpg" />
     <Content Include="images\jiantou.png" />
+    <Content Include="images\nullOrder.jpg" />
+    <Content Include="images\nullorder1.jpg" />
     <Content Include="images\package\img1.jpg" />
     <Content Include="images\package\img2.jpg" />
     <Content Include="images\package\img3.jpg" />
@@ -111,7 +113,6 @@
     <Content Include="css\bookPackage.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\buttons.css" />
-    <Content Include="css\editOrder.css" />
     <Content Include="css\iconfont.css" />
     <Content Include="css\index.css" />
     <Content Include="css\login.css" />
@@ -145,7 +146,6 @@
     <Content Include="images\wuyifan.jpg" />
     <Content Include="index.aspx" />
     <Content Include="js\addBook.js" />
-    <Content Include="js\bookDetail.js" />
     <Content Include="js\index.js" />
     <Content Include="js\jquery-3.5.1.min.js" />
     <Content Include="js\order.js" />
@@ -292,7 +292,6 @@
     <Content Include="MasterPage.Master" />
     <Content Include="css\addBook.less" />
     <Content Include="css\bookDetail.less" />
-    <Content Include="css\editOrder.less" />
     <Content Include="css\index.less" />
     <Content Include="css\login.less" />
     <Content Include="css\masterpage.less" />

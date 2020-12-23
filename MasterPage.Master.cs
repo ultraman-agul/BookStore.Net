@@ -17,10 +17,9 @@ namespace DDbook
             if (Session["USERName"] != null && Session["USERPWD"] != null)
             {
                 HyperLink1.Text = Session["USERName"].ToString();
-                HyperLink1.NavigateUrl = "#";
+                HyperLink1.NavigateUrl = "~/users/myInfo.aspx";
                 HyperLink2.Text = "退出";
                 HyperLink2.NavigateUrl = "~/users/login.aspx";
-                HyperLink1.NavigateUrl = "#";
 
                 //头像
                 DB db = new DB();

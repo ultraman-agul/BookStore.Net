@@ -218,7 +218,7 @@
         </div>
         <div class="rightContent">
             <div class="biaoti">
-                <p class="iconfont icon-paihangbang-">龙虎榜</p>
+                <p class="iconfont icon-paihangbang-">好评榜</p>
             </div>
             <asp:DataList ID="rightCommendDataList" runat="server" OnItemCommand="DataList1_ItemCommand" CssClass="rightdl">
                 <ItemTemplate>

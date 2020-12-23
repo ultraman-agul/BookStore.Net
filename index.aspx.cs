@@ -40,7 +40,7 @@ namespace DDbook
         protected void FillData1()
         {
             DB db = new DB();
-            string sql = "SELECT DISTINCT TOP 8 * FROM [Book] WHERE IsSpecial = '1' ORDER BY [Id]";
+            string sql = "SELECT DISTINCT TOP 8 * FROM [Book] WHERE IsSpecial = '1' ORDER BY PublishDate desc ";
             db.LoadExecuteData(sql);
             SpecialPriceDataList1.DataSource = db.MyDataSet.Tables[0].DefaultView;//设置DataList控件的数据源为创建的数据集ds 
             SpecialPriceDataList1.DataBind(); //绑定数据库表中数据
