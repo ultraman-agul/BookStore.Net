@@ -126,6 +126,7 @@
     // 中间栏
     .column2{
         .xianshi{
+            position: relative;
             margin-top: 19px;
             overflow: hidden;
             border-bottom: 2px solid #ee554a;
@@ -138,6 +139,28 @@
                 text-align: center;
                 line-height: 34px;
                 font-size: 18px;
+               
+            }
+            .notice{
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 200px;/*单行显示，超出隐藏*/
+                height: 35px;/*固定公告栏显示区域的高度*/
+                padding: 0 10px;
+                background-color: #ee554a;
+                overflow: hidden;
+                ul li {
+                    list-style: none;
+                    height: 35px;
+                    line-height: 35px;
+                    /*以下为了单行显示，超出隐藏*/
+                    display: block;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    color: #fff;
+                }
             }
         }
         padding-top: 10px;

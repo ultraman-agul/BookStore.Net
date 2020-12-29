@@ -98,7 +98,7 @@
              <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sqlConnection %>" SelectCommand="SELECT * FROM [Customer]" UpdateCommand="update Customer set Realname=@Realname,LoginName=@LoginName,PostCode=@PostCode,LinkTel=@LinkTel where Id=@Id" DeleteCommand="DELETE FROM Customer WHERE (Id = @Id)"></asp:SqlDataSource>
              <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" PageSize="5" Width="900px" OnRowDataBound="GridView1_RowDataBound">
                  <Columns>
-                     <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" >
+                     <asp:BoundField DataField="Id" HeaderText="编号" InsertVisible="False" ReadOnly="True" SortExpression="Id">
                      <ItemStyle Height="50px" Width="80px" />
                      </asp:BoundField>
                      <asp:BoundField DataField="Realname" HeaderText="真实姓名" SortExpression="Realname" >
@@ -113,10 +113,10 @@
                      <asp:BoundField DataField="LinkTel" HeaderText="联系电话" SortExpression="LinkTel" >
                      <ItemStyle Width="100px" />
                      </asp:BoundField>
-                     <asp:CommandField ShowEditButton="True" >
+                     <asp:CommandField ShowEditButton="True" HeaderText="操作" >
                      <ItemStyle Width="60px" />
                      </asp:CommandField>
-                     <asp:TemplateField ShowHeader="False">
+                     <asp:TemplateField ShowHeader="False" HeaderText="删除">
                          <ItemTemplate>
                              <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" Text="删除" OnClientClick="return confirm('确定删除吗？')"></asp:LinkButton>
                          </ItemTemplate>

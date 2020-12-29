@@ -3,8 +3,7 @@
     <title>叮当首页</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/slider.css">
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/index.js"></script>
+    
 </asp:Content>
 <%--
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -117,6 +116,14 @@
         <div id="slider"></div>
         <div class="xianshi">
             <p class="iconfont icon-xianshiqianggou"> 限时秒杀</p>
+            <div class="notice">
+                    <ul>
+                        <li>欢迎光临全网最perfect的书店</li>
+                        <li>本书店将秉承优质的服务对待您</li>
+                        <li>您在此将享受至高无比的待遇</li>
+                        <li>最终解释权归潘金华所有哦亲~</li>
+                    </ul>
+            </div>
         </div>
         <asp:DataList ID="SpecialPriceDataList1" runat="server" RepeatColumns="4" OnItemCommand="DataList1_ItemCommand" CssClass="showDataList" DataKeyField="Id" RepeatDirection="Horizontal">
             <ItemTemplate>
@@ -301,6 +308,8 @@
         </div>
     </div>
 </div>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/index.js"></script>
 <script>
     var imgs = ['./images/img1.jpg', './images/img2.jpg', './images/img3.jpg', './images/img4.jpg', './images/img5.jpg'];
     $('#slider').sliderImg(imgs);

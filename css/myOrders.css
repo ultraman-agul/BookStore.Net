@@ -44,13 +44,14 @@
   background-color: #ff6666;
 }
 .Mcontainer .search {
-  height: 30px;
+  height: 42px;
   padding: 30px;
 }
 .Mcontainer .search input {
   width: 200px;
-  height: 30px;
+  height: 37px;
   outline: none;
+  border: 2px solid black;
 }
 .Mcontainer .search a {
   font-size: 22px;
@@ -85,6 +86,7 @@
   margin-bottom: 70px;
 }
 .Mcontainer .DLdv .orderDL td .demo .title {
+  padding: 10px;
   background-color: #eee;
   height: 30px;
   line-height: 30px;

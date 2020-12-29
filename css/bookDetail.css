@@ -148,9 +148,13 @@
   height: 36px;
   line-height: 36px;
 }
-.box .detailContainer .mainContain .tabbox .description #dv2 .emptyimg {
-  margin: 80px auto;
-  margin-left: 400px;
+.box .detailContainer .mainContain .tabbox .description #dv2 .emptydv {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+.box .detailContainer .mainContain .tabbox .description #dv2 .emptydv .emptyimg {
+  vertical-align: middle;
 }
 .box .detailContainer .mainContain .tabbox .description #dv2 .commentdl {
   width: 100%;
@@ -230,10 +234,10 @@
   color: #fff;
   font-weight: 700;
 }
-.box .detailContainer .mainContain .tabbox .description #dv2 .inputword .txtbox {
+.box .detailContainer .mainContain .tabbox .description #dv2 .inputword .expression {
   margin-left: 100px;
 }
-.box .detailContainer .mainContain .tabbox .description #dv2 .inputword textarea {
+.box .detailContainer .mainContain .tabbox .description #dv2 .inputword .expression textarea {
   font-size: 16px;
   padding: 10px;
 }

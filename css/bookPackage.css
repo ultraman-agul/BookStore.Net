@@ -209,3 +209,8 @@
 .PContainer .Pmain .dl {
   margin-top: 30px;
 }
+.PContainer .Pmain .dl .showimg {
+  width: 445px;
+  margin-left: 250px;
+  border-radius: 5px;
+}

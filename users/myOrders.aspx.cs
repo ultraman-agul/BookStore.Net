@@ -49,19 +49,27 @@ namespace DDbook
         protected void GetData(string id)
         {
             DB db = new DB();
-            string sql = "select s.* from(select *, row_number() over(partition by Id order by BuyDate)as group_idx from Torder) s where s.group_idx = 1 and Id = " + id;
-            db.LoadExecuteData(sql);
-            DataList2.DataKeyField = "Id";
-            DataList2.DataSource = db.MyDataSet.Tables[0].DefaultView;
-            DataList2.DataBind();
-            //判断是否为空
-            if (db.MyDataSet.Tables[0].Rows.Count <= 0)
+            try
             {
-                Image2.Visible = true;
+                string sql = "select s.* from(select *, row_number() over(partition by Id order by BuyDate)as group_idx from Torder) s where s.group_idx = 1 and Id = " + id;
+                db.LoadExecuteData(sql);
+           
+                DataList2.DataKeyField = "Id";
+                DataList2.DataSource = db.MyDataSet.Tables[0].DefaultView;
+                DataList2.DataBind();
+                //判断是否为空
+                if (db.MyDataSet.Tables[0].Rows.Count <= 0)
+                {
+                    Image2.Visible = true;
+                }
+                else
+                {
+                    Image2.Visible = false;
+                } 
             }
-            else
+            catch
             {
-                Image2.Visible = false;
+                Response.Write("<script>alert('查无此单')</script>");
             }
             db.OffData();
         }

@@ -136,6 +136,7 @@
                 <asp:Image ID="Image4" runat="server" ImageUrl="~/images/jiantou.png" />
             </nav>
             <div class="dl">
+                <asp:Image ID="Image5" runat="server" CssClass="showimg" ImageUrl="/images/searchNull.jpg" Visible="false"/>
                 <asp:DataList ID="PackageDataList" runat="server" RepeatColumns="3" CssClass="showDataList" OnItemCommand="PackageCommand" RepeatDirection="Horizontal">
                     <ItemTemplate>
                         <asp:LinkButton ID="LinkButton5" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="describe">

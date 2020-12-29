@@ -32,21 +32,33 @@ namespace DDbook
                 LinkButton2.Enabled = false;
                 LinkButton3.Enabled = false;
                 LinkButton4.Enabled = false;
-                ArrayList allId = (ArrayList)Session["result"];
-                string pinjie = "";
-                foreach(object o in allId)
-                {
-                    pinjie += o.ToString() + ",";
-                }
-                pinjie = pinjie.Substring(0, pinjie.Length - 1);
-                string pinjieSql = "select * from Book where Id in (" + pinjie + ")";
+                
+                try
+                {   
+                    ArrayList allId = (ArrayList)Session["result"];
+                    string pinjie = "";
+                    foreach(object o in allId)
+                    {
+                        pinjie += o.ToString() + ",";
+                    }
+                    pinjie = pinjie.Substring(0, pinjie.Length - 1);
+                    string pinjieSql = "select * from Book where Id in (" + pinjie + ")";
 
-                DB db = new DB();
-                db.LoadExecuteData(pinjieSql);
-                PackageDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
-                PackageDataList.DataKeyField = "Id";
-                PackageDataList.DataBind();
-                db.OffData();
+                    DB db = new DB();
+                    db.LoadExecuteData(pinjieSql);
+                    PackageDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
+                    PackageDataList.DataKeyField = "Id";
+                    PackageDataList.DataBind();
+                    if(db.MyDataSet.Tables[0].Rows.Count <= 0)
+                    {
+                        Image5.Visible = true;
+                    }
+                    db.OffData();
+                }
+                catch
+                {
+                    Image5.Visible = true;
+                }
             }
             else 
             {
@@ -181,6 +193,10 @@ namespace DDbook
             PackageDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
             PackageDataList.DataKeyField = "Id";
             PackageDataList.DataBind();
+            if (db.MyDataSet.Tables[0].Rows.Count <= 0)
+            {
+                Image5.Visible = true;
+            }
             db.OffData();
         }
 
@@ -224,19 +240,24 @@ namespace DDbook
         protected void FillGoodComment(int id, string sortText)
         {
             DB db = new DB();
-            string sql = "SELECT b.*, CommentLevel FROM(select * from Book where BookTypeID = " + id + ") as b LEFT JOIN LeaveWord ON b.Id = BookID order by CommentLevel " + sortText;
+            string sql = "select s.* from(select *, row_number() over(partition by Id order by Id) as group_idx from(SELECT top 1000 Book.*, CommentLevel, ReplyNumber FROM Book LEFT JOIN LeaveWord ON Book.Id = LeaveWord.BookID order by CommentLevel " + sortText + ", ReplyNumber " + sortText + ") ta) s where s.group_idx = 1 and BookTypeID = " + id + "order by CommentLevel " + sortText + ", ReplyNumber " + sortText;
             if (id == 0)
             {
                 sql = "select s.* from(select *, row_number() over(partition by Id order by Id) as group_idx from(SELECT top 1000 Book.*, CommentLevel, ReplyNumber FROM Book LEFT JOIN LeaveWord ON Book.Id = LeaveWord.BookID order by CommentLevel "+sortText+", ReplyNumber "+sortText+") ta) s where s.group_idx = 1 order by CommentLevel "+sortText+", ReplyNumber " + sortText;
             }
             if (id > 0 && id < 10)
             {
-                sql = "SELECT b.*, CommentLevel FROM(select * from Book where BookTypeID in (select Id from BookType where ParentID = "+id+")) as b left join LeaveWord on b.Id = BookId order by LeaveWord.CommentLevel " + sortText;
+
+                sql = "select s.* from(select *, row_number() over(partition by Id order by Id) as group_idx from(SELECT top 1000 Book.*, CommentLevel, ReplyNumber FROM Book LEFT JOIN LeaveWord ON Book.Id = LeaveWord.BookID and BookTypeID in (select Id from BookType where ParentID = "+id+") order by CommentLevel " + sortText + ", ReplyNumber " + sortText + ") ta) s where s.group_idx = 1 order by CommentLevel " + sortText + ", ReplyNumber " + sortText;
             }
             db.LoadExecuteData(sql);
             PackageDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
             PackageDataList.DataKeyField = "Id";
             PackageDataList.DataBind();
+            if (db.MyDataSet.Tables[0].Rows.Count <= 0)
+            {
+                Image5.Visible = true;
+            }
             db.OffData();
         }
 

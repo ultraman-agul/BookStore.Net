@@ -7,7 +7,7 @@
     <head runat="server">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+        <link rel="shortcut icon" href="/images/agul.png" />
         <link rel="stylesheet" href="/css/iconfont.css">
         <link rel="stylesheet" href="/css/masterpage.css">
         <asp:ContentPlaceHolder ID="head" runat="server">
@@ -22,55 +22,69 @@
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     <header>
                         <div class="container">
-                            <span>你好，欢迎光临 <asp:HyperLink ID="HyperLink100" runat="server" NavigateUrl="~/index.aspx">叮当书店</asp:HyperLink></span>
+                            <span>你好，欢迎光临 <asp:HyperLink ID="HyperLink100" runat="server" NavigateUrl="~/index.aspx">
+                                    叮当书店</asp:HyperLink></span>
                             <div class="menu">
                                 <ul>
                                     <li>
-                                        <asp:HyperLink ID="HyperLink5" NavigateUrl="~/index.aspx" runat="server">叮当首页</asp:HyperLink><span>|</span></li>
+                                        <asp:HyperLink ID="HyperLink5" NavigateUrl="~/index.aspx" runat="server">叮当首页
+                                        </asp:HyperLink><span>|</span>
+                                    </li>
                                     <li>
-                                        <asp:HyperLink ID="HyperLink7" NavigateUrl="~/users/shoppingCart.aspx" runat="server">购物车</asp:HyperLink><span>|</span></li>
+                                        <asp:HyperLink ID="HyperLink7" NavigateUrl="~/users/shoppingCart.aspx"
+                                            runat="server">购物车</asp:HyperLink><span>|</span>
+                                    </li>
                                     <li>
-                                        <asp:HyperLink ID="HyperLink8" NavigateUrl="~/users/myOrders.aspx" runat="server">订单查询</asp:HyperLink><span>|</span></li>
-                                    <li> <asp:HyperLink ID="HyperLink1" runat="server" CssClass="login" NavigateUrl="~/users/login.aspx">你好，请登录</asp:HyperLink>&nbsp;<span>|</span></li>
-                                    <li><asp:HyperLink ID="HyperLink2" runat="server" CssClass="login" NavigateUrl="~/users/register.aspx">注册</asp:HyperLink></li>
+                                        <asp:HyperLink ID="HyperLink8" NavigateUrl="~/users/myOrders.aspx"
+                                            runat="server">订单查询</asp:HyperLink><span>|</span>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="login"
+                                            NavigateUrl="~/users/login.aspx">你好，请登录</asp:HyperLink>&nbsp;<span>|</span>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink2" runat="server" CssClass="login"
+                                            NavigateUrl="~/users/register.aspx">注册</asp:HyperLink>
+                                    </li>
                                     <li>
                                     <li>
                                         <a href="/users/myInfo.aspx">
-                                        <asp:Image ID="Image1" runat="server"/>
+                                            <asp:Image ID="Image1" runat="server" />
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            
+
                         </div>
                     </header>
                     <div class="search_container">
                         <!-- 左边logo -->
                         <a href="/index.aspx">
-                        <div class="logo">
-                            <div class="imgdv">
-                                <img src="/images/logo.png" alt="">
+                            <div class="logo">
+                                <div class="imgdv">
+                                    <img src="/images/logo.png" alt="">
+                                </div>
+                                <div class="ddread">
+                                    叮当Read
+                                </div>
                             </div>
-                            <div class="ddread">
-                                叮当Read
-                             </div>
-                        </div>
                         </a>
                         <!-- 中间搜索框部分 -->
                         <div class="search_input">
                             <asp:TextBox ID="TextBox1" runat="server" placeholder="请输入书籍信息"></asp:TextBox>
-                            <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" CssClass="searchbtn iconfont icon-chaxun">搜索</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click"
+                                CssClass="searchbtn iconfont icon-chaxun">搜索</asp:LinkButton>
                             <%-- <input type="text" placeholder="请输入商品信息">
-                            <button class="searchbtn">
-                                搜索
-                            </button> --%>
+                                <button class="searchbtn">
+                                    搜索
+                                </button> --%>
                         </div>
                         <!-- 购物车部分 -->
                         <div class="shoppcart">
                             <asp:HyperLink ID="shoppingcart" runat="server" NavigateUrl="~/users/shoppingCart.aspx">
                                 <i class="iconfont icon-gouwuchekong"></i>
                                 <span>
-                                   购物车
+                                    购物车
                                 </span>&nbsp;
                                 <asp:Label ID="CartLabel1" runat="server" Text="0"></asp:Label>
                             </asp:HyperLink>
@@ -94,23 +108,26 @@
                     <!-- 分类导航 -->
                     <div class="connav">
                         <nav>
-                        <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/users/bookPackage.aspx?Id=0" > <i class="iconfont icon-sort"></i> 图书分类</asp:LinkButton>
-                        <div>
-                            <ul>
-                                <li><a href="#">电子书</a></li>
-                                <li><a href="#">网络文学</a></li>
-                                <li><a href="#">租阅</a></li>
-                                <li><a href="#">叮当阅读器</a></li>
-                                <li><a href="#">阅读器客户端</a></li>
-                                <li><a href="#">我要写书</a></li>
-                            </ul>
-                        </div>
-                        <div class="userInfo">
-                             <a href="/users/myInfo.aspx" class="lasta iconfont icon-geren">
-                            <i class=""></i>
-                            个人中心 </a>
-                        </div>
-                       
+                            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/users/bookPackage.aspx?Id=0">
+                                <i class="iconfont icon-sort"></i> 图书分类</asp:LinkButton>
+                            <div>
+                                <ul>
+                                    <li><a href="#">电子书</a></li>
+                                    <li><a href="#">网络文学</a></li>
+                                    <li><a href="#">租阅</a></li>
+                                    <li><a href="#">叮当阅读器</a></li>
+                                    <li><a href="#">我要写书</a></li>
+                                    <li>
+                                        <a href="javascript:void(0)" id="BGC">夜间模式</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="userInfo">
+                                <a href="/users/myInfo.aspx" class="lasta iconfont icon-geren">
+                                    <i class=""></i>
+                                    个人中心 </a>
+                            </div>
+
                         </nav>
                     </div>
                     <div class="hr">
@@ -125,59 +142,60 @@
                 <!-- 主题内容区域结束 -->
                 <!-- 关于我们开始 -->
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
-                <div class="aboutwe">
-                    <div class="aboutme1">
-                        <ul>
-                            <li>
-                                <div class="left">
-                                    <i class="iconfont icon-aixin1"></i>
-                                </div>
-                                <div class="right">
-                                    <ul>
-                                        <li>关注我们</li>
-                                        <li>最受欢迎的阅读产品</li>
-                                        <li>关注我们：</li>
-                                        <li><a href="#"><i class="iconfont icon-weibo"></i>新浪微博 </a></li>
-                                        <li id="wechat" onmouseover="show()" onmouseout="hid()">
-                                            <a href="#">
-                                                <i class="iconfont icon-gongzhonghao"></i>
-                                                官方微信 </a>
+                    <div class="aboutwe">
+                        <div class="aboutme1">
+                            <ul>
+                                <li>
+                                    <div class="left">
+                                        <i class="iconfont icon-aixin1"></i>
+                                    </div>
+                                    <div class="right">
+                                        <ul>
+                                            <li>关注我们</li>
+                                            <li>最受欢迎的阅读产品</li>
+                                            <li>关注我们：</li>
+                                            <li><a href="#"><i class="iconfont icon-weibo"></i>新浪微博 </a></li>
+                                            <li id="wechat" onmouseover="show()" onmouseout="hid()">
+                                                <a href="#">
+                                                    <i class="iconfont icon-gongzhonghao"></i>
+                                                    官方微信 </a>
                                                 <div id="imgbox">
                                                     <img src="/images/微信图片_20201205231102.png" alt="">
                                                 </div>
-                                        </li>
-                                    </ul>
-                                   
-                                </div>
-                            </li>
-                            <li>
-                                <div class="left">
-                                    <i class="iconfont icon-renshu"></i>
-                                </div>
-                                <div class="right">
-                                    <ul>
-                                        <li>作者后台</li>
-                                        <li>加入叮当原创网，尊享作者 </li>
-                                        <li>福利，成就网文大神</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="left">
-                                    <i class="iconfont icon-taiyang-copy"></i>
-                                </div>
-                                <div class="right">
-                                    <ul>
-                                        <li>关于我们 </li>
-                                        <li>欢迎反馈宝贵意见给我们</li>
-                                        <li>客服书吧：叮当云阅读问答</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <i class="iconfont icon-renshu"></i>
+                                    </div>
+                                    <div class="right">
+                                        <ul>
+                                            <li>作者后台</li>
+                                            <li>加入叮当原创网，尊享作者 </li>
+                                            <li>福利，成就网文大神</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <i class="iconfont icon-taiyang-copy"></i>
+                                    </div>
+                                    <div class="right">
+                                        <ul>
+                                            <li>关于我们 </li>
+                                            <li>欢迎反馈宝贵意见给我们</li>
+                                            <li>客服书吧：叮当云阅读问答</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <script src="/js/masterpage.js"></script>
+                    <script src="js/jquery-3.5.1.min.js"></script>
+                    <script src="/js/masterpage.js"></script>
 
                 </asp:ContentPlaceHolder>
                 <!-- 关于我们结束 -->
@@ -192,11 +210,11 @@
                         <div>叮当网收录的免费小说作品、频道内容、书友评论、用户上传文字、图片等其他一切内容及在叮当网所做之广告均属用户个人行为，与叮当网无关。
                         </div>
                     </footer>
-                    
+
                 </asp:ContentPlaceHolder>
-                <!-- 底部结束 --> 
+                <!-- 底部结束 -->
             </div>
-     
+
         </form>
     </body>
 
