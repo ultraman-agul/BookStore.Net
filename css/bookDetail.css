@@ -176,6 +176,10 @@
   height: 35px;
   width: 35px;
   border-radius: 16px;
+  transition: all 1s;
+}
+.box .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .left .imgb img:hover {
+  transform: rotate(-360deg);
 }
 .box .detailContainer .mainContain .tabbox .description #dv2 .commentdl td .left .imgb span {
   position: absolute;

@@ -96,6 +96,10 @@
   width: 35px;
   border-radius: 16px;
   vertical-align: middle;
+  transition: all 1s;
+}
+.box .mainContainer .replyContent td p .repImg:hover {
+  transform: rotate(-360deg);
 }
 .box .mainContainer .replyContent td p span {
   color: #999;

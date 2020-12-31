@@ -24,7 +24,10 @@ namespace DDbook.admin
                 string id = e.CommandArgument.ToString();
                 string sql = "update Torder set IsSend = 1 where Id=" + id;
                 DB db = new DB();
-                db.ExecuteNonQuery(sql);
+                if(db.ExecuteNonQuery(sql) > 0)
+                {
+                    Response.Write("<script>alert('发货成功！')</script>");
+                }
                 GridView2.DataBind();
                 db.OffData();
             }

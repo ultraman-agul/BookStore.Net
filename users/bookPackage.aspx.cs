@@ -248,7 +248,7 @@ namespace DDbook
             if (id > 0 && id < 10)
             {
 
-                sql = "select s.* from(select *, row_number() over(partition by Id order by Id) as group_idx from(SELECT top 1000 Book.*, CommentLevel, ReplyNumber FROM Book LEFT JOIN LeaveWord ON Book.Id = LeaveWord.BookID and BookTypeID in (select Id from BookType where ParentID = "+id+") order by CommentLevel " + sortText + ", ReplyNumber " + sortText + ") ta) s where s.group_idx = 1 order by CommentLevel " + sortText + ", ReplyNumber " + sortText;
+                sql = "select s.* from(select *, row_number() over(partition by Id order by Id) as group_idx from(SELECT top 1000 Book.*, CommentLevel, ReplyNumber FROM Book LEFT JOIN LeaveWord ON Book.Id = LeaveWord.BookID order by CommentLevel "+sortText+", ReplyNumber "+sortText+") ta) s , (select Id from BookType where ParentID = "+id+") as typeid where s.group_idx = 1 and typeid.Id = s.BookTypeID order by CommentLevel "+ sortText+", ReplyNumber "+ sortText;
             }
             db.LoadExecuteData(sql);
             PackageDataList.DataSource = db.MyDataSet.Tables[0].DefaultView;
